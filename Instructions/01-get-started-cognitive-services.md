@@ -79,25 +79,19 @@ Azure AI Services are cloud-based services that encapsulate artificial intellige
 
 The cognitive services APIs are REST-based, so you can consume them by submitting JSON requests over HTTP. In this example, you'll explore a console application that uses the **Langauge** REST API to perform language detection; but the basic principle is the same for all of the APIs supported by the Cognitive Services resource.
 
-> **Note**: In this exercise, you can choose to use the REST API from either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
-
-1. Open Visual Studio Code, in the **Explorer** pane, browse to the **01-getting-started** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
+1. Open Visual Studio Code, in the **Explorer** pane, browse to the **01-getting-started** folder and expand the **C-Sharp** folder.
 
 1. View the contents of the **rest-client** folder, and note that it contains a file for configuration settings:
     
     - **C#**: appsettings.json
-    
-    - **Python**: .env
 
         >**Note:** Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your cognitive services resource. Save your changes, by pressing **CTRL + S** on the keyboard.
 
 1. Note that the **rest-client** folder contains a code file for the client application:
 
     - **C#**: Program.cs
-    
-    - **Python**: rest-client.py
 
-    Open the code file and review the code it contains, the following details:
+1. Open the code file and review the code it contains, the following details:
     
     - Various namespaces are imported to enable HTTP communication
     
@@ -111,36 +105,12 @@ The cognitive services APIs are REST-based, so you can consume them by submittin
     
     - The response from the service is a JSON object, which the client application can parse.
 
-1. On the Lab-VM, in the **Type here to search** bar, search for **Command Prompt**, then right-click on it, and select **Run as administrator**.
-
-1. Run these following commands, for adding the path:
-
-    ```
-    setx path1 "%PATH%;C:\Python313\Scripts;"
-    ```
-
-    ```
-    setx path "%PATH%;C:\Python313;"
-    ```
-
-1. Navigate, back to the **Visual Studio Code**.
-
 1. Right-click on the **rest-client** folder and open an integrated terminal. Then enter the following language-specific command to run the program:
 
     **C#**
 
     ```
     dotnet run
-    ```
-
-    **Python**
- 
-    ```
-    python -m pip install --user python-dotenv
-    ```
-
-    ```
-    python rest-client.py
     ```
 
 1. When prompted, enter some text and review the language that is detected by the service, which is returned in the JSON response. For example, try entering "Hello", "Bonjour", and "Hola".
@@ -151,7 +121,7 @@ The cognitive services APIs are REST-based, so you can consume them by submittin
 
 You can write code that consumes cognitive services REST APIs directly, but there are software development kits (SDKs) for many popular programming languages, including Microsoft C#, Python, and Node.js. Using an SDK can greatly simplify development of applications that consume cognitive services.
 
-1. In Visual Studio Code, in the **Explorer** pane, in the **01-getting-started** folder, expand the **C-Sharp** or **Python** folder depending on your language preference.
+1. In Visual Studio Code, in the **Explorer** pane, in the **01-getting-started** folder, expand the **C-Sharp** folder.
 
 1. Right-click the **sdk-client** folder and open an integrated terminal. Then install the Text Analytics SDK package by running the appropriate command for your language preference:
 
@@ -161,26 +131,17 @@ You can write code that consumes cognitive services REST APIs directly, but ther
     dotnet add package Azure.AI.TextAnalytics --version 5.3.0
     ```
 
-    **Python**
-
-    ```
-    pip install azure-ai-textanalytics==5.3.0
-    ```
-
 1. View the contents of the **sdk-client** folder, and note that it contains a file for configuration settings:
     
     - **C#**: appsettings.json
-    
-    - **Python**: .env
 
-    Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your cognitive services resource. Save your changes.
+1. Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your cognitive services resource. Save your changes.
     
 1. Note that the **sdk-client** folder contains a code file for the client application:
 
     - **C#**: Program.cs
-    - **Python**: sdk-client.py
 
-    Open the code file and review the code it contains, noting the following details:
+1. Open the code file and review the code it contains, noting the following details:
     
     - The namespace for the SDK you installed is imported
     
@@ -196,17 +157,11 @@ You can write code that consumes cognitive services REST APIs directly, but ther
     dotnet run
     ```
 
-    **Python**
-
-    ```
-    python sdk-client.py
-    ```
-
 1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "Goodbye", "Au revoir", and "Hasta la vista".
 
 1. When you have finished testing the application, enter "quit" to stop the program.
 
-> **Note**: Some languages that require Unicode character sets may not be recognized in this simple console application.
+    > **Note**: Some languages that require Unicode character sets may not be recognized in this simple console application.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.

@@ -164,7 +164,7 @@ Now you're ready to use the service principal identity in an application, so it 
 
 > **Note**: In this exercise, we'll store the service principal credentials in the application configuration and use them to authenticate a **ClientSecretCredential** identity in your application code. This is fine for development and testing, but in a real production application, an administrator would assign a *managed identity* to the application so that it uses the service principal identity to access resources, without caching or storing the password.
 
-1. In Visual Studio Code, expand the **02-cognitive-security** folder and the **C-Sharp** or **Python** folder depending on your language preference.
+1. In Visual Studio Code, expand the **02-cognitive-security** folder and the **C-Sharp** folder.
 
 1. Right-click the **keyvault-client** folder and open an integrated terminal. Then install the packages you will need to use Azure Key Vault and the Text Analytics API in your Azure AI services resource by running the appropriate command for your language preference:
 
@@ -176,19 +176,9 @@ Now you're ready to use the service principal identity in an application, so it 
     dotnet add package Azure.Security.KeyVault.Secrets --version 4.2.0-beta.3
     ```
 
-    **Python**
-
-    ```
-    pip install azure-ai-textanalytics==5.3.0
-    pip install azure-identity==1.5.0
-    pip install azure-keyvault-secrets==4.2.0
-    ```
-
 1. View the contents of the **keyvault-client** folder, and note that it contains a file for configuration settings:
     
     - **C#**: appsettings.json
-    
-    - **Python**: .env
 
 1. Open the configuration file and update the configuration values it contains to reflect the following settings:
     
@@ -207,8 +197,6 @@ Now you're ready to use the service principal identity in an application, so it 
 1. Note that the **keyvault-client** folder contains a code file for the client application:
 
     - **C#**: Program.cs
-    
-    - **Python**: keyvault-client.py
 
 1. Open the code file and review the code it contains, noting the following details:
     
@@ -224,12 +212,6 @@ Now you're ready to use the service principal identity in an application, so it 
 
     ```
     dotnet run
-    ```
-
-    **Python**
-
-    ```
-    python keyvault-client.py
     ```
 
 1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "Hello", "Bonjour", and "Gracias".
