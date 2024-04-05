@@ -52,9 +52,9 @@ You'll use the sample forms from the **21-custom-form/sample-forms** folder in t
 
 3. View the **Resource group** in which you created the Document Intelligence resource previously.
 
-4. On the **Overview** page for your resource group, note the **Subscription ID** and **Location**. You will need these values, along with your **resource group** name in subsequent steps.
+4. On the **Overview** page for your resource group, note the **Subscription ID** and **Location**. You will need these values, along with your **resource group** name in subsequent steps. Select the Essentials option if you don't see the above options.
 
-![An example of the resource group page.](./images/resource_group_variables.png)
+   ![An example of the resource group page.](images/mod-6-4.png)
 
 5. In Visual Studio Code, in the Explorer pane, right-click the the **21-custom-form** folder and select **Open in Integrated Terminal**.
 
