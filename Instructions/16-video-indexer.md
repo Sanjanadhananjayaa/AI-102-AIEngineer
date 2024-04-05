@@ -101,7 +101,7 @@ Video Analyzer provides a REST API that you can use to upload and manage videos 
 
 To use the Video Analyzer API, you need some information to authenticate requests:
 
-1. In the Video Analyzer portal, expand the menu (≡) and select the **Account settings** page.
+1. In the Video Analyzer portal, expand the menu (>>) on the left side and select the **Account settings** page.
 2. Note the **Account ID** on this page - you will need it later.
 3. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
 4. On the **Profile** page, view the **Subscriptions** associated with your profile.
