@@ -29,9 +29,9 @@ In this exercise, you'll create **Custom Vision** resources for training and pre
 2. Select the **&#65291;Create a resource** button, search for *custom vision*, and create a **Custom Vision** resource with the following settings:
     - **Create options**: Both
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Choose or create a resource group (Ai-102-DeploymentID)*
+    - **Resource group**: *Choose a resource group (Ai-102-<inject key="DeploymentID" enableCopy="false"/>)*
     - **Region**: *Choose any available region*
-    - **Name**: *Vison-<inject key="DeploymentID"></inject>*
+    - **Name**: *Vison-<inject key="DeploymentID" enableCopy="false"/>
     - **Training location**: *Choose any available region*
     - **Training pricing tier**: F0
     - **Prediction location**: *The same region as the training resource*
