@@ -24,8 +24,15 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
 1. In your browser, open the Video Analyzer portal at `https://www.videoindexer.ai`.
 2. If you have an existing Video Analyzer account, sign in. Otherwise, sign up for a free account and sign in using your Microsoft account (or any other valid account type). If you have difficulty signing in, try opening a private browser session.
-3. In Video Analyzer, select the **Upload** option. Then select the option to **enter a file URL** and enter `https://aka.ms/responsible-ai-video`. Change the default name to **Responsible AI**, review the default settings, select the checkbox to verify compliance with Microsoft's policies for facial recognition, and upload the file.
-4. After the file has uploaded, wait a few minutes while Video Analyzer automatically indexes it.
+3. Download the video by browsing the url in new tab **https://aka.ms/responsible-ai-video**.
+
+    ![](./images/Ai_Video_Synthesizer_download_1.png)
+   
+5. In Video Analyzer, select the **Upload** option. Then select the option to **Browse for files** and Select the **Video downloaded** in earlier step and click on **Open**. select the checkbox to verify compliance with Microsoft's policies for facial recognition, and Click on **Upload + Index**. do not close the upload and index page it will cause interruption in the index of video.
+   
+6. After the file has uploaded, wait a few minutes while Video Analyzer automatically indexes it. Dublicate the Tab and View the Index Status
+
+    ![](./images/Ai_Video_Synthesizer_Status_2.png)
 
 > **Note**: In this exercise, we're using this video to explore Video Analyzer functionality; but you should take the time to watch it in full when you've finished the exercise as it contains useful information and guidance for developing AI-enabled applications responsibly! 
 
