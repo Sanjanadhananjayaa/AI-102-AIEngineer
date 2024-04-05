@@ -40,7 +40,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
 The indexing process extracts insights from the video, which you can view in the portal.
 
-1. In the Video Analyzer portal, when the video is indexed, select it to view it. You'll see the video player alongside a pane that shows insights extracted from the video.
+1. In the Video Analyzer portal, when the video is indexed, Click middle of the video to play it. You'll see the video player alongside a pane that shows insights extracted from the video.
 
 ![Video Analyzer with a video player and Insights pane](./images/video-indexer-insights.png)
 
