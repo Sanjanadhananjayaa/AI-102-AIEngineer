@@ -22,7 +22,7 @@ In this exercise, you'll implement a knowledge store for *Margie's Travel*, a fi
 
 ## Create Azure resources
 
-> **Note**: If you have previously completed the **[Create an Azure Cognitive Search solution](22-azure-search.md)** exercise, and still have these Azure resources in your subscription, you can skip this section and start at the **Create a search solution** section. Otherwise, follow the steps below to provision the required Azure resources.
+> **Note**: If you have previously completed the **[Create an Azure AI Search solution](22-azure-search.md)** exercise, and still have these Azure resources in your subscription, you can skip this section and start at the **Create a search solution** section. Otherwise, follow the steps below to provision the required Azure resources.
 
 1. In a web browser, open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 2. View the **Resource groups** in your subscription.
