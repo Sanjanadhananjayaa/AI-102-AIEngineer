@@ -343,7 +343,7 @@ Now you need to include your function as a custom skill in the search solution s
 14. In the terminal pane for the **update-search** folder, enter the following command run the batch script.
 
     ```
-    update-search
+    .\update-search.cmd
     ```
 
 15. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
