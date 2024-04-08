@@ -8,17 +8,17 @@ Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated
 
 In this exercise, you'll implement a knowledge store for *Margie's Travel*, a fictitious travel agency that uses information in brochures and hotel reviews to help customers plan trips.
 
-## Open the cloned folder in Visual Studio Code.
 
-1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
+## Clone the repository for this course
 
-     ![Visual Studio Code Icon](./images/vscode.png)
+If you have already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, open it in Visual Studio Code; otherwise, follow these steps to clone it now.
 
-2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\AllFiles\AI-102-AIEngineer-prod**.
+1. Start Visual Studio Code.
+2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+3. When the repository has been cloned, open the folder in Visual Studio Code.
+4. Wait while additional files are installed to support the C# code projects in the repo.
 
-    **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
-
-3.  Wait while additional files are installed to support the C# code projects in the repo.
+    > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
 ## Create Azure resources
 
@@ -37,18 +37,24 @@ In this exercise, you'll implement a knowledge store for *Margie's Travel*, a fi
     ```
 
 8. When prompted, sign into your Azure subscription. Then return to Visual Studio Code and wait for the sign-in process to complete.
-
-9. In the **setup.cmd** script, modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for your subscription ID, resource group name, and location name. Then save your changes.
-10. In the terminal for the **24-knowledge-store** folder, enter the following command to run the script:
+9. Run the following command to list Azure locations.
 
     ```
-    .\setup
+    az account list-locations -o table
+    ```
+
+10. In the output, find the **Name** value that corresponds with the location of your resource group (for example, for *East US* the corresponding name is *eastus*).
+11. In the **setup.cmd** script, modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for your subscription ID, resource group name, and location name. Then save your changes.
+12. In the terminal for the **24-knowledge-store** folder, enter the following command to run the script:
+
+    ```
+    setup
     ```
     > **Note**: The Search CLI module is in preview, and may get stuck in the *- Running ..* process. If this happens for over 2 minutes, press CTRL+C to cancel the long-running operation, and then select **N** when asked if you want to terminate the script. It should then complete successfully.
     >
     > If the script fails, ensure you saved it with the correct variable names and try again.
 
-11. When the script completes, review the output it displays and note the following information about your Azure resources (you will need these values later):
+13. When the script completes, review the output it displays and note the following information about your Azure resources (you will need these values later):
     - Storage account name
     - Storage connection string
     - Azure AI Services account
@@ -57,7 +63,7 @@ In this exercise, you'll implement a knowledge store for *Margie's Travel*, a fi
     - Search service admin key
     - Search service query key
 
-12. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
+14. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
 
 ## Create a search solution
 
@@ -72,7 +78,7 @@ In this exercise, you'll use the Azure AI Search REST interface to create these 
 
 ### Prepare JSON for REST operations
 
-You'll use the REST interface to submit JSON definitions for your Azure Cognitive Search components.
+You'll use the REST interface to submit JSON definitions for your Azure AI Search components.
 
 1. In Visual Studio Code, in the **24-knowledge-store** folder, expand the **create-search** folder and select **data_source.json**. This file contains a JSON definition for a data source named **margies-knowledge-data**.
 2. Replace the **YOUR_CONNECTION_STRING** placeholder with the connection string for your Azure storage account, which should resemble the following:
@@ -85,9 +91,9 @@ You'll use the REST interface to submit JSON definitions for your Azure Cognitiv
 
 3. Save and close the updated JSON file.
 4. In the **create-search** folder, open **skillset.json**. This file contains a JSON definition for a skillset named **margies-knowledge-skillset**.
-5. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with either of the keys for your AI services resources.
+5. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with either of the keys for your Azure AI Services resources.
 
-    *You can find the keys on the **Keys and Endpoint** page for your cognitive services resource in the Azure portal.*
+    *You can find the keys on the **Keys and Endpoint** page for your Azure AI Services resource in the Azure portal.*
 
 6. At the end of the collection of skills in your skillset, find the **Microsoft.Skills.Util.ShaperSkill** skill named **define-projection**. This skill defines a JSON structure for the enriched data that will be used for the projections that the pipeline will persist on the knowledge store for each document processed by the indexer.
 7. At the bottom of the skillset file, observe that the skillset also includes a **knowledgeStore** definition, which includes a connection string for the Azure Storage account where the knowledge store is to be created, and a collection of **projections**. This skillset includes three *projection groups*:
@@ -112,14 +118,14 @@ Now that you've prepared the JSON objects that define your search solution compo
 1. In the **create-search** folder, open **create-search.cmd**. This batch script uses the cURL utility to submit the JSON definitions to the REST interface for your Azure AI Search resource.
 2. Replace the **YOUR_SEARCH_URL** and **YOUR_ADMIN_KEY** variable placeholders with the **Url** and one of the **admin keys** for your Azure AI Search resource.
 
-    *You can find these values on the **Overview** and **Keys** pages for your Azure Cognitive Search resource in the Azure portal.*
+    *You can find these values on the **Overview** and **Keys** pages for your Azure AI Search resource in the Azure portal.*
 
 3. Save the updated batch file.
 4. Right-click the the **create-search** folder and select **Open in Integrated Terminal**.
 5. In the terminal pane for the **create-search** folder, enter the following command run the batch script.
 
     ```
-    .\create-search
+    create-search
     ```
 
 6. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
@@ -138,7 +144,7 @@ The *object* projections defined in the Margie's Travel skillset consist of a JS
 
 1. In the Azure portal, view the Azure Storage account you created previously.
 2. Select the **Storage browser** tab (in the pane on the left) to view the storage account in the storage explorer interface in the Azure portal.
-2. Select **Blob containers** to view the containers in the storage account. In addition to the **margies** container where the source data is stored, there should be two new containers: **margies-images** and **margies-knowledge**. These were created by the indexing process.
+2. Expand **Blob containers** to view the containers in the storage account. In addition to the **margies** container where the source data is stored, there should be two new containers: **margies-images** and **margies-knowledge**. These were created by the indexing process.
 3. Select the **margies-knowledge** container. It should contain a folder for each indexed document.
 4. Open any of the folders, and then download and open the **knowledge-projection.json** file it contains. Each JSON file contains a representation of an indexed document, including the enriched data extracted by the skillset as shown here.
 
@@ -188,8 +194,8 @@ The ability to generate *file* projections like this makes indexing an efficient
 
 The *table* projections defined in the skillset form a relational schema of enriched data.
 
-1. In the storage explorer interface in the Azure portal, select **TABLES**.
-2. Select the **Docs** table to view its columns. The columns include some standard Azure Storage table columns - to hide these, modify the **Column Options** to select only the following columns:
+1. In the storage explorer interface in the Azure portal, expand **Tables**.
+2. Select the **docs** table to view its columns. The columns include some standard Azure Storage table columns - to hide these, modify the **Column Options** to select only the following columns:
     - **document_id** (the key column automatically generated by the indexing process)
     - **file_id** (the encoded file URL)
     - **file_name** (the file name extracted from the document metadata)
@@ -205,4 +211,4 @@ The ability to create *table* projections enables you to build analytical and re
 
 ## More information
 
-To learn more about creating knowledge stores with Azure Cognitive Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/knowledge-store-concept-intro).
+To learn more about creating knowledge stores with Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/knowledge-store-concept-intro).
