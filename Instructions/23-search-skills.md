@@ -309,9 +309,7 @@ module.exports = async function (context, req) {
             "youll",
             "find"
             ]
-        },
-        "errors": null,
-        "warnings": null
+        }
         }
     ]
     }
