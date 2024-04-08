@@ -43,7 +43,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 12. In the terminal for the **23-custom-search-skill** folder, enter the following command to run the script:
 
     ```
-    setup
+    .\setup.cmd
     ```
 
     > **Note**: The Search CLI module is in preview, and may get stuck in the *- Running ..* process. If this happens for over 2 minutes, press CTRL+C to cancel the long-running operation, and then select **N** when asked if you want to terminate the script. It should then complete successfully.
