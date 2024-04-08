@@ -355,7 +355,6 @@ All of the other metadata and content fields in the source document are implicit
 
 Now that you have a useful index, you can use it from a client application. You can do this by consuming the REST interface, submitting requests and receiving responses in JSON format over HTTP; or you can use the software development kit (SDK) for your preferred programming language. In this exercise, we'll use the SDK.
 
-> **Note**: You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
 
 ### Get the endpoint and keys for your search resource
 
@@ -366,7 +365,7 @@ Now that you have a useful index, you can use it from a client application. You 
 
 ### Prepare to use the Azure AI Search SDK
 
-1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
+1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** folder.
 2. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
 
     **C#**
@@ -375,25 +374,19 @@ Now that you have a useful index, you can use it from a client application. You 
     dotnet add package Azure.Search.Documents --version 11.1.1
     ```
     
-    **Python**
-    
-    ```
-    pip install azure-search-documents==11.0.0
-    ```
+   
     
 3. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
-    - **Python**: .env
 
     Open the configuration file and update the configuration values it contains to reflect the **endpoint** and **query key** for your Azure AI Search resource. Save your changes.
 
 ### Explore code to search an index
 
-The **margies-travel** folder contains code files for a web application (a Microsoft C# *ASP.NET Razor* web application or a Python *Flask* application), which includes search functionality.
+The **margies-travel** folder contains code files for a web application a Microsoft C# *ASP.NET Razor* web application, which includes search functionality.
 
 1. Open the following code file in the web application, depending on your choice of programming language:
     - **C#**:Pages/Index.cshtml.cs
-    - **Python**: app.py
 2. Near the top of the code file, find the comment **Import search namespaces**, and note the namespaces that have been imported to work with the Azure AI Search SDK:
 3. In the **search_query** function, find the comment **Create a search client**, and note that the code creates a **SearchClient** object using the endpoint and query key for your Azure AI Search resource:
 4. In the **search_query** function, find the comment **Submit search query**, and review the code to submit a search for the specified text with the following options:
@@ -411,9 +404,8 @@ The web app already includes code to process and render the search results.
 
 1. Open the following code file in the web application, depending on your choice of programming language:
     - **C#**:Pages/Index.cshtml
-    - **Python**: templates/search.html
 2. Examine the code, which renders the page on which the search results are displayed. Observe that:
-    - The page begins with a search form that the user can use to submit a new search (in the Python version of the application, this form is defined in the **base.html** template), which is referenced at the beginning of the page.
+    - The page begins with a search form that the user can use to submit a new search, which is referenced at the beginning of the page.
     - A second form is then rendered, enabling the user to refine the search results. The code for this form:
         - Retrieves and displays the count of documents from the search results.
         - Retrieves the facet values for the **metadata_author** field and displays them as an option list for filtering.
@@ -436,12 +428,6 @@ The web app already includes code to process and render the search results.
     ```
     dotnet run
     ```
-    
-    **Python**
-    
-    ```
-    flask run
-    ```
 
 2. In the message that is displayed when the app starts successfully, follow the link to the running web application (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the Margies Travel site in a web browser.
 3. In the Margie's Travel website, enter **London hotel** into the search box and click **Search**.
@@ -456,7 +442,7 @@ The web app already includes code to process and render the search results.
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
     - **skyscraper** (observe that this word doesn't appear in the actual content of any documents, but is found in the *image captions* and *image tags* that were generated for images in some documents).
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
-10. Close the browser tab containing the Margie's Travel web site and return to Visual Studio Code. Then in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
+10. Close the browser tab containing the Margie's Travel web site and return to Visual Studio Code. Then in the terminal for the **margies-travel** folder where the dotnet  application is running, enter Ctrl+C to stop the app.
 
 ## More information
 
