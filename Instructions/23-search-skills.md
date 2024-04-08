@@ -102,7 +102,7 @@ In this exercise, you'll use the Azure AI Search REST interface to create these 
 15. In the terminal pane for the **create-search** folder, enter the following command run the batch script.
 
     ```
-    create-search
+    .\create-search.cmd
     ```
 
 16. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
