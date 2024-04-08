@@ -66,7 +66,7 @@ Now you're ready to use the Bot Framework Composer to create a bot.
 
 1. On the **Home** screen, select **+ Create new**.
 
-1. On the **Select a template** pop-up, select **Empty Bot** and select **Next**. Name it as **WeatherBot** and create it in a local folder.
+1. On the **Select a template** pop-up, select **Empty Bot** and select **Next**. Name it as **WeatherBot** and create it in a C:\ fodler.
 
 1. Close the **Get Started** pane if it opens, and then in the navigation pane on the left, select **Greeting** to open the authoring canvas and show the *ConversationUpdate* activity that is called when a user initially joins a conversation with the bot. The activity consists of a flow of actions.
 
