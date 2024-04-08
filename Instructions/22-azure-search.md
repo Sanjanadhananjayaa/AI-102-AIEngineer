@@ -91,7 +91,7 @@ A web browser tab will open and prompt you to sign into Azure. Do so, and then c
 5. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
     ```
-    UploadDocs
+    .\UploadDocs
     ```
 
 ## Index the documents
