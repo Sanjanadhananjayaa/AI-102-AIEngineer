@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Manage authentication keys
 + Task 2: Secure key access with Azure Key Vault
 + Task 2.1: Create a key vault and add a secret
-+ Task 2.2: Create a service principal
++ Task 2.2: Use a service principal
 + Task 2.3: Use the service principal in an application
 
 ## Task 1: Manage authentication keys
@@ -113,6 +113,8 @@ First, you need to create a key vault and add a *secret* for the Azure AI servic
     
     - **Secret Value**: *Your **key1** Azure AI services key*
 
+        >**Note:** The same key1 that you copied in the earlier step.
+
     - Select **Create**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -121,36 +123,21 @@ First, you need to create a key vault and add a *secret* for the Azure AI servic
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 2.2: Create a service principal
+### Task 2.2: Use a service principal
 
-To access the secret in the key vault, your application must use a service principal that has access to the secret. You'll use the Azure command line interface (CLI) to create the service principal, find its object ID, and grant access to the secret in Azure Vault.
+To access the secret in the key vault, your application must use a service principal that has access to the secret. You'll use the Azure command line interface (CLI) to use the service principal, find its object ID, and grant access to the secret in Azure Vault.
 
-1. Return to Visual Studio Code, and in the integrated terminal for the **02-cognitive-security** folder, run the following Azure CLI command, replace *&lt;subscriptionId&gt;* with the correct values for your subscription ID containing your Azure AI services and key vault resources:
+1. Return to Visual Studio Code, and open the integrated terminal for the **02-cognitive-security** folder.
 
-    > **Tip**: If you are unsure of your subscription ID, use the **az account show** command to retrieve your subscription information - the subscription ID is the **id** attribute in the output. If you see an error about the object already existing, please choose a different unique name.
-
-    ```
-    az ad sp create-for-rbac -n "api://ai-app-<inject key="DeploymentID" enableCopy="false"/>" --role owner --scopes subscriptions/<subscriptionId>/resourceGroups/ai-102-<inject key="DeploymentID" enableCopy="false"/>
-    ```
-
-1. The output of this command includes information about your new service principal. It should look similar to this:
-
-    ```
-    {
-        "appId": "abcd12345efghi67890jklmn",
-        "displayName": "ai-app",
-        "password": "1a2b3c4d5e6f7g8h9i0j",
-        "tenant": "1234abcd5678fghi90jklm"
-    }
-    ```
-
-    >**Note:** Make a note of the **appId**, **password**, and **tenant** values - you will need them later (if you close this terminal, you won't be able to retrieve the password; so it's important to note the values now - you can paste the output into a new text file in Visual Studio Code to ensure you can find the values you need later!)
-
-2. To get the **object ID** of your service principal, run the following Azure CLI command, replacing *&lt;appId&gt;* with the value of your service principal's app ID. If running the following command gives no response, you may be using a different version of Azure CLI; replace `objectId` with `id` if that is the case.
+2. To get the **object ID** of your service principal, run the following Azure CLI command. If running the following command gives no response, you may be using a different version of Azure CLI; replace `objectId` with `id` if that is the case.
 
     ```
     az ad sp show --id <appId> --query objectId --out tsv
     ```
+
+    >**Note:** Navigate to the **Environment** page, and select the **Service Principal Details** page. You will see the **Application Id**; replace it with <appId>.
+
+    >**Note:** Copy the **object ID**, and paste it inside the **Notepad**, you will use this in next step.
 
 3. To assign permission for your new service principal to access secrets in your Key Vault, run the following Azure CLI command, replacing *&lt;keyVaultName&gt;* with the name of your Azure Key Vault resource and *&lt;objectId&gt;* with the value of your service principal's object ID.
 
@@ -182,15 +169,15 @@ Now you're ready to use the service principal identity in an application, so it 
 
 1. Open the configuration file and update the configuration values it contains to reflect the following settings:
     
-    - The **endpoint** for your Azure AI services resource
+    - **CognitiveServicesEndpoint**: Replace it with the endpoint value that you copied.
     
-    - The name of your **Azure Key Vault** resource
+    - **KeyVault**: Replace it with the name of your key vault that you created.
     
-    - The **TenantID** for your service principal
+    - **TenantID**: Replace it with the value of the **Tenant Id**, which you can find on the **Environment** page, and select the **Service Principal Details** page.
     
-    - The **AppId** for your service principal
+    - **AppId**: Replace it with the value of the **Application Id**, which you can find on the **Environment** page, and select the **Service Principal Details** page.
     
-    - The **AppPassword** for your service principal
+    - **AppPassword**: Replace it with the value of the **Secret Key**, which you can find on the **Environment** page, and select the **Service Principal Details** page.
 
     - **Save** your changes, by pressing **CTRL+S**.
 
@@ -224,7 +211,7 @@ In this lab, you have completed:
 + Managed authentication keys
 + Secured key access with Azure Key Vault
 + Created a key vault and add a secret
-+ Created a service principal
++ Used a service principal
 + Used the service principal in an application
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.

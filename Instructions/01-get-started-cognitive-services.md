@@ -31,19 +31,13 @@ In this lab, you will complete the following tasks:
 
 Azure AI Services are cloud-based services that encapsulate artificial intelligence capabilities you can incorporate into your applications. You can provision individual Azure AI services resources for specific APIs (for example, **Language** or **Vision**), or you can provision a single **Azure AI Services** resource that provides access to multiple Azure AI services APIs through a single endpoint and key. In this case, you'll use a single **Azure AI Services** resource.
 
-1. On the Jump-VM, double-click on the Azure portal shortcut.
+1. Navigate to the **Azure Portal**.
 
-1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
-   
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-1. Now enter the following password and click on **Sign in**.
-   
-   * Password: <inject key="AzureAdUserPassword"></inject>
-
-   >**Note:** If the **Stay signed in?** pop-ups, select **No**.
+    ![Visual Studio Code Icon](./images/azureportal.png)
 
 1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+
+    ![Visual Studio Code Icon](./images/azureaiservice.png)
 
 1. On the **Azure AI service** home page, from the left navigation menu, select **Azure AI services multi-service account**, select **+ Create**, and create the resource with the following settings:
     
@@ -59,8 +53,6 @@ Azure AI Services are cloud-based services that encapsulate artificial intellige
 
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox 
 
-        ![Visual Studio Code Icon](./images/azureaiservice.png)
-
 1. Select **Review + create**, and once the validation passed, select **Create**.
 
 1. Wait for deployment to complete, and then view the deployment details.
@@ -73,7 +65,13 @@ Azure AI Services are cloud-based services that encapsulate artificial intellige
     
     - The *location* where the resource is hosted. This is required for requests to some (but not all) APIs.
 
-        >**Note:** Copy the values of **Endpoint** and **Key 1**, in a notepad. You will use this in the next task. 
+        >**Note:** Copy the values of **Endpoint** and **Key 1**, in a notepad. You will use this in the next task.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
 
 ## Task 3: Use a REST Interface
 
@@ -163,12 +161,6 @@ You can write code that consumes cognitive services REST APIs directly, but ther
 
     > **Note**: Some languages that require Unicode character sets may not be recognized in this simple console application.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 ### Review
 In this lab, you have completed:
 
@@ -177,4 +169,4 @@ In this lab, you have completed:
 - Used a REST Interface
 - Used an SDK
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
