@@ -91,7 +91,7 @@ A web browser tab will open and prompt you to sign into Azure. Do so, and then c
 5. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
     ```
-    .\UploadDocs
+    .\UploadDocs.cmd
     ```
 
 ## Index the documents
@@ -327,7 +327,7 @@ All of the other metadata and content fields in the source document are implicit
 2. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
 
     ```
-    modify-search
+    .\modify-search.cmd
     ```
 
 3. When the script has finished, return to the **Overview** page for your Azure AI Search resource in the Azure portal and view the **Indexers** page. The periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
