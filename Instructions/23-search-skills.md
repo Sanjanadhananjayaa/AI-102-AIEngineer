@@ -150,7 +150,7 @@ To implement the word count functionality as a custom skill, you'll create an Az
     - **Template details**:
         - **New Function**: wordcount
         - **Authorization level**: Function
-4. Wait for the *wordcount* function to be created. Then in its page, select the **Code + Test** tab.
+4. Click on create and wait for the *wordcount* function to be created. Then in its page, select the **Code + Test** tab.
 5. Replace the default function code with the following code:
 
 ```javascript
