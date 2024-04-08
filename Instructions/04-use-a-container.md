@@ -54,7 +54,7 @@ Many commonly used Azure AI services APIs are available in container images. For
 
             | Mark as secure | Key | Value |
             | -------------- | --- | ----- |
-            | Yes | `ApiKey` | *Either key for your Azure AI services resource* |
+            | Yes | `ApiKey` | *Enter key for your Azure AI services resource* |
             | Yes | `Billing` | *The endpoint URI for your Azure AI services resource* |
             | No | `Eula` | `accept` |
 
@@ -102,6 +102,12 @@ Many commonly used Azure AI services APIs are available in container images. For
     ```
 
 1. Verify that the command returns a JSON document containing information about the language detected in the two input documents (which should be English and French).
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
 In this lab, you have completed:

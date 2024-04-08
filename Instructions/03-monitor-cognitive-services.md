@@ -17,15 +17,23 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
 1. In the Azure portal, go to your **Azure AI services** resource and view its **Alerts** page under the **Monitoring** section.
 
-1. Select **+ Create** dropdown, and select **Alert rule**.
+    ![Visual Studio Code Icon](./images/alerts.png)
+
+1. Select **+ Create (1)** dropdown, and select **Alert rule (2)**.
+
+    ![Visual Studio Code Icon](./images/create.png)
 
 1. In the **Create an alert rule** page, under **Scope**, verify that the your Azure AI services resource is listed.
 
 1. Select **Condition** tab, and view the **Select a signal** pane that appears on the right, where you can select a signal type to monitor.
 
-1. In the **Signal type** list, under **Activity Log**, in the filtered list, select **List Keys**, and select **Apply**.
+1. In the **Signal type** list, under **Activity Log**, in the filtered list, select **List Keys (1)**, and select **Apply (2)**.
+
+    ![Visual Studio Code Icon](./images/alertrule.png)
 
 1. Review the activity over the past 6 hours.
+
+    ![Visual Studio Code Icon](./images/6hours.png)
 
 1. Select the **Actions** tab. Note that you can specify an *action group*. This enables you to configure automated actions when an alert is fired - for example, sending an email notification. We won't do that in this exercise; but it can be useful to do this in a production environment.
 
@@ -87,4 +95,4 @@ In this lab, you have completed:
 - Configured an alert
 - Visualized a metric
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
