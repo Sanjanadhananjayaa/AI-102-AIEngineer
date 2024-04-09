@@ -34,7 +34,8 @@ To use the Form Recognizer service, you need a Form Recognizer resource in your 
 
 1. Select **Review + create** and **Create**.
 
-1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need the **endpoint** and one of the **keys** from this page to manage access from your code later on. 
+1. Wait for the deployment to complete. Once the deployment is successful, click on **Go to resources** to view the deployment details.
+1. In the left navigation pane, under the **Resource Management** section, choose **Keys and Endpoint**. Make sure to note down the Keys and Endpoint values in notepad. You'll require the endpoint and one of the keys from this page for the subsequent procedure.
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
