@@ -36,7 +36,9 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
     ![](./images/Ai_Video_Synthesizer_download_1.png)
    
 5. In Video Analyzer, select the **Upload** option. Then select the option to **Browse for files** and Select the **Video downloaded** in earlier step and click on **Open**. select the checkbox to verify compliance with Microsoft's policies for facial recognition, and Click on **Upload + Index**. do not close the upload and index page it will cause interruption in the index of video.
-   
+       
+    ![Video Analyzer search results for Bee](./images/lab8-image1.png)
+
 6. After the file has uploaded, wait a few minutes while Video Analyzer automatically indexes it. Dublicate the Tab and View the Index Status
 
     ![](./images/Ai_Video_Synthesizer_Status_2.png)
@@ -49,15 +51,15 @@ The indexing process extracts insights from the video, which you can view in the
 
 1. In the Video Analyzer portal, when the video is indexed, Click middle of the video to play it. You'll see the video player alongside a pane that shows insights extracted from the video.
 
-![Video Analyzer with a video player and Insights pane](./images/video-indexer-insights.png)
+    ![Video Analyzer with a video player and Insights pane](./images/video-indexer-insights.png)
 
 2. As the video plays, select the **Timeline** tab to view a transcript of the video audio.
 
-![Video Analyzer with a video player and Timeline pane showing the video transcript.](./images/video-indexer-transcript.png)
+    ![Video Analyzer with a video player and Timeline pane showing the video transcript.](./images/video-indexer-transcript.png)
 
 3. At the top right of the portal, select the **View** symbol (which looks similar to &#128455;), and in the list of insights, in addition to **Transcript**, select **OCR** and **Speakers**.
 
-![Video Analyzer view menu with Transcript, OCR, and Speakers selected](./images/video-indexer-view-menu.png)
+    ![Video Analyzer view menu with Transcript, OCR, and Speakers selected](./images/video-indexer-view-menu.png)
 
 4. Observe that the **Timeline** pane now includes:
     - Transcript of audio narration.
@@ -82,7 +84,7 @@ You can use Video Analyzer to search the video for insights.
 3. Select the beginning of the section where the presence of a bee is indicated, and view the video at that point (you may need to pause the video and select carefully - the bee only appears briefly!)
 4. Clear the **Search** box to show all insights for the video.
 
-![Video Analyzer search results for Bee](./images/video-indexer-search.png)
+    ![Video Analyzer search results for Bee](./images/video-indexer-search.png)
 
 ## Use Video Analyzer widgets
 
@@ -93,7 +95,7 @@ The Video Analyzer portal is a useful interface to manage video indexing project
 2. In the Video Analyzer portal, return to the **Media files** page and open your **Responsible AI** video.
 
 3. Under the video player, select **&lt;/&gt; Embed** to view the HTML iframe code to embed the widgets.
-     ![Video Analyzer search results for Bee](./images/lab8-image1.png)
+     ![Video Analyzer search results for Bee](./images/lab8-image2.png)
 
 4. In the **Share and Embed** dialog box, select the **Player** widget, set the video size to 560 x 315,  and then copy the embed code to the clipboard.
 
