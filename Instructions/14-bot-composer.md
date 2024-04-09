@@ -28,9 +28,27 @@ In this exercise, you will create a bot that uses the OpenWeather service to ret
 
 1. In a web browser, go to the OpenWeather site at `https://openweathermap.org/price`.
 
-1. Request a free API key, and create an OpenWeather account with your personal account.
+1. Request a free API key, and create an OpenWeather account, using these credentials:
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. After signing up, view the **API keys** page to see your API key.
+
+1. Open a new tab, go to the Outlook site at 'https://www.microsoft.com/en-us/microsoft-365/outlook/log-in'.
+
+1. Use these credentials, for siging in:
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. You will recieve email for approving your email, select **Verify your email** page.
+
+1. After approving the email, you will recieve new email regarding your **API keys**.
+
+    >**Note:** Do not close the outlook page.
 
 ## Task 2: Update Bot Framework Composer
 
@@ -38,11 +56,13 @@ You're going to use the Bot Framework Composer to create your bot. This tools is
 
 > **Note**: Updates may include changes to the user interface that affect the instructions in this exercise.
 
-1. Open an edge browser, copy and paste this link, `https://aka.ms/bf-composer-download-win`, download the **Bot Framework Composer**.
+1. Open a new tab, copy and paste this link, `https://aka.ms/bf-composer-download-win`, download the **Bot Framework Composer**.
 
-1. Start the **Bot Framework Composer**, and if you are not automatically prompted to install an update, use the **Check for updates** option on the **Help** menu to check for updates.
+1. Start the **Bot Framework Composer** installation, and if you are not automatically prompted to install an update, use the **Check for updates** option on the **Help** menu to check for updates.
 
 1. If an update is available, choose the option to install it when the application is closed. Then close the Bot Framework Composer and install the update for the currently logged in user, restarting the Bot Framework Composer after the installation is complete. Installation may take a few minutes.
+
+    >**Note:** If **Help us improve?** pop-ups, select **Not now**.
 
 1. Ensure that the version of Bot Framework Composer is **2.0.0** or later.
 
@@ -66,7 +86,13 @@ Now you're ready to use the Bot Framework Composer to create a bot.
 
 1. On the **Home** screen, select **+ Create new**.
 
-1. On the **Select a template** pop-up, select **Empty Bot** and select **Next**. Name it as **WeatherBot** and create it in a C:\ fodler.
+1. On the **Select a template** pop-up, select **Empty Bot** and select **Next**. Name it as **WeatherBot**, select **Location** as **C:\** folder, and select **Create**.
+
+    >**Note:** If the Node js required pop-up appears, select **Cancel**, anf follow these steps:
+
+    - Select the **Start** button.
+
+    - Select the **Power** button, and click on **Restart**.
 
 1. Close the **Get Started** pane if it opens, and then in the navigation pane on the left, select **Greeting** to open the authoring canvas and show the *ConversationUpdate* activity that is called when a user initially joins a conversation with the bot. The activity consists of a flow of actions.
 
@@ -74,7 +100,7 @@ Now you're ready to use the Bot Framework Composer to create a bot.
 
 1. In the properties pane on the left, edit the title of **Greeting** by selecting the word **Greeting** at the top of the properties pane on the right and changing it to **WelcomeUsers**.
 
-1. In the authoring canvas, select the **Send a response** action. Then, in the properties pane, change the default text from **Welcome to your bot**  to `Hi! I'm WeatherBot.`
+1. In the authoring canvas, select the **Send a response** action. Then, in the properties pane, change the default text from **Welcome to your bot.**  to `Hi! I'm WeatherBot.`
 
 1. In the authoring canvas, select the final **+** symbol (just above the circle that marks the <u>end</u> of the dialog flow), and add a new **Ask a question** action for a **Text** response.
 
@@ -167,13 +193,12 @@ First, you need to define a dialog flow that will be used to handle questions ab
 
 1. If the call was successful, you need to store the response in a variable. On the authoring canvas, in the **True** branch, add a **Manage properties** > **Set properties** action. Then in the properties pane, add the following property assignments:
 
-    ```javascript
-    // Property: Value
-    // -- | --
-    // dialog.weather | =dialog.api_response.content.weather[0].description
-    // dialog.temp | =round(dialog.api_response.content.main.temp)
-    // dialog.icon | =dialog.api_response.content.weather[0].icon
-    ```
+    | Property        | Value                                     |
+    |-----------------|-------------------------------------------|
+    | dialog.weather | =dialog.api_response.content.weather[0].description |
+    | dialog.temp    | =round(dialog.api_response.content.main.temp)       |
+    | dialog.icon    | =dialog.api_response.content.weather[0].icon      |
+
 
 1. Still in the **True** branch, add a **Send a response** action under the **Set a property** action and set its text to:
 
@@ -181,7 +206,7 @@ First, you need to define a dialog flow that will be used to handle questions ab
     The weather in ${dialog.city} is ${dialog.weather} and the temperature is ${dialog.temp}&deg;.
     ```
 
-    >**Note**: This message uses the **dialog.city**, **dialog.weather**, and **dialog.temp** properties you set in the previous actions. Later, you'll also use the **dialog.icon** property.*
+    >**Note**: This message uses the **dialog.city**, **dialog.weather**, and **dialog.temp** properties you set in the previous actions. Later, you'll also use the **dialog.icon** property.
 
 1. You also need to account for a response from the weather service that is not 200, so in the **False** branch, add a **Send a response** action and set its text to `I got an error: ${dialog.api_response.content.message}.` The dialog flow should now look like this:
 
@@ -195,11 +220,11 @@ Now you need some way for the new dialog to be initiated from the existing welco
 
     ![Selected WeatherBot workflow](./images/select-workflow.png)
 
-1. In the properties pane for the selected **WeatherBot** dialog, in the **Language Understanding** section, set the **Recognizer/Dispatch type** to **Regular expression**, by clicking on the **Change** button, and select **Done**.
+1. In the properties pane for the selected **WeatherBot** dialog, in the **Language Understanding** section, set the **Recognizer type** to **Regular expression recognizer**.
 
     >**Note:** The default recognizer type uses the Language Understanding service to product the user's intent using a natural language understanding model. We're using a regular expression recognizer to simplify this exercise. In a real, application, you should consider using Language Understanding to allow for more sophisticated intent recognition.
 
-1. In the **...** menu for the **WeatherBot** dialog, select **Add new Trigger**.
+1. In the **...** menu for the **WeatherBot** dialog, select **+ Add new Trigger**.
 
 1. Then create a trigger with the following settings:
 
@@ -291,15 +316,21 @@ The interactions with the weather bot so far has been through text.  Users enter
     ]
     ```
 
-This template will use the same variables as before for the weather condition but also adds a title to the card that will be displayed, along with an image for the weather condition.
+    >**Note:** This template will use the same variables as before for the weather condition but also adds a title to the card that will be displayed, along with an image for the weather condition.
 
 ### Task 6.3: Test the new user interface
 
-1. Start the bot and open the web chat pane. Restart the conversation, and after entering your name, enter `What is the weather like?`. Then, when prompted, click the **Cancel** button to cancel the request.
+1. Restart the bot and open the web chat pane. Restart the conversation, and after entering your name, enter `What is the weather like?`. Then, when prompted, click the **Cancel** button to cancel the request.
 
 1. After canceling, enter `Tell me about the weather` and when prompted, enter a city, such as `London`. The bot will contact the service and should respond with a card indicating the weather conditions.
 
 1. When you have finished testing, close the emulator and stop the bot.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
 In this lab, you have completed:

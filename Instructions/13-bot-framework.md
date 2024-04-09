@@ -191,4 +191,4 @@ In this lab, you have completed:
 + Tested the bot in the Bot Framework Emulator
 + Modified the bot code
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
