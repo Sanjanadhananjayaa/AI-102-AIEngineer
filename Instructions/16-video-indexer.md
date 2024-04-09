@@ -25,8 +25,13 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 > **Tip**: If the Video Analyzer page is slow to load in the hosted lab environment, use your locally installed browser. You can switch back to the hosted VM for the later tasks.
 
 1. In your browser, open the Video Analyzer portal at `https://www.videoindexer.ai`.
-2. If you have an existing Video Analyzer account, sign in. Otherwise, sign up for a free account and sign in using your Microsoft account (or any other valid account type). If you have difficulty signing in, try opening a private browser session.
-3. Download the video by browsing the url in new tab **https://aka.ms/responsible-ai-video**.
+2. When Choose an account to continue: prompted select **Microsoft Entra ID (formerly Azure AD)** and sign-in with following credentials.
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+4. Download the video by browsing the url in new tab **https://aka.ms/responsible-ai-video**.
 
     ![](./images/Ai_Video_Synthesizer_download_1.png)
    
