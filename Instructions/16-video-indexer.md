@@ -123,7 +123,7 @@ To use the Video Analyzer API, you need some information to authenticate request
 
 2. Note the **Account ID** on this page - you will need it later.
 
-    ![Video Analyzer search results for Bee](./images/lab8-image3.png)
+    ![Video Analyzer search results for Bee](./images/lab8-image(3).png)
 
 3. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
 4. On the **Profile** page, view the **Subscriptions** associated with your profile.
@@ -131,7 +131,7 @@ To use the Video Analyzer API, you need some information to authenticate request
 
     ![Video Analyzer search results for Bee](./images/lab8-image4.png)
 
-    ![Video Analyzer search results for Bee](./images/lab8-image5.png)
+    ![Video Analyzer search results for Bee](./images/lab8-image(5).png)
 
 ### Use the REST API
 
