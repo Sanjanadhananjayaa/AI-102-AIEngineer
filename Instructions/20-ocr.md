@@ -25,7 +25,7 @@ If you don't already have one in your subscription, you'll need to provision a *
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. Select the **&#65291;Create a resource** button, search for *Azure AI services*, select **Azure AI Services**, and create an Azure AI services multi-service account resource with the following setting
+2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>*.
