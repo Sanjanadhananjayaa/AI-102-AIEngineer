@@ -73,7 +73,6 @@ In this exercise, you'll complete a partially implemented client application tha
      dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --version 6.0.0
      ```
 
-
 3. View the contents of the **read-text** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
 
@@ -91,7 +90,6 @@ In this exercise, you'll complete a partially implemented client application tha
      using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
      using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
      ```
-
 
 5. In the code file for your client application, in the **Main** function, note that the code to load the configuration settings has been provided. Then find the comment **Authenticate Azure AI Vision client**. Then, under this comment, add the following language-specific code to create and authenticate a Azure AI Vision client object:
 
@@ -182,7 +180,6 @@ The **Read** API uses an asynchronous operation model, in which a request to sta
      ```
      dotnet run
      ```
-
 6. When prompted, enter **2** and observe the output, which is the text extracted from the document.
 
 ## Task 6: Read handwritten text
@@ -198,8 +195,6 @@ In addition to printed text, the **Read** API can extract handwritten text in En
      ```
      dotnet run
      ```
-
-
 4. When prompted, enter **3** and observe the output, which is the text extracted from the document.
 
 ## More information
