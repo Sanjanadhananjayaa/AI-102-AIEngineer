@@ -35,8 +35,8 @@ If you don't already have one in your subscription, you'll need to provision a *
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
 
 3. Select **Review + create** and **Create**.
-4. Wait for deployment to complete, and then view the deployment details.
-5. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need the endpoint and one of the keys from this page in the next procedure.
+4. Wait for the deployment to complete. Once the deployment is successful, click on **Go to resources** to view the deployment details.
+5. In the left navigation pane, under the **Resource Management** section, choose **Keys and Endpoint**. Make sure to note down the Keys and Endpoint values in notepad. You'll require the endpoint and one of the keys from this page for the subsequent procedure.
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
