@@ -34,7 +34,7 @@ To use the Form Recognizer service, you need a Form Recognizer resource in your 
 
 1. Select **Review + create** and **Create**.
 
-3. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need the **endpoint** and one of the **keys** from this page to manage access from your code later on. 
+1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need the **endpoint** and one of the **keys** from this page to manage access from your code later on. 
 
 ## Gather documents for training
 
@@ -60,17 +60,17 @@ You'll use the sample forms from the **21-custom-form/sample-forms** folder in t
 
 6. In the terminal pane, enter the following command to establish an authenticated connection to your Azure subscription.
     
-```
-az login --output none
-```
+     ```
+     az login --output none
+     ```
 
 7. When prompted, sign into your Azure subscription. Then return to Visual Studio Code and wait for the sign-in process to complete.
 
 8. Run the following command to list Azure locations.
 
-```
-az account list-locations -o table
-```
+     ```
+     az account list-locations -o table
+     ```
 
 9. In the output, find the **Name** value that corresponds with the location of your resource group (for example, for *East US* the corresponding name is *eastus*).
 
@@ -90,9 +90,9 @@ Then **save** your changes.
 
 13. In the terminal for the **21-custom-form** folder, enter the following command to run the script:
 
-```
-.\setup
-```
+     ```
+     .\setup
+     ```
 
 14. When the script completes, review the displayed output and note your Azure resource's SAS URI.
 
@@ -127,7 +127,7 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
 8. Edit the configuration file, modifying the settings to reflect:
     - The **endpoint** for your Document Intelligence resource.
     - A **key** for your Document Intelligence resource.
-    - The **SAS URI** for your blob container.
+    - The **SAS URI** for your blob container. **Save** your changes.
 
 9. Note that the **train-model** folder contains a code file for the client application:
 
@@ -144,11 +144,11 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
 
 11. Return the integrated terminal for the **train-model** folder, and enter the following command to run the program:
 
-**C#**
-
-```
-dotnet run
-```
+     **C#**
+     
+     ```
+     dotnet run
+     ```
 
 12. Wait for the program to end, then review the model output.
 13. Write down the Model ID in the terminal output. You will need it for the next part of the lab. 
@@ -161,21 +161,21 @@ dotnet run
 
 3. In the terminal for the **test-model** folder, install the Document Intelligence package by running the appropriate command for your language preference:
 
-**C#**
+     **C#**
+     
+     ```
+     dotnet add package Azure.AI.FormRecognizer --version 3.0.0 
+     ```
 
-```
-dotnet add package Azure.AI.FormRecognizer --version 3.0.0 
-```
-
-*This isn't strictly necessary if you previously used pip to install the package into Python environment; but it does no harm to ensure it's installed!*
+    >**Note**: This isn't strictly necessary if you previously used pip to install the package into Python environment; but it does no harm to ensure it's installed!*
 
 4. In the same terminal for the **test-model** folder, install the Tabulate library. This will provide your output in a table:
 
-**C#**
-
-```
-dotnet add package Tabulate.NET --version 1.0.5
-```
+     **C#**
+     
+     ```
+     dotnet add package Tabulate.NET --version 1.0.5
+     ```
 
 5. In the **test-model** folder, edit the configuration file (**appsettings.json** or **.env**, depending on your language preference) to add the following values:
     - Your Document Intelligence endpoint.
@@ -190,11 +190,11 @@ dotnet add package Tabulate.NET --version 1.0.5
 
 7. Return the integrated terminal for the **test-model** folder, and enter the following command to run the program:
 
-**C#**
-
-```
-dotnet run
-```
+     **C#**
+     
+     ```
+     dotnet run
+     ```
     
 8. View the output and observe how the output for the model provides field names like "CompanyPhoneNumber" and "DatedAs".   
 
