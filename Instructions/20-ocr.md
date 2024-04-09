@@ -45,11 +45,11 @@ In this exercise, you'll complete a partially implemented client application tha
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **20-ocr** folder and expand the **C-Sharp** folder depending on your language preference.
 2. Right-click the **read-text** folder and open an integrated terminal. Then install the Azure AI Vision SDK package by running the appropriate command for your language preference:
 
-**C#**
-
-```
-dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --version 6.0.0
-```
+     **C#**
+     
+     ```
+     dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --version 6.0.0
+     ```
 
 
 3. View the contents of the **read-text** folder, and note that it contains a file for configuration settings:
