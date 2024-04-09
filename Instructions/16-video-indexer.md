@@ -29,7 +29,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 4. Download the video by browsing the url in new tab **https://aka.ms/responsible-ai-video**.
 
@@ -126,6 +126,11 @@ To use the Video Analyzer API, you need some information to authenticate request
     ![Video Analyzer search results for Bee](./images/copy.png)
 
 3. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
 4. On the **Profile** page, view the **Subscriptions** associated with your profile.
 5. On the page with your subscription(s), observe that you have been assigned two keys (primary and secondary) for each subscription. Then select **Show** for any of the keys to see it and copy the Keys You will need this shortly.
 
