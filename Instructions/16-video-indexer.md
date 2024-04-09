@@ -93,6 +93,7 @@ The Video Analyzer portal is a useful interface to manage video indexing project
 2. In the Video Analyzer portal, return to the **Media files** page and open your **Responsible AI** video.
 
 3. Under the video player, select **&lt;/&gt; Embed** to view the HTML iframe code to embed the widgets.
+     ![Video Analyzer search results for Bee](./images/lab8-image1.png)
 
 4. In the **Share and Embed** dialog box, select the **Player** widget, set the video size to 560 x 315,  and then copy the embed code to the clipboard.
 
@@ -117,10 +118,18 @@ Video Analyzer provides a REST API that you can use to upload and manage videos 
 To use the Video Analyzer API, you need some information to authenticate requests:
 
 1. In the Video Analyzer portal, expand the menu (>>) on the left side and select the **Account settings** page.
+
 2. Note the **Account ID** on this page - you will need it later.
+
+    ![Video Analyzer search results for Bee](./images/lab8-image3.png)
+
 3. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
 4. On the **Profile** page, view the **Subscriptions** associated with your profile.
 5. On the page with your subscription(s), observe that you have been assigned two keys (primary and secondary) for each subscription. Then select **Show** for any of the keys to see it and copy the Keys You will need this shortly.
+
+    ![Video Analyzer search results for Bee](./images/lab8-image4.png)
+
+    ![Video Analyzer search results for Bee](./images/lab8-image5.png)
 
 ### Use the REST API
 
