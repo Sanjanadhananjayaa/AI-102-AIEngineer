@@ -6,7 +6,7 @@ Optical character recognition (OCR) is a subset of computer vision that deals wi
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
-     ![Visual Studio Code Icon](./images/vscode.png)
+     ![Visual Studio Code Icon](./images/vscode.png) 
 
 2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
 
@@ -141,6 +141,9 @@ The **Read** API uses an asynchronous operation model, in which a request to sta
          }
      }  
      ```
+
+   ![Visual Studio Code Icon](./images/lab11-image1)
+
 
 4. Examine the code you added to the **GetTextRead** function. It submits a request for a read operation, and then repeatedly checks status until the operation has completed. If it was successful, the code processes the results by iterating through each page, and then through each line.
 5. Save your changes and return to the integrated terminal for the **read-text** folder, and enter the following command to run the program:
