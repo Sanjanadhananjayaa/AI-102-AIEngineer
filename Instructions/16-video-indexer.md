@@ -1,11 +1,25 @@
-# Analyze Video with Video Analyzer
+# Exercise 2 : Analyze Video with Video Analyzer
+
+## Lab scenario
 
 A large proportion of the data created and consumed today is in the format of video. **Azure AI Video Indexer** is an AI-powered service that you can use to index videos and extract insights from them.
 
 > **Note**: From June 21st 2022, capabilities of Azure AI services that return personally identifiable information are restricted to customers who have been granted [limited access](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access). Without getting limited access approval, recognizing people and celebrities with Video Analyzer for this lab is not available. For more details about the changes Microsoft has made, and why - see [Responsible AI investments and safeguards for facial recognition](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/).
 
+## Objectives
 
-## Open the cloned folder in Visual Studio Code.
+In this lab, you will complete the following tasks:
+
++ Task 1: Open the cloned folder in Visual Studio Code
++ Task 2: Upload a video to Video Analyzer
++ Task 3: Review video insights
++ Task 4: Search for insights
++ Task 5: Use Video Analyzer widgets
++ Task 6: Use the Video Analyzer REST API
++ Task 6.1 : Get your API details
++ Task 7: Use the REST API
+
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
 
@@ -18,7 +32,7 @@ A large proportion of the data created and consumed today is in the format of vi
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
 
-## Upload a video to Video Analyzer
+## Task 2: Upload a video to Video Analyzer
 
 First, you'll need to sign into the Video Analyzer portal and upload a video.
 
@@ -45,7 +59,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
 > **Note**: In this exercise, we're using this video to explore Video Analyzer functionality; but you should take the time to watch it in full when you've finished the exercise as it contains useful information and guidance for developing AI-enabled applications responsibly! 
 
-## Review video insights
+## Task 3: Review video insights
 
 The indexing process extracts insights from the video, which you can view in the portal.
 
@@ -75,7 +89,7 @@ The indexing process extracts insights from the video, which you can view in the
 
     The insights found can help you determine the main themes in the video. For example, the **topics** for this video show that it is clearly about technology, social responsibility, and ethics.
 
-## Search for insights
+## Task 4: Search for insights
 
 You can use Video Analyzer to search the video for insights.
 
@@ -86,7 +100,7 @@ You can use Video Analyzer to search the video for insights.
 
     ![Video Analyzer search results for Bee](./images/video-indexer-search.png)
 
-## Use Video Analyzer widgets
+## Task 5: Use Video Analyzer widgets
 
 The Video Analyzer portal is a useful interface to manage video indexing projects. However, there may be occasions when you want to make the video and its insights available to people who don't have access to your Video Analyzer account. Video Analyzer provides widgets that you can embed in a web page for this purpose.
 
@@ -111,11 +125,11 @@ The Video Analyzer portal is a useful interface to manage video indexing project
 
     ![Video Analyzer widgets in a web page](./images/video-indexer-widgets.png)
 
-## Use the Video Analyzer REST API
+## Task 6: Use the Video Analyzer REST API
 
 Video Analyzer provides a REST API that you can use to upload and manage videos in your account.
 
-### Get your API details
+## Task 6.1 : Get your API details
 
 To use the Video Analyzer API, you need some information to authenticate requests:
 
@@ -138,7 +152,7 @@ To use the Video Analyzer API, you need some information to authenticate request
 
     ![Video Analyzer search results for Bee](./images/lab8-image(5).png)
 
-### Use the REST API
+## Task 7: Use the REST API
 
 Now that you have the account ID and an API key, you can use the REST API to work with videos in your account. In this procedure, you'll use a PowerShell script to make REST calls; but the same principles apply with HTTP utilities such as cURL or Postman, or any programming language capable of sending and receiving JSON over HTTP.
 
@@ -165,3 +179,17 @@ All interactions with the Video Analyzer REST API follow the same pattern:
 Recognition of people and celebrities is still available, but following the [Responsible AI Standard](https://aka.ms/aah91ff) those are restricted behind a Limited Access policy. These features include facial identification and celebrity recognition. To learn more and apply for access, see the [Limited Access for Azure AI Services](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-limited-access).
 
 For more information about **Video Analyzer**, see the [Video Analyzer documentation](https://docs.microsoft.com/azure/azure-video-analyzer/video-analyzer-for-media-docs/).
+
+### Review
+In this lab, you have completed:
+
++  Open the cloned folder in Visual Studio Code
++  Upload a video to Video Analyzer
++  Review video insights
++  Search for insights
++  Use Video Analyzer widgets
++  Use the Video Analyzer REST API
++  Get your API details
++  Use the REST API
+
+## You have successfully completed the lab
