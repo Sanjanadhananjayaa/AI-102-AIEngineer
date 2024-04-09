@@ -104,7 +104,7 @@ Then **save** your changes.
 
 > **Important**: Before moving on, paste the SAS URI somewhere you will be able to retrieve it again later (for example, in a new text file in Visual Studio Code).
 
-15. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account just created. Open the storage account and in the pane on the left, select **Storage Browser (preview)**. Then in Storage Browser, expand **BLOB CONTAINERS** and select the **sampleforms** container to verify that the files have been uploaded from your local **21-custom-form/sample-forms** folder.
+15. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account just created. Open the storage account and in the pane on the left, select **Storage Browser**. Then in Storage Browser, expand **BLOB CONTAINERS** and select the **sampleforms** container to verify that the files have been uploaded from your local **21-custom-form/sample-forms** folder.
 
 ## Train a model using the Document Intelligence SDK
 
@@ -173,8 +173,6 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
      dotnet add package Azure.AI.FormRecognizer --version 3.0.0 
      ```
 
-    >**Note**: This isn't strictly necessary if you previously used pip to install the package into Python environment; but it does no harm to ensure it's installed!*
-
 4. In the same terminal for the **test-model** folder, install the Tabulate library. This will provide your output in a table:
 
      **C#**
@@ -188,7 +186,7 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
     - Your Document Intelligence key.
     - The Model ID generated when you trained the model (you can find this by switching the terminal back to the **cmd** console for the **train-model** folder). **Save** your changes.
 
-6. In the **test-model** folder, open the code file for your client application (*Program.cs* for C#, *test-model.py* for Python) and review the code it contains, noting the following details:
+6. In the **test-model** folder, open the code file for your client application (*Program.cs* for C#) and review the code it contains, noting the following details:
     - Namespaces from the package you installed are imported
     - The **Main** function retrieves the configuration settings, and uses the key and endpoint to create an authenticated **Client**.
     - The client is then used to extract form fields and values from the **test1.jpg** image.
