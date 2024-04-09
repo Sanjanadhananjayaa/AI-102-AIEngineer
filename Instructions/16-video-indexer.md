@@ -89,16 +89,24 @@ You can use Video Analyzer to search the video for insights.
 The Video Analyzer portal is a useful interface to manage video indexing projects. However, there may be occasions when you want to make the video and its insights available to people who don't have access to your Video Analyzer account. Video Analyzer provides widgets that you can embed in a web page for this purpose.
 
 1. In Visual Studio Code, in the **16-video-indexer** folder, open **analyze-video.html**. This is a basic HTML page to which you will add the Video Analyzer **Player** and **Insights** widgets. Note the reference to the **vb.widgets.mediator.js** script in the header - this script enables multiple Video Analyzer widgets on the page to interact with one another.
+
 2. In the Video Analyzer portal, return to the **Media files** page and open your **Responsible AI** video.
+
 3. Under the video player, select **&lt;/&gt; Embed** to view the HTML iframe code to embed the widgets.
+
 4. In the **Share and Embed** dialog box, select the **Player** widget, set the video size to 560 x 315,  and then copy the embed code to the clipboard.
+
 5. In Visual Studio Code, in the **analyze-video.html** file, paste the copied code under the comment **&lt;-- Player widget goes here -- &gt;**.
+
 6. Back in the **Share and Embed** dialog box, select the **Insights** widget and then copy the embed code to the clipboard. Then close the **Share and Embed** dialog box, switch back to Visual Studio Code, and paste the copied code under the comment **&lt;-- Insights widget goes here -- &gt;**.
+
 7. Save the file. Then in the **Explorer** pane, right-click **analyze-video.html** and select **Reveal in File Explorer**.
+
 8. In File Explorer, open **analyze-video.html** in your browser to see the web page.
+
 9. Experiment with the widgets, using the **Insights** widget to search for insights and jump to them in the video.
 
-![Video Analyzer widgets in a web page](./images/video-indexer-widgets.png)
+    ![Video Analyzer widgets in a web page](./images/video-indexer-widgets.png)
 
 ## Use the Video Analyzer REST API
 
