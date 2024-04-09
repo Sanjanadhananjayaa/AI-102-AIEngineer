@@ -28,8 +28,8 @@ If you don't already have one in your subscription, you'll need to provision a *
 2. Select the **&#65291;Create a resource** button, search for *Azure AI services*, select **Azure AI Services**, and create an Azure AI services multi-service account resource with the following setting
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>*.
-    - **Region**: Choose same as resource group location.
-    - **Name**: *AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+    - **Region**: **<inject key="Region" enableCopy="false"/>**.
+    - **Name**: **AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
     - **Pricing tier**: Standard S0
     - **Responsible AI Notice**: Agree.
 3. Select **Review + create** and **Create**.
