@@ -26,6 +26,8 @@ You're going to use the Bot Framework SDK to create your bot, and the Bot Framew
 
 1. Start the **Bot Framework Emulator**, and if you are prompted to install an update, do so for the currently logged in user. If you are not prompted automatically, use the **Check for update** option on the **Help** menu to check for updates.
 
+    >**Note:** If **Help us improve?** pop-ups, select **Not now**.
+    
 1. After installing any available update, close the Bot Framework Emulator until you need it again later.
 
 ## Task 2: Open the cloned repository for this course
