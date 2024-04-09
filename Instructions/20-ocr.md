@@ -1,4 +1,4 @@
-# Read Text in Images
+# Exercise 1 : Read Text in Images
 
 ## Lab scenario
 
