@@ -1,9 +1,24 @@
-# Analyze Images with Computer Vision
+# Exercise 1: Analyze Images with Computer Vision
 
 Azure AI Vision is an artificial intelligence capability that enables software systems to interpret visual input by analyzing images. In Microsoft Azure, the **Vision** Azure AI service provides pre-built models for common computer vision tasks, including analysis of images to suggest captions and tags, detection of common objects, landmarks, celebrities, brands, and the presence of adult content. You can also use the Azure AI Vision service to analyze image color and formats, and to generate "smart-cropped" thumbnail images.
 
+## Objectives
 
-## Open the cloned folder in Visual Studio Code.
+In this lab, you will complete the following tasks:
+
+ + Task 1: Open the cloned folder in Visual Studio Code
+ + Task 2: Provision a Cognitive Services resource
+ + Task 3: Prepare to use the Azure AI Vision SDK
+ + Task 4: View the images you will analyze
+ + Task 5: Analyze an image to suggest a caption
+ + Task 6: Get suggested tags for an image
+ + Task 7: Get image categories
+ + Task 8: Get brands in an image
+ + Task 9: Detect and locate objects in an image
+ + Task 10: Get moderation ratings for an image
+ + Task 11: Generate a thumbnail image
+
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
@@ -16,7 +31,7 @@ Azure AI Vision is an artificial intelligence capability that enables software s
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
 
-## Provision a Cognitive Services resource
+## Task 2: Provision a Cognitive Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
@@ -46,7 +61,7 @@ If you don't already have one in your subscription, you'll need to provision a *
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
 
 
-## Prepare to use the Azure AI Vision SDK
+## Task 3: Prepare to use the Azure AI Vision SDK
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Vision SDK to analyze images.
 
@@ -80,14 +95,14 @@ In this exercise, you'll complete a partially implemented client application tha
      ```
 
     
-## View the images you will analyze
+## Task 4: View the images you will analyze
 
 In this exercise, you will use the Azure AI Vision service to analyze multiple images.
 
 1. In Visual Studio Code, expand the **image-analysis** folder and the **images** folder it contains.
 2. Select each of the image files in turn to view then in Visual Studio Code.
 
-## Analyze an image to suggest a caption
+## Task 5: Analyze an image to suggest a caption
 
 Now you're ready to use the SDK to call the Vision service and analyze an image.
 
@@ -170,7 +185,7 @@ Now you're ready to use the SDK to call the Vision service and analyze an image.
 7. Run the program again, this time with the argument **images/building.jpg** to see the caption that gets generated for the **building.jpg** image.
 8. Repeat the previous step to generate a caption for the **images/person.jpg** file.
 
-## Get suggested tags for an image
+## Task 6: Get suggested tags for an image
 
 It can sometimes be useful to identify relevant *tags* that provide clues about the contents of an image.
 
@@ -192,7 +207,7 @@ It can sometimes be useful to identify relevant *tags* that provide clues about 
 
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing that in addition to the image caption, a list of suggested tags is displayed.
 
-## Get image categories
+## Task 7: Get image categories
 
 The Vision service can suggest *categories* for images, and within each category it can identify well-known landmarks.
 
@@ -236,7 +251,7 @@ The Vision service can suggest *categories* for images, and within each category
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing that in addition to the image caption and tags, a list of suggested categories is displayed along with any recognized landmarks (in particular in the **building.jpg** image).
 
-## Get brands in an image
+## Task 8: Get brands in an image
 
 Some brands are visually recognizable from logo's, even when the name of the brand is not displayed. The Vision service is trained to identify thousands of well-known brands.
 
@@ -258,7 +273,7 @@ Some brands are visually recognizable from logo's, even when the name of the bra
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing any brands that are identified (specifically, in the **person.jpg** image).
 
-## Detect and locate objects in an image
+## Task 9: Detect and locate objects in an image
 
 *Object detection* is a specific form of computer vision in which individual objects within an image are identified and their location indicated by a bounding box..
 
@@ -300,7 +315,7 @@ Some brands are visually recognizable from logo's, even when the name of the bra
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing any objects that are detected. After each run, view the **objects.jpg** file that is generated in the same folder as your code file to see the annotated objects.
 
-## Get moderation ratings for an image
+## Task 10: Get moderation ratings for an image
 
 Some images may not be suitable for all audiences, and you may need to apply some moderation to identify images that are adult or violent in nature.
 
@@ -318,7 +333,7 @@ Some images may not be suitable for all audiences, and you may need to apply som
 
 > **Note**: In the preceding tasks, you used a single method to analyze the image, and then incrementally added code to parse and display the results. The SDK also provides individual methods for suggesting captions, identifying tags, detecting objects, and so on - meaning that you can use the most appropriate method to return only the information you need, reducing the size of the data payload that needs to be returned. See the [.NET SDK documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/computervision?view=azure-dotnet) for more details.
 
-## Generate a thumbnail image
+## Task 11: Generate a thumbnail image
 
 In some cases, you may need to create a smaller version of an image named a *thumbnail*, cropping it to include the main visual subject within new image dimensions.
 
@@ -369,3 +384,20 @@ In some cases, you may need to create a smaller version of an image named a *thu
 In this exercise, you explored some of the image analysis and manipulation capabilities of the Azure AI Vision service. The service also includes capabilities for reading text, detecting faces, and other computer vision tasks.
 
 For more information about using the **Azure AI Vision** service, see the [Azure AI Vision documentation](https://docs.microsoft.com/azure/cognitive-services/computer-vision/).
+
+### Review
+In this lab, you have completed:
+
+ + Open the cloned folder in Visual Studio Code
+ + Provision a Cognitive Services resource
+ + Prepare to use the Azure AI Vision SDK
+ + View the images you will analyze
+ + Analyze an image to suggest a caption
+ + Get suggested tags for an image
+ + Get image categories
+ + Get brands in an image
+ + Detect and locate objects in an image
+ + Get moderation ratings for an image
+ + Generate a thumbnail image
+
+## You have successfully completed the lab
