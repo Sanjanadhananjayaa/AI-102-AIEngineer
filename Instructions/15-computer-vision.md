@@ -55,11 +55,11 @@ In this exercise, you'll complete a partially implemented client application tha
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **15-computer-vision** folder and expand the **C-Sharp**  folder.
 2. Right-click the **image-analysis** folder and open an integrated terminal. Then install the Azure AI Vision SDK package by running the appropriate command for your language preference:
 
-**C#**
-
-```
-dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --version 6.0.0
-```
+     **C#**
+     
+     ```
+     dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --version 6.0.0
+     ```
 
 3. View the contents of the **image-analysis** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
@@ -71,13 +71,13 @@ dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision --ver
 
     Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following language-specific code to import the namespaces you will need to use the Azure AI Vision SDK:
 
-**C#**
-
-```C#
-// import namespaces
-using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
-using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
-```
+     **C#**
+     
+     ```C#
+     // import namespaces
+     using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
+     using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
+     ```
 
     
 ## View the images you will analyze
