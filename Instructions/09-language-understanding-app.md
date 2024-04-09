@@ -1,4 +1,6 @@
-# Create a language understanding model with the Language service
+# Exercise 01: Create a language understanding model with the Language service
+
+## Lab scenario
 
 The conversational language understanding feature of the Azure AI Language service is currently in preview, and subject to change. In some cases, model training may fail - if this happens, try again.  
 
@@ -12,72 +14,93 @@ This kind of input is an example of an *utterance* (something a user might say o
 
 > **Note**: The task of a conversational language model is to predict the user's intent and identify any entities to which the intent applies. It is <u>not</u> the job of a conversational language model to actually perform the actions required to satisfy the intent. For example, a clock application can use a conversational language model to discern that the user wants to know the time in London; but the client application itself must then implement the logic to determine the correct time and present it to the user.
 
-## Create an Azure AI Language resource
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Create an Azure AI Language resource
++ Task 2: Create a conversational language understanding project
++ Task 3: Create intents
++ Task 4: Train and test the model
++ Task 5: Add entities
++ Task 6: Use the model from a client app
++ Task 7: Call the API from the Azure Cloud Shell
++ Task 8: Export the project
+
+## Task 1: Create an Azure AI Language resource
 
 To create a conversational language model, you need a **Azure AI Language service** resource in a supported region.
-
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription. Here, enter your credentials:
-
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Azure AI services**, and then select **Azure AI services** under services.
 
       ![](images/mod-5-1.png)
 
-1. Then, in the Azure AI services tab, select **Language Service** and select **Create**.
+1. Then, in the Azure AI services tab, select **Language Service** and select **+ Create**.
 
 1. Select **Continue to create your resource**.
+
 1. Provision the resource using the following settings:
+    
     - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>*.
-    - **Region**: Choose same as resource group location.
-    - **Name**: *AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
+    - **Region**: **Ai-102-<inject key="Region" enableCopy="false" /></inject>**
+    - **Name**: **AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
     - **Pricing tier**: Select either **Free (F0)** or **Standard (S)** tier if Free is not available.
     - **Responsible AI Notice**: Agree.
 1. Select **Review + create** and **Create**.
 1. Wait for deployment to complete, and then view the deployment details.
 
-## Create a conversational language understanding project
+## Task 2: Create a conversational language understanding project
 
 Now that you have created an authoring resource, you can use it to create a conversational language understanding project.
 
 1. In a new browser tab, open the Language Studio portal at `https://language.cognitive.azure.com/` and sign in using the Microsoft account associated with your Azure subscription if prompted to sign in.
 
-1. If prompted to choose a Language resource, select the following settings:
+1. If prompted to choose a Language resource, select the following settings, and select **Done**:
 
     - **Azure Directory**: The Azure directory containing your subscription.
+    
     - **Azure subscription**: Your Azure subscription.
+    
     - **Resource type**: Language.
+    
     - **Language resource**: AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>.
 
 1. If you are <u>not</u> prompted to choose a language resource, it may be because you have already assigned a different Azure AI Language resource; in which case:
 
-    1. On the bar at the top if the page, select the **Settings (&#9881;)** button.
-    2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and select **Switch resource**.
-    4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
+    - On the bar at the top if the page, select the **Settings (&#9881;)** button.
+    
+    - On the **Settings** page, view the **Resources** tab.
+    
+    - Select the language resource you just created, and select **Switch resource**.
+    
+    - At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, select the **Create new** menu and from the dropdown select **Conversational language understanding**.
 
 1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and then select **Next**:
+    
     - **Name**: `Clock`
+    
     - **Description**: `Natural language clock`
+    
     - **Utterances primary language**: English
+    
     - **Enable multiple languages in project?**: *Unselected*
+
+    - Select **Next**
 
 1. On the **Review and finish** page, select **Create**.
 
-## Create intents
+## Task 3: Create intents
 
 The first thing we'll do in the new project is to define some intents.
 
 > **Tip**: When working on your project, if some tips are displayed, read them and select **Got it** to dismiss them, or select **Skip all**.
 
-1. On the **Schema definition** page, on the **Intents** tab, select **&#65291; Add** to add a new intent named **GetTime**.
+1. On the **Schema definition** page, on the **Intents** tab, select **&#65291; Add**, and under **Intent name** type **GetTime**, and select **Add intent**.
 
-1. Select the new **GetTime** intent to edit it, add the following utterances as example user input and press **enter**:
+1. Under **Training set**. Select the **GetTime** from the **intent** drop-down, add the following utterances as example user input and press **enter**:
 
     `what is the time?`
 
@@ -90,7 +113,9 @@ The first thing we'll do in the new project is to define some intents.
 
 1. After you've added these utterances, select **Save changes** and go back to the **Schema definition** page.
 
-1. Add another new intent named **GetDay** with the following utterances:
+1. On the **Schema definition** page, on the **Intents** tab, select **&#65291; Add**, and under **Intent name** type **GetDay**, and select **Add intent**.
+
+1. Under **Training set**. Select the **GetDay** from the **intent** drop-down, add the following utterances as example user input and press **enter**:
 
     `what day is it?`
 
@@ -99,6 +124,8 @@ The first thing we'll do in the new project is to define some intents.
     `what is the day today?`
 
     `what day of the week is it?`
+
+1. After you've added these utterances, select **Save changes** and go back to the **Schema definition** page.
 
 1. After you've added these utterances and saved them, go back to the **Schema definition** page and add another new intent named **GetDate** with the following utterances:
 
@@ -112,7 +139,7 @@ The first thing we'll do in the new project is to define some intents.
 
 1. After you've added these utterances, save them and clear the **GetDate** filter on the utterances page so you can see all of the utterances for all of the intents. To do this select the filter button on the top right of the Training set tab then unselect **GetDate**.
 
-## Train and test the model
+## Task 4: Train and test the model
 
 Now that you've added some intents, let's train the language model and see if it can correctly predict them from user input.
 
@@ -124,11 +151,11 @@ Now that you've added some intents, let's train the language model and see if it
 
 1. When training is complete (which may take several minutes) the job **Status** will change to **Training succeeded**.
 
-1. Select the **Model performance** page, and then select the **Clock** model. Review the overall and per-intent evaluation metrics (*precision*, *recall*, and *F1 score*) and the *confusion matrix* generated by the evaluation that was performed when training (note that due to the small number of sample utterances, not all intents may be included in the results).
+1. From the left navigation menu, select the **Model performance** page, and then select the **Clock** model. Review the overall and per-intent evaluation metrics (*precision*, *recall*, and *F1 score*) and the *confusion matrix* generated by the evaluation that was performed when training (note that due to the small number of sample utterances, not all intents may be included in the results).
 
     > **Note**: To learn more about the evaluation metrics, refer to the [documentation](https://learn.microsoft.com/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics)
 
-1. Go to the **Deploying a model** page, then select **Add deployment**.
+1. From the left navigation menu, go to the **Deploying a model** page, then select **Add deployment**.
 
 1. On the **Add deployment** dialog, select **Create a new deployment name**, and then enter **production**.
 
@@ -136,11 +163,11 @@ Now that you've added some intents, let's train the language model and see if it
 
 1. When the model has been deployed, select the **Testing deployments** page, then select the **production** deployment in the **Deployment name** field.
 
-1. Enter the following text in the empty textbox, and then select **Run the test**:
+1. Enter the following text in the **Enter your own text, or upload a text document**, and then select **Run the test**:
 
     `what's the time now?`
 
-    Review the result that is returned, noting that it includes the predicted intent (which should be **GetTime**) and a confidence score that indicates the probability the model calculated for the predicted intent. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
+1. Review the result that is returned, noting that it includes the predicted intent (which should be **GetTime**) and a confidence score that indicates the probability the model calculated for the predicted intent. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
 
 1. Clear the text box, and then run another test with the following text:
 
@@ -154,11 +181,11 @@ Now that you've added some intents, let's train the language model and see if it
 
     Hopefully the model predicts the **GetDay** intent.
 
-## Add entities
+## Task 5: Add entities
 
 So far you've defined some simple utterances that map to intents. Most real applications include more complex utterances from which specific data entities must be extracted to get more context for the intent.
 
-### Add a learned entity
+### Task 5.1: Add a learned entity
 
 The most common kind of entity is a *learned* entity, in which the model learns to identify entity values based on examples.
 
@@ -188,7 +215,7 @@ The most common kind of entity is a *learned* entity, in which the model learns 
 
 1. Select **Save changes** to save the new utterances.
 
-### Add a *list* entity
+### Task 5.2: Add a *list* entity
 
 In some cases, valid values for an entity can be restricted to a list of specific terms and synonyms; which can help the app identify instances of the entity in utterances.
 
@@ -237,7 +264,7 @@ In some cases, valid values for an entity can be restricted to a list of specifi
 
 1. select **Save changes** to save the new utterances.
 
-### Add a *prebuilt* entity
+### Task 5.3: Add a *prebuilt* entity
 
 The Azure AI Language service provides a set of *prebuilt* entities that are commonly used in conversational applications.
 
@@ -265,15 +292,15 @@ The Azure AI Language service provides a set of *prebuilt* entities that are com
 
 1. Select **Save changes** to save the new utterances.
 
-### Retrain the model
+### Task 5.4: Retrain the model
 
 Now that you've modified the schema, you need to retrain and retest the model.
 
-1. On the **Training jobs** page, select **Start a training job**.
+1. On the **Training jobs** page, select **+ Start a training job**.
 
-1. On the **Start a training job** dialog,  select  **overwrite an existing model** and specify the **Clock** model. Select **Train** to train the model. If prompted, confirm you want to overwrite the existing model.
+1. On the **Start a training job** dialog,  select  **overwrite an existing model** and specify the **Clock** model. Select **Train** to train the model. If prompted, confirm you want to **overwrite and train**.
 
-1. When training is complete the job **Status** will update to **Training succeeded**.
+1. When training is completed the job **Status** will update to **Training succeeded**.
 
 1. Select the **Model performance** page and then select the **Clock** model. Review the evaluation metrics (*precision*, *recall*, and *F1 score*) and the *confusion matrix* generated by the evaluation that was performed when training (note that due to the small number of sample utterances, not all intents may be included in the results).
 
@@ -301,7 +328,7 @@ Now that you've modified the schema, you need to retrain and retest the model.
 
     `what day will Mar 7th 2030 be?`
 
-## Use the model from a client app
+## Task 6: Use the model from a client app
 
 In a real project, you'd iteratively refine intents and entities, retrain, and retest until you are satisfied with the predictive performance. Then, when you've tested it and are satisfied with its predictive performance, you can use it in a client app by calling its REST interface. In this exercise, you'll use the *curl* utility to call the REST endpoint for your model.
 
@@ -309,7 +336,7 @@ In a real project, you'd iteratively refine intents and entities, retrain, and r
 
 1. In the **Get prediction URL** dialog box, note that the URL for the prediction endpoint is shown along with a sample request, which consists of a **curl** command that submits an HTTP POST request to the endpoint, specifying the key for your Azure AI Language resource in the header and including a query and language in the request data. Paste the sample request in a notepad, we will be needing it in next task of lab.
 
-## Call the API from the Azure Cloud Shell
+## Task 7: Call the API from the Azure Cloud Shell
 
 Open up a new internet browser tab to work with Cloud Shell.
 
@@ -319,7 +346,19 @@ Open up a new internet browser tab to work with Cloud Shell.
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-1. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created.
+1. If you're prompted to create storage for your Cloud Shell, select **Show advanced settings** , and follow these settings:
+
+    - Subscription: **Azure subscription**
+
+    - Resource Group: Ai-102-<inject key="DeploymentID" enableCopy="false"/>
+    
+    - **Storage account**: Enter **blob<inject key="DeploymentID" enableCopy="false"/>**
+    
+    - **File share**: Enter **fs<inject key="DeploymentID" enableCopy="false"/>**
+    
+    - Select **Create storage** 
+    
+    >**Note:** Wait a minute or so for the storage to be created.
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu in the top left.
 
@@ -399,7 +438,7 @@ Open up a new internet browser tab to work with Cloud Shell.
 
     `What date will next Monday be?`
 
-## Export the project
+## Task 8: Export the project
 
 You can use Language Studio to develop and test your language understanding model, but in a software development process for DevOps, you should maintain a source controlled definition of the project that can be included in continuous integration and delivery (CI/CD) pipelines. While you can use the Azure AI Language REST API in code scripts to create and train the model, a simpler way is to use the portal to create the model schema, and export it as a **.json** file that can be imported and retrained in another Azure AI Language  instance. This approach enables you to make use of the productivity benefits of the Language Studio visual interface while maintaining portability and reproducibility for the model.
 
@@ -411,6 +450,16 @@ You can use Language Studio to develop and test your language understanding mode
 
 1. Open the downloaded file in your favorite code editor (for example, Visual Studio Code) to review the JSON definition of your project.
 
-## More information
+### Review
+In this lab, you have completed:
 
-For more information about using the **Azure AI Language** service to create language understanding solutions, see the [Azure AI Language documentation](/azure/ai-services/language-service/conversational-language-understanding/overview).
++ Created an Azure AI Language resource
++ Created a conversational language understanding project
++ Created intents
++ Trained and test the model
++ Added entities
++ Used the model from a client app
++ Called the API from the Azure Cloud Shell
++ Exported the project
+
+## You have successfully completed the lab, proceed with the next exercises.
