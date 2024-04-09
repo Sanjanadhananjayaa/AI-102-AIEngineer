@@ -1,8 +1,20 @@
-# Create a Language Service Client Application
+# Exercise 02: Create a Language Service Client Application
+
+## Lab scenario
 
 The Conversational Language Understanding feature of the Azure AI Service for Language enables you to define a conversational language model that client apps can use to interpret natural language input from users, predict the users *intent* (what they want to achieve), and identify any *entities* to which the intent should be applied. You can create client applications that consume conversational language understanding models directly through REST interfaces, or by using language-specific software development kits (SDKs).
 
-## Open the cloned folder in Visual Studio Code.
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Open the cloned folder in Visual Studio Code
++ Task 2: Create Language service resources
++ Task 3: Import, train, and publish a Conversational language understanding model
++ Task 4: Prepare to use the Language service SDK
++ Task 5: Get a prediction from the Conversational Language model
+
+## Task 1: Open the cloned folder in Visual Studio Code.
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
@@ -15,7 +27,7 @@ The Conversational Language Understanding feature of the Azure AI Service for La
 
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
-## Create Language service resources
+## Task 2: Create Language service resources
 
 1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 
@@ -32,7 +44,7 @@ The Conversational Language Understanding feature of the Azure AI Service for La
 
 4. Wait for the resources to be created, and note that two Language Understanding resources are provisioned; one for authoring, and another for prediction. You can view both of these by navigating to the resource group where you created them.
 
-## Import, train, and publish a Conversational language understanding model
+## Task 3: Import, train, and publish a Conversational language understanding model
 
 1. In a new browser tab, open the Language Studio - Preview portal at `https://language.cognitive.azure.com`.
 
@@ -69,7 +81,7 @@ The Conversational Language Understanding feature of the Azure AI Service for La
 
 14. Client applications need information from the prediction URL endpoint and the Language service key to connect to your deployed model and be authenticated.
 
-## Prepare to use the Language service SDK
+## Task 4: Prepare to use the Language service SDK
 
 In this exercise, you'll complete a partially implemented client application that uses the Clock model (published Conversational Language Understanding model) to predict intents from user input and respond appropriately.
 
@@ -109,7 +121,7 @@ In this exercise, you'll complete a partially implemented client application tha
     using Azure.AI.Language.Conversations;
     ```
 
-## Get a prediction from the Conversational Language model
+## Task 5: Get a prediction from the Conversational Language model
 
 Now you're ready to implement code that uses the SDK to get a prediction from your Conversational Language model.
 
@@ -266,3 +278,14 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
 ## More information
 
 To learn more about creating a Language Service client, see the [developer documentation](https://docs.microsoft.com/azure/cognitive-services/luis/developer-reference-resource)
+
+### Review
+In this lab, you have completed:
+
++ Open the cloned folder in Visual Studio Code
++ Create Language service resources
++ Import, train, and publish a Conversational language understanding model
++ Prepare to use the Language service SDK
++ Get a prediction from the Conversational Language model
+
+## You have successfully completed the lab, proceed with the next Module.
