@@ -1,10 +1,22 @@
 # Extract Data from Forms 
 
+## Lab scenario
+
 Suppose a company needs to automate a data entry process. Currently an employee might manually read a purchase order and enter the data into a database. You want to build a model that will use machine learning  to read the form and produce structured data that can be used to automatically update a database.
 
 **Form Recognizer** is a cognitive service that enables users to build automated data processing software. This software can extract text, key/value pairs, and tables from form documents using optical character recognition (OCR). Form Recognizer has pre-built models for recognizing invoices, receipts, and business cards. The service also provides the capability to train custom models. In this exercise, we will focus on building custom models.
 
-## Open the cloned folder in Visual Studio Code.
+## Objectives
+
+In this lab, you will complete the following tasks:
+
+ + Task 1: Open the cloned folder in Visual Studio Code.
+ + Task 2: Create a Azure AI Document Intelligence resource
+ + Task 3: Gather documents for training
+ + Task 4: Train a model using the Document Intelligence SDK
+ + Task 5: Test your custom Document Intelligence model 
+
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
 
@@ -17,7 +29,7 @@ Suppose a company needs to automate a data entry process. Currently an employee 
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
 
-## Create a Azure AI Document Intelligence resource
+## Task 2: Create a Azure AI Document Intelligence resource
 
 To use the Form Recognizer service, you need a Form Recognizer resource in your Azure subscription. You'll use the Azure portal to create a resource.
 
@@ -43,7 +55,7 @@ To use the Form Recognizer service, you need a Form Recognizer resource in your 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Gather documents for training
+## Task 3: Gather documents for training
 
 ![An image of an invoice.](../21-custom-form/sample-forms/Form_1.jpg)  
 
@@ -107,7 +119,7 @@ Then **save** your changes.
 
 15. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account just created. Open the storage account and in the pane on the left, select **Storage Browser**. Then in Storage Browser, expand **BLOB CONTAINERS** and select the **sampleforms** container to verify that the files have been uploaded from your local **21-custom-form/sample-forms** folder.
 
-## Train a model using the Document Intelligence SDK
+## Task 4: Train a model using the Document Intelligence SDK
 
 Now you will train a model using the **.jpg** and **.json** files.
 
@@ -160,7 +172,7 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
 12. Wait for the program to end, then review the model output.
 13. Write down the Model ID in the terminal output. You will need it for the next part of the lab. 
 
-## Test your custom Document Intelligence model 
+## Task 5: Test your custom Document Intelligence model 
 
 1. In the **21-custom-form** folder, in the subfolder for your preferred language (**C-Sharp**), expand the **test-model** folder.
 
@@ -206,3 +218,14 @@ dotnet add package Azure.AI.FormRecognizer --version 3.0.0
 ## More information
 
 For more information about the Document Intelligence service, see the [Document Intelligence documentation](https://docs.microsoft.com/azure/cognitive-services/form-recognizer/).
+
+### Review
+In this lab, you have completed:
+
+ + Open the cloned folder in Visual Studio Code.
+ + Create a Azure AI Document Intelligence resource
+ + Gather documents for training
+ + Train a model using the Document Intelligence SDK
+ + Test your custom Document Intelligence model 
+
+## You have successfully completed the lab
