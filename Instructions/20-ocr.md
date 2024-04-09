@@ -1,8 +1,22 @@
 # Read Text in Images
 
+## Lab scenario
+
 Optical character recognition (OCR) is a subset of computer vision that deals with reading text in images and documents. The **Computer Vision** service provides two APIs for reading text, which you'll explore in this exercise.
 
-## Open the cloned folder in Visual Studio Code.
+## Objectives
+
+In this lab, you will complete the following tasks:
+
+ + Task 1: Open the cloned folder in Visual Studio Code.
+ + Task 2: Provision a Cognitive Services resource
+ + Task 3: Prepare to use the Azure AI Vision SDK
+ + Task 4: Use the Read API to read text from an image
+ + Task 5: Use the Read API to read text from a document
+ + Task 6: Read handwritten text
+
+
+## Task 1: Open the cloned folder in Visual Studio Code.
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
@@ -15,7 +29,7 @@ Optical character recognition (OCR) is a subset of computer vision that deals wi
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
 
-## Provision a Cognitive Services resource
+## Task 2: Provision a Cognitive Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
@@ -44,7 +58,7 @@ If you don't already have one in your subscription, you'll need to provision a *
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
 
-## Prepare to use the Azure AI Vision SDK
+## Task 3: Prepare to use the Azure AI Vision SDK
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Vision SDK to read text.
 
@@ -92,7 +106,7 @@ In this exercise, you'll complete a partially implemented client application tha
      };
      ```
 
-## Use the Read API to read text from an image
+## Task 4: Use the Read API to read text from an image
 
 The **Read** API uses a newer text recognition model and generally performs better for larger images that contain a lot of text, but will work for any amount of text. It also supports text extraction from *.pdf* files, and can recognize both printed text and handwritten text in multiple languages.
 
@@ -157,7 +171,7 @@ The **Read** API uses an asynchronous operation model, in which a request to sta
 6. When prompted, enter **1** and observe the output, which is the text extracted from the image.
 7. If desired, go back to the code you added to **GetTextRead** and find the comment in the nested `for` loop at the end, uncomment the last line, save the file, and rerun steps 5 and 6 above to see the bounding box of each line. Be sure to re-comment that line and save the file before moving on.
 
-## Use the Read API to read text from a document
+## Task 5: Use the Read API to read text from a document
 
 1. In the code file for your application, in the **Main** function, examine the code that runs if the user selects menu option **2**. This code calls the **GetTextRead** function, passing the path to a PDF document file.
 2. In the **read-text/images** folder, right-click **Rome.pdf** and select **Reveal in File Explorer**. Then in File Explorer, open the PDF file to view it.
@@ -171,7 +185,7 @@ The **Read** API uses an asynchronous operation model, in which a request to sta
 
 6. When prompted, enter **2** and observe the output, which is the text extracted from the document.
 
-## Read handwritten text
+## Task 6: Read handwritten text
 
 In addition to printed text, the **Read** API can extract handwritten text in English..
 
@@ -191,3 +205,14 @@ In addition to printed text, the **Read** API can extract handwritten text in En
 ## More information
 
 For more information about using the **Azure AI Vision** service to read text, see the [Azure AI Vision documentation](https://docs.microsoft.com/azure/cognitive-services/computer-vision/concept-recognizing-text).
+
+### Review
+In this lab, you have completed:
+ +  Open the cloned folder in Visual Studio Code.
+ +  Provision a Cognitive Services resource
+ +  Prepare to use the Azure AI Vision SDK
+ +  Use the Read API to read text from an image
+ +  Use the Read API to read text from a document
+ +  Read handwritten text
+   
+## You have successfully completed the lab
