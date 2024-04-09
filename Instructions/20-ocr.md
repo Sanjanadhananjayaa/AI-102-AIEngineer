@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
  + Task 6: Read handwritten text
 
 
-## Task 1: Open the cloned folder in Visual Studio Code.
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
