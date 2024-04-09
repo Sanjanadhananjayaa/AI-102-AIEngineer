@@ -3,35 +3,48 @@
 Azure AI Vision is an artificial intelligence capability that enables software systems to interpret visual input by analyzing images. In Microsoft Azure, the **Vision** Azure AI service provides pre-built models for common computer vision tasks, including analysis of images to suggest captions and tags, detection of common objects, landmarks, celebrities, brands, and the presence of adult content. You can also use the Azure AI Vision service to analyze image color and formats, and to generate "smart-cropped" thumbnail images.
 
 
-## Clone the repository for this course
+## Open the cloned folder in Visual Studio Code.
 
-If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
 
-1. Start Visual Studio Code.
-2. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+     ![Visual Studio Code Icon](./images/vscode.png) 
 
-    ![](./images/Terminal_new_vs_1.png)
+2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
 
-   
-4. When the repository has been cloned, open the folder in Visual Studio Code.
-5. Wait while additional files are installed to support the C# code projects in the repo.
+    **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
-    > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
+3.  Wait while additional files are installed to support the C# code projects in the repo.
 
-## Provision an Azure AI Services resource
 
-If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource.
+## Provision a Cognitive Services resource
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
-2. In the top search bar, search for *Azure AI services*, select **Azure AI Services**, and create an Azure AI services multi-service account resource with the following settings:
+If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
+
+1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription. Here, enter your credentials:
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
+
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
-    - **Region**: *Choose any available region*
-    - **Name**: *Enter a unique name*
+    - **Resource group**: *Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>*.
+    - **Region**: **<inject key="Region" enableCopy="false"/>**.
+    - **Name**: **AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
     - **Pricing tier**: Standard S0
-3. Select the required checkboxes and create the resource.
-4. Wait for deployment to complete, and then view the deployment details.
-5. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need the endpoint and one of the keys from this page in the next procedure.
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
+
+3. Select **Review + create** and **Create**.
+4. Wait for the deployment to complete. Once the deployment is successful, click on **Go to resources** to view the deployment details.
+5. In the left navigation pane, under the **Resource Management** section, choose **Keys and Endpoint**. Make sure to note down the Keys and Endpoint values in notepad. You'll require the endpoint and one of the keys from this page for the subsequent procedure.
+
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
+
 
 ## Prepare to use the Azure AI Vision SDK
 
