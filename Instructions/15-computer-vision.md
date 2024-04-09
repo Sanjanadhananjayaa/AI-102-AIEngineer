@@ -93,79 +93,78 @@ Now you're ready to use the SDK to call the Vision service and analyze an image.
 
 1. In the code file for your client application (**Program.cs**), in the **Main** function, note that the code to load the configuration settings has been provided. Then find the comment **Authenticate Azure AI Vision client**. Then, under this comment, add the following language-specific code to create and authenticate a Azure AI Vision client object:
 
-**C#**
-
-```C#
-// Authenticate Azure AI Vision client
-ApiKeyServiceClientCredentials credentials = new ApiKeyServiceClientCredentials(cogSvcKey);
-cvClient = new ComputerVisionClient(credentials)
-{
-    Endpoint = cogSvcEndpoint
-};
-```
-
+     **C#**
+     
+     ```C#
+     // Authenticate Azure AI Vision client
+     ApiKeyServiceClientCredentials credentials = new ApiKeyServiceClientCredentials(cogSvcKey);
+     cvClient = new ComputerVisionClient(credentials)
+     {
+         Endpoint = cogSvcEndpoint
+     };
+     ```
 
 2. In the **Main** function, under the code you just added, note that the code specifies the path to an image file and then passes the image path to two other functions (**AnalyzeImage** and **GetThumbnail**). These functions are not yet fully implemented.
 
 3. In the **AnalyzeImage** function, under the comment **Specify features to be retrieved**, add the following code:
 
-**C#**
-
-```C#
-// Specify features to be retrieved
-List<VisualFeatureTypes?> features = new List<VisualFeatureTypes?>()
-{
-    VisualFeatureTypes.Description,
-    VisualFeatureTypes.Tags,
-    VisualFeatureTypes.Categories,
-    VisualFeatureTypes.Brands,
-    VisualFeatureTypes.Objects,
-    VisualFeatureTypes.Adult
-};
-```
+     **C#**
+     
+     ```C#
+     // Specify features to be retrieved
+     List<VisualFeatureTypes?> features = new List<VisualFeatureTypes?>()
+     {
+         VisualFeatureTypes.Description,
+         VisualFeatureTypes.Tags,
+         VisualFeatureTypes.Categories,
+         VisualFeatureTypes.Brands,
+         VisualFeatureTypes.Objects,
+         VisualFeatureTypes.Adult
+     };
+     ```
 
 4. In the **AnalyzeImage** function, under the comment **Get image analysis**, add the following code (including the comments indicating where you will add more code later.):
 
-**C#**
-
-```C
-// Get image analysis
-using (var imageData = File.OpenRead(imageFile))
-{    
-    var analysis = await cvClient.AnalyzeImageInStreamAsync(imageData, features);
-
-    // get image captions
-    foreach (var caption in analysis.Description.Captions)
-    {
-        Console.WriteLine($"Description: {caption.Text} (confidence: {caption.Confidence.ToString("P")})");
-    }
-
-    // Get image tags
-
-
-    // Get image categories
-
-
-    // Get brands in the image
-
-
-    // Get objects in the image
-
-
-    // Get moderation ratings
-    
-
-}            
-```
+     **C#**
+     
+     ```C
+     // Get image analysis
+     using (var imageData = File.OpenRead(imageFile))
+     {    
+         var analysis = await cvClient.AnalyzeImageInStreamAsync(imageData, features);
+     
+         // get image captions
+         foreach (var caption in analysis.Description.Captions)
+         {
+             Console.WriteLine($"Description: {caption.Text} (confidence: {caption.Confidence.ToString("P")})");
+         }
+     
+         // Get image tags
+     
+     
+         // Get image categories
+     
+     
+         // Get brands in the image
+     
+     
+         // Get objects in the image
+     
+     
+         // Get moderation ratings
+         
+     
+     }            
+     ```
 
     
 5. Save your changes and return to the integrated terminal for the **image-analysis** folder, and enter the following command to run the program with the argument **images/street.jpg**:
 
-**C#**
-
-```
-dotnet run images/street.jpg
-```
+     **C#**
+     
+     ```
+     dotnet run images/street.jpg
+     ```
     
 6. Observe the output, which should include a suggested caption for the **street.jpg** image.
 7. Run the program again, this time with the argument **images/building.jpg** to see the caption that gets generated for the **building.jpg** image.
@@ -177,19 +176,19 @@ It can sometimes be useful to identify relevant *tags* that provide clues about 
 
 1. In the **AnalyzeImage** function, under the comment **Get image tags**, add the following code:
 
-**C#**
-
-```C
-// Get image tags
-if (analysis.Tags.Count > 0)
-{
-    Console.WriteLine("Tags:");
-    foreach (var tag in analysis.Tags)
-    {
-        Console.WriteLine($" -{tag.Name} (confidence: {tag.Confidence.ToString("P")})");
-    }
-}
-```
+     **C#**
+     
+     ```C
+     // Get image tags
+     if (analysis.Tags.Count > 0)
+     {
+         Console.WriteLine("Tags:");
+         foreach (var tag in analysis.Tags)
+         {
+             Console.WriteLine($" -{tag.Name} (confidence: {tag.Confidence.ToString("P")})");
+         }
+     }
+     ```
 
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing that in addition to the image caption, a list of suggested tags is displayed.
 
@@ -199,41 +198,41 @@ The Vision service can suggest *categories* for images, and within each category
 
 1. In the **AnalyzeImage** function, under the comment **Get image categories**, add the following code:
 
-**C#**
-
-```C
-// Get image categories
-List<LandmarksModel> landmarks = new List<LandmarksModel> {};
-Console.WriteLine("Categories:");
-foreach (var category in analysis.Categories)
-{
-    // Print the category
-    Console.WriteLine($" -{category.Name} (confidence: {category.Score.ToString("P")})");
-
-    // Get landmarks in this category
-    if (category.Detail?.Landmarks != null)
-    {
-        foreach (LandmarksModel landmark in category.Detail.Landmarks)
-        {
-            if (!landmarks.Any(item => item.Name == landmark.Name))
-            {
-                landmarks.Add(landmark);
-            }
-        }
-    }
-}
-
-// If there were landmarks, list them
-if (landmarks.Count > 0)
-{
-    Console.WriteLine("Landmarks:");
-    foreach(LandmarksModel landmark in landmarks)
-    {
-        Console.WriteLine($" -{landmark.Name} (confidence: {landmark.Confidence.ToString("P")})");
-    }
-}
-
-```
+     **C#**
+     
+     ```C
+     // Get image categories
+     List<LandmarksModel> landmarks = new List<LandmarksModel> {};
+     Console.WriteLine("Categories:");
+     foreach (var category in analysis.Categories)
+     {
+         // Print the category
+         Console.WriteLine($" -{category.Name} (confidence: {category.Score.ToString("P")})");
+     
+         // Get landmarks in this category
+         if (category.Detail?.Landmarks != null)
+         {
+             foreach (LandmarksModel landmark in category.Detail.Landmarks)
+             {
+                 if (!landmarks.Any(item => item.Name == landmark.Name))
+                 {
+                     landmarks.Add(landmark);
+                 }
+             }
+         }
+     }
+     
+     // If there were landmarks, list them
+     if (landmarks.Count > 0)
+     {
+         Console.WriteLine("Landmarks:");
+         foreach(LandmarksModel landmark in landmarks)
+         {
+             Console.WriteLine($" -{landmark.Name} (confidence: {landmark.Confidence.ToString("P")})");
+         }
+     }
+     
+     ```
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing that in addition to the image caption and tags, a list of suggested categories is displayed along with any recognized landmarks (in particular in the **building.jpg** image).
 
@@ -243,19 +242,19 @@ Some brands are visually recognizable from logo's, even when the name of the bra
 
 1. In the **AnalyzeImage** function, under the comment **Get brands in the image**, add the following code:
 
-**C#**
-
-```C
-// Get brands in the image
-if (analysis.Brands.Count > 0)
-{
-    Console.WriteLine("Brands:");
-    foreach (var brand in analysis.Brands)
-    {
-        Console.WriteLine($" -{brand.Name} (confidence: {brand.Confidence.ToString("P")})");
-    }
-}
-```
+     **C#**
+     
+     ```C
+     // Get brands in the image
+     if (analysis.Brands.Count > 0)
+     {
+         Console.WriteLine("Brands:");
+         foreach (var brand in analysis.Brands)
+         {
+             Console.WriteLine($" -{brand.Name} (confidence: {brand.Confidence.ToString("P")})");
+         }
+     }
+     ```
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing any brands that are identified (specifically, in the **person.jpg** image).
 
@@ -265,39 +264,39 @@ if (analysis.Brands.Count > 0)
 
 1. In the **AnalyzeImage** function, under the comment **Get objects in the image**, add the following code:
 
-**C#**
-
-```C
-// Get objects in the image
-if (analysis.Objects.Count > 0)
-{
-    Console.WriteLine("Objects in image:");
-
-    // Prepare image for drawing
-    Image image = Image.FromFile(imageFile);
-    Graphics graphics = Graphics.FromImage(image);
-    Pen pen = new Pen(Color.Cyan, 3);
-    Font font = new Font("Arial", 16);
-    SolidBrush brush = new SolidBrush(Color.Black);
-
-    foreach (var detectedObject in analysis.Objects)
-    {
-        // Print object name
-        Console.WriteLine($" -{detectedObject.ObjectProperty} (confidence: {detectedObject.Confidence.ToString("P")})");
-
-        // Draw object bounding box
-        var r = detectedObject.Rectangle;
-        Rectangle rect = new Rectangle(r.X, r.Y, r.W, r.H);
-        graphics.DrawRectangle(pen, rect);
-        graphics.DrawString(detectedObject.ObjectProperty,font,brush,r.X, r.Y);
-
-    }
-    // Save annotated image
-    String output_file = "objects.jpg";
-    image.Save(output_file);
-    Console.WriteLine("  Results saved in " + output_file);   
-}
-```
+     **C#**
+     
+     ```C
+     // Get objects in the image
+     if (analysis.Objects.Count > 0)
+     {
+         Console.WriteLine("Objects in image:");
+     
+         // Prepare image for drawing
+         Image image = Image.FromFile(imageFile);
+         Graphics graphics = Graphics.FromImage(image);
+         Pen pen = new Pen(Color.Cyan, 3);
+         Font font = new Font("Arial", 16);
+         SolidBrush brush = new SolidBrush(Color.Black);
+     
+         foreach (var detectedObject in analysis.Objects)
+         {
+             // Print object name
+             Console.WriteLine($" -{detectedObject.ObjectProperty} (confidence: {detectedObject.Confidence.ToString("P")})");
+     
+             // Draw object bounding box
+             var r = detectedObject.Rectangle;
+             Rectangle rect = new Rectangle(r.X, r.Y, r.W, r.H);
+             graphics.DrawRectangle(pen, rect);
+             graphics.DrawString(detectedObject.ObjectProperty,font,brush,r.X, r.Y);
+     
+         }
+         // Save annotated image
+         String output_file = "objects.jpg";
+         image.Save(output_file);
+         Console.WriteLine("  Results saved in " + output_file);   
+     }
+     ```
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing any objects that are detected. After each run, view the **objects.jpg** file that is generated in the same folder as your code file to see the annotated objects.
 
@@ -307,13 +306,13 @@ Some images may not be suitable for all audiences, and you may need to apply som
 
 1. In the **AnalyzeImage** function, under the comment **Get moderation ratings**, add the following code:
 
-**C#**
-
-```C
-// Get moderation ratings
-string ratings = $"Ratings:\n -Adult: {analysis.Adult.IsAdultContent}\n -Racy: {analysis.Adult.IsRacyContent}\n -Gore: {analysis.Adult.IsGoryContent}";
-Console.WriteLine(ratings);
-```
+     **C#**
+     
+     ```C
+     // Get moderation ratings
+     string ratings = $"Ratings:\n -Adult: {analysis.Adult.IsAdultContent}\n -Racy: {analysis.Adult.IsRacyContent}\n -Gore: {analysis.Adult.IsGoryContent}";
+     Console.WriteLine(ratings);
+     ```
 
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing the ratings for each image.
 
@@ -325,43 +324,43 @@ In some cases, you may need to create a smaller version of an image named a *thu
 
 1. In your code file, find the **GetThumbnail** function; and under the comment **Generate a thumbnail**, add the following code:
 
-**C#**
+     **C#**
 
-```C
-// Generate a thumbnail
-using (var imageData = File.OpenRead(imageFile))
-{
-    // Get thumbnail data
-    var thumbnailStream = await cvClient.GenerateThumbnailInStreamAsync(100, 100,imageData, true);
-
-    // Save thumbnail image
-    string thumbnailFileName = "thumbnail.png";
-    using (Stream thumbnailFile = File.Create(thumbnailFileName))
-    {
-        thumbnailStream.CopyTo(thumbnailFile);
-    }
-
-    Console.WriteLine($"Thumbnail saved in {thumbnailFileName}");
-}
-```
+     ```C
+     // Generate a thumbnail
+     using (var imageData = File.OpenRead(imageFile))
+     {
+         // Get thumbnail data
+         var thumbnailStream = await cvClient.GenerateThumbnailInStreamAsync(100, 100,imageData, true);
+     
+         // Save thumbnail image
+         string thumbnailFileName = "thumbnail.png";
+         using (Stream thumbnailFile = File.Create(thumbnailFileName))
+         {
+             thumbnailStream.CopyTo(thumbnailFile);
+         }
+     
+         Console.WriteLine($"Thumbnail saved in {thumbnailFileName}");
+     }
+     ```
 
     
 2. Save your changes and run the program once for each of the image files in the **images** folder, (**images/building.jpg**, **images/person.jpg**, **images/street.jpg**).
   
-  **C#**
+     **C#**
 
-```
-dotnet run images/street.jpg
-```
+     ```
+     dotnet run images/street.jpg
+     ```
 
   
 3. opening the **thumbnail.jpg** file that is generated in the same folder as your code file.
 
-  **C#**
+     **C#**
 
-```
-dotnet run thumbnail.jpg
-```
+     ```
+     dotnet run thumbnail.jpg
+     ```
 
 > **Note**: If you face any issues after running the command like process cannot access the file because it is being used by another process please ignore and proceed with next lab.
 
