@@ -1,10 +1,26 @@
-# Analyze Text
+# Exercise 01: Analyze Text
 
+## Lab scenario
 **Azure Language** supports analysis of text, including language detection, sentiment analysis, key phrase extraction, and entity recognition.
 
 For example, suppose a travel agency wants to process hotel reviews that have been submitted to the company's web site. By using the Azure AI Language, they can determine the language each review is written in, the sentiment (positive, neutral, or negative) of the reviews, key phrases that might indicate the main topics discussed in the review, and named entities, such as places, landmarks, or people mentioned in the reviews.
 
-## Provision an Azure AI Language resource
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Provision an Azure AI Language resource
++ Task 2: Clone the repository for this course in Cloud Shell
++ Task 3: Prepare to use the Azure AI Language SDK for text analytics
++ Task 4: Detect language
++ Task 5: Evaluate sentiment
++ Task 6: Identify key phrases
++ Task 7: Extract entities
++ Task 8: Extract linked entities
+
+## Estimated timing: 120 minutes
+
+## Task 1: Provision an Azure AI Language resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Language service** resource in a supported region.
 
@@ -21,13 +37,13 @@ If you don't already have one in your subscription, you'll need to provision an 
 1. Select **Review + create**.
 1. Wait for deployment to complete, and then view the deployment details.
 
-## Clone the repository for this course in Cloud Shell
+## Task 2: Clone the repository for this course in Cloud Shell
 
 Open up a new browser tab to work with Cloud Shell. If you haven't cloned this repository to Cloud Shell recently, follow the steps below to make sure you have the most recent version. Otherwise, open Cloud Shell and navigate to your clone.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](./images/cloudshell-launch-portal.png)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](./images/powershell-portal-guide-1.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
@@ -52,11 +68,11 @@ Applications for both C# and Python have been provided, as well as a supporting 
 
 Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
 
-```bash
-code .
-```
+    
+      code .
 
-## Prepare to use the Azure AI Language SDK for text analytics
+
+## Task 3: Prepare to use the Azure AI Language SDK for text analytics
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Language text analytics SDK to analyze hotel reviews.
 
@@ -143,7 +159,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. Observe the output as the code should run without error, displaying the contents of each review text file in the **reviews** folder. The application successfully creates a client for the Text Analytics API but doesn't make use of it. We'll fix that in the next procedure.
 
-## Detect language
+## Task 4: Detect language
 
 Now that you have created a client for the API, let's use it to detect the language in which each review is written.
 
@@ -183,7 +199,7 @@ Now that you have created a client for the API, let's use it to detect the langu
 
 1. Observe the output, noting that this time the language for each review is identified.
 
-## Evaluate sentiment
+## Task 5: Evaluate sentiment
 
 *Sentiment analysis* is a commonly used technique to classify text as *positive* or *negative* (or possible *neutral* or *mixed*). It's commonly used to analyze social media posts, product reviews, and other items where the sentiment of the text may provide useful insights.
 
@@ -221,7 +237,7 @@ Now that you have created a client for the API, let's use it to detect the langu
 
 1. Observe the output, noting that the sentiment of the reviews is detected.
 
-## Identify key phrases
+## Task 6: Identify key phrases
 
 It can be useful to identify key phrases in a body of text to help determine the main topics that it discusses.
 
@@ -269,7 +285,7 @@ It can be useful to identify key phrases in a body of text to help determine the
 
 1. Observe the output, noting that each document contains key phrases that give some insights into what the review is about.
 
-## Extract entities
+## Task 7: Extract entities
 
 Often, documents or other bodies of text mention people, places, time periods, or other entities. The text Analytics API can detect multiple categories (and subcategories) of entity in your text.
 
@@ -317,7 +333,7 @@ Often, documents or other bodies of text mention people, places, time periods, o
 
 1. Observe the output, noting the entities that have been detected in the text.
 
-## Extract linked entities
+## Task 8: Extract linked entities
 
 In addition to categorized entities, the Text Analytics API can detect entities for which there are known links to data sources, such as Wikipedia.
 
@@ -365,6 +381,14 @@ In addition to categorized entities, the Text Analytics API can detect entities 
 
 1. Observe the output, noting the linked entities that are identified.
 
-## More information
+### Review
+In this lab, you have completed:
 
-For more information about using **Azure AI Language**, see the [documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview).
++ Provisioned Azure AI Language resource
++ Cloned the repo into your Azure Cloud Shell
++ Prepared to use Azure AI Language SDK for text analytics
++ Detected Language, evaluated sentiments, analyzed key phrases
++ Extracted entities
++ Extracted linked entities
+
+## You have successfully completed the lab
