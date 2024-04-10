@@ -30,8 +30,9 @@ In this lab, you will complete the following tasks:
 
     **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
-3.  Wait while additional files are installed to support the C# code projects in the repo.
+    **Note:** When **Do you trust the authors of the filesin tjis folder?** prompted select **Yes, I trust the authors**.
 
+4.  Wait while additional files are installed to support the C# code projects in the repo.
 
 ## Task 2: Provision a Cognitive Services resource
 
