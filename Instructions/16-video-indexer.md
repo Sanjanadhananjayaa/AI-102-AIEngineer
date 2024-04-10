@@ -163,7 +163,7 @@ All interactions with the Video Analyzer REST API follow the same pattern:
 
 1. In Visual Studio Code, in the **16-video-indexer** folder, open **get-videos.ps1**.
 2. In the PowerShell script, replace the **YOUR_ACCOUNT_ID** and **YOUR_API_KEY** placeholders with the account ID and API key values you identified previously.
-3. Observe that the *location* for a free account is "trial". If you have created an unrestricted Video Analyzer account (with an associated Azure resource), you can change this to the location where your Azure resource is provisioned (for example "eastus").
+3. Observe that the *location* for a free account is "trial". If you have created an unrestricted Video Analyzer account (with an associated Azure resource), you can change this to the location where your Azure resource is provisioned **<inject key="Region" enableCopy="false"/>**.
 4. Review the code in the script, noting that invokes two REST methods: one to get an access token, and another to list the videos in your account.
 5. Save your changes, and then right click on **16-video-indexer**, click on **open in integrated terminal** and run the script using **.\get-videos.ps1**.
 6. View the JSON response from the REST service, which should contain details of the **Responsible AI** video you indexed previously.
