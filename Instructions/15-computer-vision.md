@@ -8,17 +8,19 @@ Azure AI Vision is an artificial intelligence capability that enables software s
 
 In this lab, you will complete the following tasks:
 
- + Task 1: Open the cloned folder in Visual Studio Code
- + Task 2: Provision a Cognitive Services resource
- + Task 3: Prepare to use the Azure AI Vision SDK
- + Task 4: View the images you will analyze
- + Task 5: Analyze an image to suggest a caption
- + Task 6: Get suggested tags for an image
- + Task 7: Get image categories
- + Task 8: Get brands in an image
- + Task 9: Detect and locate objects in an image
- + Task 10: Get moderation ratings for an image
- + Task 11: Generate a thumbnail image
++ Task 1: Open the cloned folder in Visual Studio Code
++ Task 2: Provision a Cognitive Services resource
++ Task 3: Prepare to use the Azure AI Vision SDK
++ Task 4: View the images you will analyze
++ Task 5: Analyze an image to suggest a caption
++ Task 6: Get suggested tags for an image
++ Task 7: Get image categories
++ Task 8: Get brands in an image
++ Task 9: Detect and locate objects in an image
++ Task 10: Get moderation ratings for an image
++ Task 11: Generate a thumbnail image
+
+## Estimated timing: 120 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
@@ -32,29 +34,30 @@ In this lab, you will complete the following tasks:
   
       **Note:** When **Do you trust the authors of the filesin tjis folder?** prompted select **Yes, I trust the authors**.
 
-4.  Wait while additional files are installed to support the C# code projects in the repo.
-
 ## Task 2: Provision a Cognitive Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription. Here, enter your credentials:
-
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+1. Open the **Azure portal**.
 
 2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
 
     - **Subscription**: *Your Azure subscription*
+    
     - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
+    
     - **Region**: **<inject key="Region" enableCopy="false"/>**
+    
     - **Name**: **AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**
+    
     - **Pricing tier**: Standard S0
+    
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
 
 3. Select **Review + create** and **Create**.
+
 4. Wait for the deployment to complete. Once the deployment is successful, click on **Go to resources** to view the deployment details.
+
 5. In the left navigation pane, under the **Resource Management** section, choose **Keys and Endpoint**. Make sure to note down the Keys and Endpoint values in notepad. You'll require the endpoint and one of the keys from this page for the subsequent procedure.
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -103,6 +106,7 @@ In this exercise, you'll complete a partially implemented client application tha
 In this exercise, you will use the Azure AI Vision service to analyze multiple images.
 
 1. In Visual Studio Code, expand the **image-analysis** folder and the **images** folder it contains.
+
 2. Select each of the image files in turn to view then in Visual Studio Code.
 
 ## Task 5: Analyze an image to suggest a caption
@@ -185,7 +189,9 @@ Now you're ready to use the SDK to call the Vision service and analyze an image.
      ```
     
 6. Observe the output, which should include a suggested caption for the **street.jpg** image.
+
 7. Run the program again, this time with the argument **images/building.jpg** to see the caption that gets generated for the **building.jpg** image.
+
 8. Repeat the previous step to generate a caption for the **images/person.jpg** file.
 
 ## Task 6: Get suggested tags for an image
@@ -334,7 +340,7 @@ Some images may not be suitable for all audiences, and you may need to apply som
 
 2. Save your changes and run the program once for each of the image files in the **images** folder, observing the ratings for each image.
 
-> **Note**: In the preceding tasks, you used a single method to analyze the image, and then incrementally added code to parse and display the results. The SDK also provides individual methods for suggesting captions, identifying tags, detecting objects, and so on - meaning that you can use the most appropriate method to return only the information you need, reducing the size of the data payload that needs to be returned. See the [.NET SDK documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/computervision?view=azure-dotnet) for more details.
+    > **Note**: In the preceding tasks, you used a single method to analyze the image, and then incrementally added code to parse and display the results. The SDK also provides individual methods for suggesting captions, identifying tags, detecting objects, and so on - meaning that you can use the most appropriate method to return only the information you need, reducing the size of the data payload that needs to be returned. See the [.NET SDK documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/computervision?view=azure-dotnet) for more details.
 
 ## Task 11: Generate a thumbnail image
 
@@ -380,27 +386,22 @@ In some cases, you may need to create a smaller version of an image named a *thu
      dotnet run thumbnail.jpg
      ```
 
-> **Note**: If you face any issues after running the command like process cannot access the file because it is being used by another process please ignore and proceed with next lab.
+    > **Note**: If you face any issues after running the command like process cannot access the file because it is being used by another process please ignore and proceed with next lab.
 
-## More information
-
-In this exercise, you explored some of the image analysis and manipulation capabilities of the Azure AI Vision service. The service also includes capabilities for reading text, detecting faces, and other computer vision tasks.
-
-For more information about using the **Azure AI Vision** service, see the [Azure AI Vision documentation](https://docs.microsoft.com/azure/cognitive-services/computer-vision/).
 
 ### Review
 In this lab, you have completed:
 
- + Open the cloned folder in Visual Studio Code
- + Provision a Cognitive Services resource
- + Prepare to use the Azure AI Vision SDK
- + View the images you will analyze
- + Analyze an image to suggest a caption
- + Get suggested tags for an image
- + Get image categories
- + Get brands in an image
- + Detect and locate objects in an image
- + Get moderation ratings for an image
- + Generate a thumbnail image
++ Opened the cloned folder in Visual Studio Code
++ Provisioned a Cognitive Services resource
++ Prepared to use the Azure AI Vision SDK
++ Viewed the images you will analyze
++ Analyzed an image to suggest a caption
++ Got suggested tags for an image
++ Got image categories
++ Got brands in an image
++ Detected and locate objects in an image
++ Got moderation ratings for an image
++ Generated a thumbnail image
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
