@@ -3,7 +3,7 @@
 ## Lab scenario
 Azure AI Speech includes a speech translation API that you can use to translate spoken language. For example, suppose you want to develop a translator application that people can use when traveling in places where they don't speak the local language. They would be able to say phrases such as "Where is the station?" or "I need to find a pharmacy" in their own language, and have it translate them to the local language.
 
-> **!NOTE:** This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
+  > **!NOTE :** This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
 
 ## Objectives
 
@@ -45,8 +45,7 @@ In this exercise, you'll complete a partially implemented client application tha
    ```csharp
    dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
    ```
-
-
+   
 3. View the contents of the **translator** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
 
@@ -79,7 +78,6 @@ In this exercise, you'll complete a partially implemented client application tha
     translationConfig.AddTargetLanguage("hi");
     Console.WriteLine("Ready to translate from " + translationConfig.SpeechRecognitionLanguage);
     ```
-
 6. You will use the **SpeechTranslationConfig** to translate speech into text, but you will also use a **SpeechConfig** to synthesize translations into speech. Add the following code under the comment **Configure speech**:
 
     **C#**
@@ -88,7 +86,6 @@ In this exercise, you'll complete a partially implemented client application tha
     // Configure speech
     speechConfig = SpeechConfig.FromSubscription(cogSvcKey, cogSvcRegion);
     ```
-
 7. Save your changes and return to the integrated terminal for the **translator** folder, and enter the following command to run the program:
 
     **C#**
@@ -96,8 +93,6 @@ In this exercise, you'll complete a partially implemented client application tha
     ```csharp
     dotnet run
     ```
-`
-
 8. If you are using C#, you can ignore any warnings about using the **await** operator in asynchronous methods - we'll fix that later. The code should display a message that it is ready to translate from en-US. Press ENTER to end the program.
 
 ## Task 3: Implement speech translation
@@ -135,8 +130,6 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
     ```csharp
     dotnet add package System.Windows.Extensions --version 4.6.0 
     ```
-
-
 2. In the code file for your program, under the existing namespace imports, add the following code to import the library you just installed:
 
     **C#**
@@ -144,8 +137,6 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
     ```csharp
     using System.Media;
     ```
-
-
 3. In the **Main** function for your program, note that the code uses the **Translate** function to translate spoken input. Then in the **Translate** function, under the comment **Translate speech**, add the following code to create a **TranslationRecognizer** client that can be used to recognize and translate speech from a file.
 
     **C#**
@@ -175,8 +166,6 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
     ```csharp
     dotnet run
     ```
-
-
 2. When prompted, enter a valid language code (*fr*, *es*, or *hi*), and then, if using a microphone, speak clearly and say "where is the station?" or some other phrase you might use when traveling abroad. The program should transcribe your spoken input and translate it to the language you specified (French, Spanish, or Hindi). Repeat this process, trying each language supported by the application. When you're finished, press ENTER to end the program.
 
    > **!NOTE :** The TranslationRecognizer gives you around 5 seconds to speak. If it detects no spoken input, it produces a "No match" result. The translation to Hindi may not always be displayed correctly in the Console window due to character encoding issues.
@@ -205,8 +194,6 @@ So far, your application translates spoken input to text; which might be suffici
         Console.WriteLine(speak.Reason);
     }
     ```
-
-
 2. Save your changes and return to the integrated terminal for the **translator** folder, and enter the following command to run the program:
 
     **C#**
@@ -214,8 +201,6 @@ So far, your application translates spoken input to text; which might be suffici
     ```csharp
     dotnet run
     ```
-
-
 3. When prompted, enter a valid language code (*fr*, *es*, or *hi*), and then speak clearly into the microphone and say a phrase you might use when traveling abroad. The program should transcribe your spoken input and respond with a spoken translation. Repeat this process, trying each language supported by the application. When you're finished, press **ENTER** to end the program.
 
    > **!NOTE :** *In this example, you've used a **SpeechTranslationConfig** to translate speech to text, and then used a **SpeechConfig** to synthesize the translation as speech. You can in fact use the **SpeechTranslationConfig** to synthesize the translation directly, but this only works when translating to a single language, and results in an audio stream that is typically saved as a file rather than sent directly to a speaker.*
