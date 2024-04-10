@@ -189,26 +189,25 @@ First, you need to define a dialog flow that will be used to handle questions ab
 
 1. In the **Properties** of the branch action, set the **Condition** field to **write an expression**:
 
-    ```
-    dialog.api_response.statusCode == 200
-    ```
+   ```
+   dialog.api_response.statusCode == 200
+   ```
 
 1. If the call was successful, you need to store the response in a variable. On the authoring canvas, in the **True** branch, add a **Manage properties** > **Set properties** action. Then in the properties pane, add the following property assignments:
 
-    | Property        | Value                                     |
-    |-----------------|-------------------------------------------|
-    | dialog.weather | =dialog.api_response.content.weather[0].description |
-    | dialog.temp    | =round(dialog.api_response.content.main.temp)       |
-    | dialog.icon    | =dialog.api_response.content.weather[0].icon      |
-
+   | Property        | Value                                     |
+   |-----------------|-------------------------------------------|
+   | dialog.weather | =dialog.api_response.content.weather[0].description |
+   | dialog.temp    | =round(dialog.api_response.content.main.temp)       |
+   | dialog.icon    | =dialog.api_response.content.weather[0].icon      |
 
 1. Still in the **True** branch, add a **Send a response** action under the **Set a property** action and set its text to:
 
-    ```
-    The weather in ${dialog.city} is ${dialog.weather} and the temperature is ${dialog.temp}&deg;.
-    ```
+   ```
+   The weather in ${dialog.city} is ${dialog.weather} and the temperature is ${dialog.temp}&deg;.
+   ```
 
-    >**Note**: This message uses the **dialog.city**, **dialog.weather**, and **dialog.temp** properties you set in the previous actions. Later, you'll also use the **dialog.icon** property.
+   >**Note**: This message uses the **dialog.city**, **dialog.weather**, and **dialog.temp** properties you set in the previous actions. Later, you'll also use the **dialog.icon** property.
 
 1. You also need to account for a response from the weather service that is not 200, so in the **False** branch, add a **Send a response** action and set its text to `I got an error: ${dialog.api_response.content.message}.` The dialog flow should now look like this:
 
