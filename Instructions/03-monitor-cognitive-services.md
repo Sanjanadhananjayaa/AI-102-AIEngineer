@@ -11,6 +11,8 @@ In this lab, you will complete the following tasks:
 + Task 1: Configure an alert
 + Task 2: Visualize a metric
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Configure an alert
 
 Let's start monitoring by defining an alert rule so you can detect activity in your Azure AI services resource.

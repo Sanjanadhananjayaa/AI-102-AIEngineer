@@ -13,6 +13,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Use a REST Interface
 + Task 4: Use an SDK
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Open the cloned folder in Visual Studio Code
 
 1. On the Jump-VM double click on the **Visual Studio Code** shortcut.

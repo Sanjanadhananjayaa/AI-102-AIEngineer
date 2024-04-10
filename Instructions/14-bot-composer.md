@@ -22,6 +22,8 @@ In this lab, you will complete the following tasks:
 + Task 6.2: Add a card
 + Task 6.3: Test the new user interface
 
+## Estimated timing: 120 minutes
+
 ## Task 1: Get an OpenWeather API key
 
 In this exercise, you will create a bot that uses the OpenWeather service to retrieve weather conditions for the city entered by the user. You will require an API key for the service to work.

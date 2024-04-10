@@ -16,6 +16,8 @@ In this lab, you will complete the following tasks:
 + Task 2.2: Use a service principal
 + Task 2.3: Use the service principal in an application
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Manage authentication keys
 
 When you created your Azure AI services resource, two authentication keys were generated. You can manage these in the Azure portal or by using the Azure command line interface (CLI).

@@ -15,6 +15,8 @@ In this lab, you will complete the following tasks:
 + Task 4: Detect language
 + Task 5: Translate text
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Clone the repo into your Azure Cloud Shell
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal. 
