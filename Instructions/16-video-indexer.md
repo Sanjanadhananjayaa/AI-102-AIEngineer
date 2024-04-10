@@ -19,6 +19,8 @@ In this lab, you will complete the following tasks:
 + Task 6.1 : Get your API details
 + Task 7: Use the REST API
 
+## Estimated timing: 120 minutes
+
 ## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
@@ -181,13 +183,13 @@ For more information about **Video Analyzer**, see the [Video Analyzer documenta
 ### Review
 In this lab, you have completed:
 
-+  Open the cloned folder in Visual Studio Code
-+  Upload a video to Video Analyzer
-+  Review video insights
-+  Search for insights
-+  Use Video Analyzer widgets
-+  Use the Video Analyzer REST API
-+  Get your API details
-+  Use the REST API
++  Opened the cloned folder in Visual Studio Code
++  Uploaded a video to Video Analyzer
++  Reviewed video insights
++  Searched for insights
++  Used Video Analyzer widgets
++  Used the Video Analyzer REST API
++  Got your API details
++  Used the REST API
 
 ## You have successfully completed the lab
