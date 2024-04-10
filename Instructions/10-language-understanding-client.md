@@ -288,4 +288,4 @@ In this lab, you have completed:
 + Prepared to use the Language service SDK
 + Got a prediction from the Conversational Language model
 
-## You have successfully completed the lab, proceed with the next Module.
+## You have successfully completed the lab.
