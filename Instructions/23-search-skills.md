@@ -1,7 +1,6 @@
 # Exercise 02: Create a Custom Skill for Azure AI Search
 
 ## Lab scenario
-
 Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated fields from documents and include them in a search index. There's a comprehensive set of built-in skills that you can use, but if you have a specific requirement that isn't met by these skills, you can create a custom skill.
 
 In this exercise, you'll create a custom skill that tabulates the frequency of individual words in a document to generate a list of the top five most used words, and add it to a search solution for Margie's Travel - a fictitious travel agency.
@@ -17,6 +16,8 @@ In this lab, you will complete the following tasks:
 + Task 5: Create an Azure Function for a custom skill
 + Task 6: Add the custom skill to the search solution
 + Task 7: Search the index
+
+## Estimated timing: 60 minutes
 
 ## Task 1: Clone the repository for this course
 

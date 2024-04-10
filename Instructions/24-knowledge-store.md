@@ -1,7 +1,6 @@
 # Exercise 03: Create a Knowledge Store with Azure AI Search
 
 ## Lab scenario
-
 Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated fields from documents and include them in a search index. While the index might be considered the primary output from an indexing process, the enriched data it contains might also be useful in other ways. For example:
 
 - Since the index is essentially a collection of JSON objects, each representing an indexed record, it might be useful to export the objects as JSON files for integration into a data orchestration process using tools such as Azure Data Factory.
@@ -18,6 +17,8 @@ In this lab, you will complete the following tasks:
 + Task 2: Create Azure resources
 + Task 3: Create a search solution
 + Task 4: View the knowledge store
+
+## Estimated timing: 60 minutes
 
 ## Task 1: Clone the repository for this course
 
