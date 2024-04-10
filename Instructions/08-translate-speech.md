@@ -1,12 +1,24 @@
-# Translate Speech
+# Exercise 02: Translate Speech
 
+## Lab scenario
 Azure AI Speech includes a speech translation API that you can use to translate spoken language. For example, suppose you want to develop a translator application that people can use when traveling in places where they don't speak the local language. They would be able to say phrases such as "Where is the station?" or "I need to find a pharmacy" in their own language, and have it translate them to the local language.
 
 > [!NOTE]
 > This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
 
 
-## Provision an Azure AI Speech resource
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Provision an Azure AI Speech resource
++ Task 2: Prepare to use the Azure AI Speech Translation service
++ Task 3: Implement speech translation
++ Task 4: Synthesize the translation to speech
+
+## Estimated timing: 120 minutes
+
+## Task 1: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.
 
@@ -23,7 +35,7 @@ If you don't already have on in your subscription, you'll need to provision a **
 1. Wait for deployment to complete, and then view the deployment details.
 1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need one of the keys and the location in which the service is provisioned from this page in the next procedure.
 
-## Prepare to use the Azure AI Speech Translation service
+## Task 2: Prepare to use the Azure AI Speech Translation service
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Speech SDK to recognize, translate, and synthesize speech.
 
@@ -92,7 +104,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. If you are using C#, you can ignore any warnings about using the **await** operator in asynchronous methods - we'll fix that later. The code should display a message that it is ready to translate from en-US. Press ENTER to end the program.
 
-## Implement speech translation
+## Task 3: Implement speech translation
 
 Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service, you can use the Azure AI Speech translation API to recognize and translate speech.
 
@@ -180,7 +192,7 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
 > [!NOTE]
 > The TranslationRecognizer gives you around 5 seconds to speak. If it detects no spoken input, it produces a "No match" result. The translation to Hindi may not always be displayed correctly in the Console window due to character encoding issues.
 
-## Synthesize the translation to speech
+## Task 4: Synthesize the translation to speech
 
 So far, your application translates spoken input to text; which might be sufficient if you need to ask someone for help while traveling. However, it would be better to have the translation spoken aloud in a suitable voice.
 
@@ -220,6 +232,12 @@ So far, your application translates spoken input to text; which might be suffici
 > [!NOTE]
 > *In this example, you've used a **SpeechTranslationConfig** to translate speech to text, and then used a **SpeechConfig** to synthesize the translation as speech. You can in fact use the **SpeechTranslationConfig** to synthesize the translation directly, but this only works when translating to a single language, and results in an audio stream that is typically saved as a file rather than sent directly to a speaker.*
 
-## More information
+### Review
+In this lab, you have completed:
 
-For more information about using the Azure AI Speech translation API, see the [Speech translation documentation](/azure/ai-services/speech-service/speech-translation).
++ Provisioned an Azure AI Speech resource
++ Prepared to use the Azure AI Speech service
++ Implemented speech translation
++ Synthesized speech
+
+## You have successfully completed the lab
