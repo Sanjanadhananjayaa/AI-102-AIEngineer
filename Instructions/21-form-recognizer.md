@@ -16,6 +16,8 @@ In this lab, you will complete the following tasks:
  + Task 4: Train a model using the Document Intelligence SDK
  + Task 5: Test your custom Document Intelligence model 
 
+## Estimated timing: 45 minutes
+
 ## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
