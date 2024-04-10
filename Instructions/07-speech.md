@@ -59,7 +59,7 @@ If you don't already have on in your subscription, you'll need to provision a **
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Speech SDK to recognize and synthesize speech.
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **07-speech** folder and expand the **C-Sharp** folder.
-1. Right-click the **speaking-clock** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
+2. Right-click the **speaking-clock** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
 
    **C#**
 
@@ -67,11 +67,11 @@ In this exercise, you'll complete a partially implemented client application tha
    dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
    ```
 
-1. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
+3. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
 
     Open the configuration file and update the configuration values it contains to include an authentication **key** for Azure AI Speech resource, and the **location** where it is deployed. Save your changes.
-1. Note that the **speaking-clock** folder contains a code file for the client application:
+4. Note that the **speaking-clock** folder contains a code file for the client application:
 
     - **C#**: Program.cs
 
@@ -85,7 +85,7 @@ In this exercise, you'll complete a partially implemented client application tha
     using Microsoft.CognitiveServices.Speech.Audio;
     ```
 
-1. In the **Main** function, note that code to load the service key and region from the configuration file has already been provided. You must use these variables to create a **SpeechConfig** for your Azure AI Speech resource. Add the following code under the comment **Configure speech service**:
+5. In the **Main** function, note that code to load the service key and region from the configuration file has already been provided. You must use these variables to create a **SpeechConfig** for your Azure AI Speech resource. Add the following code under the comment **Configure speech service**:
 
     **C#**
 
@@ -99,7 +99,7 @@ In this exercise, you'll complete a partially implemented client application tha
     ```
 
 
-1. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+6. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -107,7 +107,7 @@ In this exercise, you'll complete a partially implemented client application tha
     dotnet run
     ```
 
-1. If you are using C#, you can ignore any warnings about using the **await** operator in asynchronous methods - we'll fix that later. The code should display the region of the speech service resource the application will use.
+7. If you are using C#, you can ignore any warnings about using the **await** operator in asynchronous methods - we'll fix that later. The code should display the region of the speech service resource the application will use.
 
 ## Task 4: Recognize speech
 
@@ -215,8 +215,7 @@ Your speaking clock application accepts spoken input, but it doesn't actually sp
     using SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer(speechConfig);
     ```
 
-> [!NOTE]
->  *The default audio configuration uses the default system audio device for output, so you don't need to explicitly provide an **AudioConfig**. If you need to     redirect     audio output to a file, you can use an **AudioConfig** with a filepath to do so.*
+    > **NOTE :** *The default audio configuration uses the default system audio device for output, so you don't need to explicitly provide an **AudioConfig**. If you need to     redirect     audio output to a file, you can use an **AudioConfig** with a filepath to do so.*
 
 1. In the **TellTime** function, under the comment **Synthesize spoken output**, add the following code to generate spoken output, being careful not to replace the code at the end of the function that prints the response:
 
@@ -314,4 +313,4 @@ In this lab, you have completed:
 + Synthesized speech
 + Used Speech Synthesis Markup Language
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
