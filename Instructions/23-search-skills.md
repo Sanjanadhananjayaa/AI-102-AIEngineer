@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 + Task 6: Add the custom skill to the search solution
 + Task 7: Search the index
 
-## Estimated timing: 120 minutes
+## Estimated timing: 60 minutes
 
 ## Task 1: Clone the repository for this course
 
