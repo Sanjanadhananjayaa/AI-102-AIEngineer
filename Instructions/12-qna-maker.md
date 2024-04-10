@@ -16,9 +16,9 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](images/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. 
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. 
 
-3. If you're prompted to create storage for your Cloud Shell, select **Show advanced settings** , and follow these settings:
+1. If you're prompted to create storage for your Cloud Shell, select **Show advanced settings** , and follow these settings:
 
     - Subscription: **Azure subscription**
 
@@ -35,25 +35,16 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu in the top left.
 
 
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-
-
-
-
-
-
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Show advance settings**. Then wait a minute or so for the storage to be created.
-
-4. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-5. Once the terminal starts, run the following commands to download a copy of the repo into your Cloud Shell:
+1. Once the terminal starts, run the following commands to download a copy of the repo into your Cloud Shell:
 
     ```bash
     rm -r azure-ai-eng -f
    git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
     ```
 
-6. The files have been downloaded into a folder called **azure-ai-eng**. Let's change into that folder by running:
+1. The files have been downloaded into a folder called **azure-ai-eng**. Let's change into that folder by running:
 
     ```bash
     cd azure-ai-eng/12-qna
