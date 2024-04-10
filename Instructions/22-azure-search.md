@@ -1,12 +1,27 @@
-# Create an Azure AI Search solution
+# Exercise 1: Create an Azure AI Search solution
 
+## Lab scenario
 All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information, but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
 
 For example, suppose *Margie's Travel* is a travel agency that specializes in organizing trips to cities around the world. Over time, the company has amassed a huge amount of information in documents such as brochures, as well as reviews of hotels submitted by customers. This data is a valuable source of insights for travel agents and customers as they plan trips, but the sheer volume of data can make it difficult to find relevant information to answer a specific customer question.
 
 To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
 
-## Clone the repository for this course
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Clone the repository for this course
++ Task 2: Create Azure resources
++ Task 3: Upload Documents to Azure Storage
++ Task 4: Index the documents
++ Task 5: Search the index
++ Task 6: Explore and modify definitions of search components
++ Task 7: Create a search client application
+
+## Estimated timing: 120 minutes
+
+## Task 1: Clone the repository for this course
 
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
@@ -21,7 +36,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Create Azure resources
+## Task 2: Create Azure resources
 
 The solution you will create for Margie's Travel requires the following resources in your Azure subscription:
 
@@ -73,7 +88,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
 
-## Upload Documents to Azure Storage
+## Task 3: Upload Documents to Azure Storage
 
 Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
@@ -94,7 +109,7 @@ A web browser tab will open and prompt you to sign into Azure. Do so, and then c
     .\UploadDocs.cmd
     ```
 
-## Index the documents
+## Task 4: Index the documents
 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
@@ -151,7 +166,7 @@ Now that you have the documents in place, you can create a search solution by in
     3. Maps the extracted fields to the index.
 16. In the bottom half of the **Overview** page for your Azure AI Search resource, view the **Indexers** tab, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 
-## Search the index
+## Task 5: Search the index
 
 Now that you have an index, you can search it.
 
@@ -216,7 +231,7 @@ Now that you have an index, you can search it.
 
     This query returns the filename of any documents authored by *Reviewer* that mention "New York".
 
-## Explore and modify definitions of search components
+## Task 6: Explore and modify definitions of search components
 
 The components of the search solution are based on JSON definitions, which you can view and edit in the Azure portal.
 
@@ -351,7 +366,7 @@ All of the other metadata and content fields in the source document are implicit
 
 3. Close the **Search explorer** page to return to the **Overview** page.
 
-## Create a search client application
+## Task 7: Create a search client application
 
 Now that you have a useful index, you can use it from a client application. You can do this by consuming the REST interface, submitting requests and receiving responses in JSON format over HTTP; or you can use the software development kit (SDK) for your preferred programming language. In this exercise, we'll use the SDK.
 
@@ -444,6 +459,16 @@ The web app already includes code to process and render the search results.
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
 10. Close the browser tab containing the Margie's Travel web site and return to Visual Studio Code. Then in the terminal for the **margies-travel** folder where the dotnet  application is running, enter Ctrl+C to stop the app.
 
-## More information
 
-To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
+### Review
+In this lab, you have completed:
+
++ Clone the repository for this course
++ Create Azure resources
++ Upload Documents to Azure Storage
++ Index the documents
++ Search the index
++ Explore and modify definitions of search components
++ Create a search client application
+
+## You have successfully completed the lab, proceed with the next exercises.
