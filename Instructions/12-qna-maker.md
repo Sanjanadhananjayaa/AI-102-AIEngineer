@@ -16,7 +16,31 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](images/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. 
+
+3. If you're prompted to create storage for your Cloud Shell, select **Show advanced settings** , and follow these settings:
+
+    - Subscription: **Azure subscription**
+
+    - Resource Group: Ai-102-<inject key="DeploymentID" enableCopy="false"/>
+    
+    - **Storage account**: Enter **blob<inject key="DeploymentID" enableCopy="false"/>**
+    
+    - **File share**: Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>**
+    
+    - Select **Create storage** 
+    
+    >**Note:** Wait a minute or so for the storage to be created.
+
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu in the top left.
+
+
+
+
+
+
+
+
 
 3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Show advance settings**. Then wait a minute or so for the storage to be created.
 
