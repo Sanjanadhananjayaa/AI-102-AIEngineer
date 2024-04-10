@@ -130,7 +130,7 @@ In this exercise, you'll complete a partially implemented client application tha
     
     - **Python**: .env
 
-    >**Note:** Open the notepad, where you pasted the values and update the configuration values it contains to include an authentication **key** for your Azure AI Translator resource, and the **location** where it is deployed (<u>not</u> the endpoint). 
+        >**Note:** Open the notepad, where you pasted the values and update the configuration values it contains to include an authentication **key** for your Azure AI Translator resource, and the **location** where it is deployed (<u>not</u> the endpoint). 
     
 1. Save your changes by pressing **CTRL + S**.
 

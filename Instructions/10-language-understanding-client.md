@@ -31,7 +31,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Create Language service resources
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
+1. Open the Azure portal.
 
 2. Select the **&#65291;Create a resource** button, search and select *language service*, and select **Create** button and then select **Continue to create your resource** resource with the following settings:
 
@@ -57,6 +57,7 @@ In this lab, you will complete the following tasks:
 3. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.  Click **Done**.
 
       ![](images/mod-5-61.png)
+      
 4. Sign in using the Microsoft account associated with your Azure subscription. If this is the first time you have signed into the Language Service portal, you may need to grant the app some permissions to access your account details. Then complete the *Welcome* steps by selecting your Azure subscription and the authoring resource you just created.
 
 5. Open the **Conversational Language Understanding** page.
@@ -288,4 +289,4 @@ In this lab, you have completed:
 + Prepared to use the Language service SDK
 + Got a prediction from the Conversational Language model
 
-## You have successfully completed the lab, proceed with the next Module.
+## You have successfully completed the lab.

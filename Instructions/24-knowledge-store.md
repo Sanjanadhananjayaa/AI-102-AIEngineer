@@ -1,4 +1,6 @@
-# Create a Knowledge Store with Azure AI Search
+# Exercise 03: Create a Knowledge Store with Azure AI Search
+
+## Lab scenario
 
 Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated fields from documents and include them in a search index. While the index might be considered the primary output from an indexing process, the enriched data it contains might also be useful in other ways. For example:
 
@@ -8,8 +10,16 @@ Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated
 
 In this exercise, you'll implement a knowledge store for *Margie's Travel*, a fictitious travel agency that uses information in brochures and hotel reviews to help customers plan trips.
 
+## Objectives
 
-## Clone the repository for this course
+In this lab, you will complete the following tasks:
+
++ Task 1: Clone the repository for this course
++ Task 2: Create Azure resources
++ Task 3: Create a search solution
++ Task 4: View the knowledge store
+
+## Task 1: Clone the repository for this course
 
 If you have already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, open it in Visual Studio Code; otherwise, follow these steps to clone it now.
 
@@ -20,7 +30,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Create Azure resources
+## Task 2: Create Azure resources
 
 > **Note**: If you have previously completed the **[Create an Azure AI Search solution](22-azure-search.md)** exercise, and still have these Azure resources in your subscription, you can skip this section and start at the **Create a search solution** section. Otherwise, follow the steps below to provision the required Azure resources.
 
@@ -65,7 +75,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
 14. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
 
-## Create a search solution
+## Task 3: Create a search solution
 
 Now that you have the necessary Azure resources, you can create a search solution that consists of the following components:
 
@@ -76,7 +86,7 @@ Now that you have the necessary Azure resources, you can create a search solutio
 
 In this exercise, you'll use the Azure AI Search REST interface to create these components by submitting JSON requests.
 
-### Prepare JSON for REST operations
+### Task 3.1: Prepare JSON for REST operations
 
 You'll use the REST interface to submit JSON definitions for your Azure AI Search components.
 
@@ -111,7 +121,7 @@ You'll use the REST interface to submit JSON definitions for your Azure AI Searc
 12. In the **create-search** folder, open **indexer.json**. This file contains a JSON definition for an indexer named **margies-knowledge-indexer**.
 13. Review the JSON for the indexer, then close the file without making any changes.
 
-### Submit REST requests
+### Task 3.2: Submit REST requests
 
 Now that you've prepared the JSON objects that define your search solution components, you can submit the JSON documents to the REST interface to create them.
 
@@ -134,11 +144,11 @@ Now that you've prepared the JSON objects that define your search solution compo
 
     > **Tip**: If the script fails, check the placeholders you added in the **data_source.json** and **skillset.json** files as well as the **create-search.cmd** file. After correcting any mistakes, you may need to use the Azure portal user interface to delete any components that were created in your search resource before re-running the script.
 
-## View the knowledge store
+## Task 4: View the knowledge store
 
 After you have run an indexer that uses a skillset to create a knowledge store, the enriched data extracted by the indexing process is persisted in the knowledge store projections.
 
-### View object projections
+### Task 4.1: View object projections
 
 The *object* projections defined in the Margie's Travel skillset consist of a JSON file for each indexed document. These files are stored in a blob container in the Azure Storage account specified in the skillset definition.
 
@@ -148,39 +158,39 @@ The *object* projections defined in the Margie's Travel skillset consist of a JS
 3. Select the **margies-knowledge** container. It should contain a folder for each indexed document.
 4. Open any of the folders, and then download and open the **knowledge-projection.json** file it contains. Each JSON file contains a representation of an indexed document, including the enriched data extracted by the skillset as shown here.
 
-```
-{
-    "file_id":"abcd1234....",
-    "file_name":"Margies Travel Company Info.pdf",
-    "url":"https://store....blob.core.windows.net/margies/...pdf",
-    "language":"en",
-    "sentiment":0.83164644241333008,
-    "key_phrases":[
-        "Margie’s Travel",
-        "Margie's Travel",
-        "best travel experts",
-        "world-leading travel agency",
-        "international reach"
-        ],
-    "locations":[
-        "Dubai",
-        "Las Vegas",
-        "London",
-        "New York",
-        "San Francisco"
-        ],
-    "image_tags":[
-        "outdoor",
-        "tree",
-        "plant",
-        "palm"
-        ]
-}
-```
+    ```
+    {
+        "file_id":"abcd1234....",
+        "file_name":"Margies Travel Company Info.pdf",
+        "url":"https://store....blob.core.windows.net/margies/...pdf",
+        "language":"en",
+        "sentiment":0.83164644241333008,
+        "key_phrases":[
+            "Margie’s Travel",
+            "Margie's Travel",
+            "best travel experts",
+            "world-leading travel agency",
+            "international reach"
+            ],
+        "locations":[
+            "Dubai",
+            "Las Vegas",
+            "London",
+            "New York",
+            "San Francisco"
+            ],
+        "image_tags":[
+            "outdoor",
+            "tree",
+            "plant",
+            "palm"
+            ]
+    }
+    ```
 
 The ability to create *object* projections like this enables you to generate enriched data objects that can be incorporated into an enterprise data analysis solution - for example by ingesting the JSON files into an Azure Data Factory pipeline for further processing or loading into a data warehouse.
 
-### View file projections
+### Task 4.2: View file projections
 
 The *file* projections defined in the skillset create JPEG files for each image that was extracted from the documents during the indexing process.
 
@@ -190,7 +200,7 @@ The *file* projections defined in the skillset create JPEG files for each image 
 
 The ability to generate *file* projections like this makes indexing an efficient way to extract embedded images from a large volume of documents.
 
-### View table projections
+### Task 4.3: View table projections
 
 The *table* projections defined in the skillset form a relational schema of enriched data.
 
@@ -209,6 +219,12 @@ The *table* projections defined in the skillset form a relational schema of enri
 
 The ability to create *table* projections enables you to build analytical and reporting solutions that query the relational schema; for example, using Microsoft Power BI. The automatically generated key columns can be used to join the tables in queries - for example to return all of the locations mentioned in a specific document.
 
-## More information
+### Review
+In this lab, you have completed:
 
-To learn more about creating knowledge stores with Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/knowledge-store-concept-intro).
++ Cloned the repository for this course
++ Created Azure resources
++ Created a search solution
++ Viewed the knowledge store
+
+## You have successfully completed the lab.

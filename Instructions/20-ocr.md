@@ -8,12 +8,12 @@ Optical character recognition (OCR) is a subset of computer vision that deals wi
 
 In this lab, you will complete the following tasks:
 
- + Task 1: Open the cloned folder in Visual Studio Code.
- + Task 2: Provision a Cognitive Services resource
- + Task 3: Prepare to use the Azure AI Vision SDK
- + Task 4: Use the Read API to read text from an image
- + Task 5: Use the Read API to read text from a document
- + Task 6: Read handwritten text
++ Task 1: Open the cloned folder in Visual Studio Code.
++ Task 2: Provision a Cognitive Services resource
++ Task 3: Prepare to use the Azure AI Vision SDK
++ Task 4: Use the Read API to read text from an image
++ Task 5: Use the Read API to read text from a document
++ Task 6: Read handwritten text
 
 ## Estimated timing: 30 minutes
 
@@ -29,18 +29,11 @@ In this lab, you will complete the following tasks:
   
       **Note:** When **Do you trust the authors of the filesin tjis folder?** prompted select **Yes, I trust the authors**.
 
-3.  Wait while additional files are installed to support the C# code projects in the repo.
-
-
 ## Task 2: Provision a Cognitive Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription. Here, enter your credentials:
-
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+1. Open the Azure portal.
 
 2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
 
@@ -200,17 +193,13 @@ In addition to printed text, the **Read** API can extract handwritten text in En
      ```
 4. When prompted, enter **3** and observe the output, which is the text extracted from the document.
 
-## More information
-
-For more information about using the **Azure AI Vision** service to read text, see the [Azure AI Vision documentation](https://docs.microsoft.com/azure/cognitive-services/computer-vision/concept-recognizing-text).
-
 ### Review
 In this lab, you have completed:
- +  Open the cloned folder in Visual Studio Code.
- +  Provision a Cognitive Services resource
- +  Prepare to use the Azure AI Vision SDK
- +  Use the Read API to read text from an image
- +  Use the Read API to read text from a document
- +  Read handwritten text
+ +  Opened the cloned folder in Visual Studio Code.
+ +  Provisioned a Cognitive Services resource
+ +  Prepared to use the Azure AI Vision SDK
+ +  Used the Read API to read text from an image
+ +  Used the Read API to read text from a document
+ +  Readed handwritten text
    
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
