@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 + Task 4: Prepare to use the Language service SDK
 + Task 5: Get a prediction from the Conversational Language model
 
-## Estimated timing: 30 minutes
+## Estimated timing: 45 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code.
 
