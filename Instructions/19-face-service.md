@@ -1,8 +1,24 @@
-# Detect and Analyze Faces
+# Exercise 01: Detect and Analyze Faces
+
+## Lab scenario
 
 The ability to detect and analyze human faces is a core AI capability. In this exercise, you'll explore two Azure Cognitive Services that you can use to work with faces in images: the **Computer Vision** service, and the **Face** service.
 
-## Open the cloned folder in Visual Studio Code.
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Open the cloned folder in Visual Studio Code.
++ Task 2: Provision a Cognitive Services resource
++ Task 3: Prepare to use the Azure AI Vision SDK
++ Task 4: View the image you will analyze
++ Task 5: Detect faces in an image
++ Task 6: Prepare to use the Face SDK
++ Task 7: Detect and analyze faces
+
+## Estimated timing: 60 minutes
+
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
 
@@ -16,7 +32,7 @@ The ability to detect and analyze human faces is a core AI capability. In this e
 
     ![Visual Studio Code Icon](./images/vscodewarning.png)
 
-## Provision a Cognitive Services resource
+## Task 2: Provision a Cognitive Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
@@ -38,7 +54,7 @@ If you don't already have one in your subscription, you'll need to provision a *
 6. On **Azure AI Services** blade, click on **Keys and Endpoint** under Resource Management. You will need the **endpoint** and one of the **keys** from this page in the next procedure.
 
 
-## Prepare to use the Azure AI Vision SDK
+## Task 3: Prepare to use the Azure AI Vision SDK
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Vision SDK to analyze faces in an image.
 
@@ -72,7 +88,7 @@ In this exercise, you'll complete a partially implemented client application tha
     using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
     ```
 
-## View the image you will analyze
+## Task 4: View the image you will analyze
 
 In this exercise, you will use the Computer Vision service to analyze an image of people.
 
@@ -80,7 +96,7 @@ In this exercise, you will use the Computer Vision service to analyze an image o
 
 2. Select the **people.jpg** image to view it.
 
-## Detect faces in an image
+## Task 5: Detect faces in an image
 
 Now you're ready to use the SDK to call the Computer Vision service and detect faces in an image.
 
@@ -163,7 +179,7 @@ Now you're ready to use the SDK to call the Computer Vision service and detect f
 
 8. View the **detected_faces.jpg** file that is generated in the same folder as your code file to see the annotated faces. In this case, your code has used the attributes of the face to label the location of the top left of the box, and the bounding box coordinates to draw a rectangle around each face.
 
-## Prepare to use the Face SDK
+## Task 6: Prepare to use the Face SDK
 
 While the **Azure AI Vision** service offers basic face detection (along with many other image analysis capabilities), the **Face** service provides more comprehensive functionality for facial analysis and recognition.
 
@@ -212,7 +228,7 @@ While the **Azure AI Vision** service offers basic face detection (along with ma
 
 9. In the **Main** function, under the code you just added, note that the code displays a menu that enables you to call functions in your code to explore the capabilities of the Face service. You will implement these functions in the remainder of this exercise.
 
-## Detect and analyze faces
+## Task 7: Detect and analyze faces
 
 One of the most fundamental capabilities of the Face service is to detect faces in an image, and determine their attributes, such as head pose, blur, the presence of spectacles, and so on.
 
@@ -298,10 +314,15 @@ One of the most fundamental capabilities of the Face service is to detect faces 
 
 7. View the **detected_faces.jpg** file that is generated in the same folder as your code file to see the annotated faces.
 
-## More information
+### Review
+In this lab, you have completed:
 
-There are several additional features available within the **Face** service, but following the [Responsible AI Standard](https://aka.ms/aah91ff) those are restricted behind a Limited Access policy. These features include identifying, verifying, and creating facial recognition models. To learn more and apply for access, see the [Limited Access for Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-limited-access).
-
-For more information about using the **Azure AI Vision** service for face detection, see the [Computer Vision documentation](https://docs.microsoft.com/azure/cognitive-services/computer-vision/concept-detecting-faces).
-
-To learn more about the **Face** service, see the [Face documentation](https://docs.microsoft.com/azure/cognitive-services/face/).
++ Opened the cloned folder in Visual Studio Code.
++ Provisioned a Cognitive Services resource
++ Prepared to use the Azure AI Vision SDK
++ Viewed the image you will analyze
++ Detected faces in an image
++ Prepared to use the Face SDK
++ Detected and analyze faces
+   
+## You have successfully completed the lab.

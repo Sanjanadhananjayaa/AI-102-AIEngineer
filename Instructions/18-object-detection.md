@@ -1,8 +1,23 @@
-# Detect Objects in Images with Custom Vision
+# Exercise 02: Detect Objects in Images with Custom Vision
+
+## Lab scenario
 
 In this exercise, you will use the Custom Vision service to train an *object detection* model that can detect and locate three classes of fruit (apple, banana, and orange) in an image.
 
-## Create a Custom Vision project
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Create a Custom Vision project
++ Task 2: Add and tag images
++ Task 3: Use the Training API to upload images
++ Task 4: Train and test a model
++ Task 5: Publish the object detection model
++ Task 6: Use the image classifier from a client application
+
+## Estimated timing: 60 minutes
+
+## Task 1: Create a Custom Vision project
 
 To train an object detection model, you need to create a Custom Vision project based on your training resource. To do this, you'll use the Custom Vision portal.
 
@@ -17,7 +32,7 @@ To train an object detection model, you need to create a Custom Vision project b
 
 3. Wait for the project to be created and opened in the browser.
 
-## Add and tag images
+## Task 2: Add and tag images
 
 To train an object detection model, you need to upload images that contain the classes you want the model to identify, and tag them to indicate bounding boxes for each object instance.
 
@@ -49,7 +64,7 @@ Alternatively, you can simply drag around the object to create a region.
 
      ![Tagged images in a project](./images/tagged-images.jpg)
 
-## Use the Training API to upload images
+## Task 3: Use the Training API to upload images
 
 You can use the graphical tool in the Custom Vision portal to tag your images, but many AI development teams use other tools that generate files containing information about tags and object regions in images. In scenarios like this, you can use the Custom Vision training API to upload tagged images to the project.
 
@@ -65,11 +80,11 @@ You can use the graphical tool in the Custom Vision portal to tag your images, b
 
 5. Right-click the **train-detector** folder and open an integrated terminal. Then install the Custom Vision Training package by running the appropriate command for your language preference:
 
-**C#**
+    **C#**
 
-```
-dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training --version 2.0.0
-```
+    ```
+    dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training --version 2.0.0
+    ```
 
 6. View the contents of the **train-detector** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
@@ -93,17 +108,17 @@ dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Trainin
 
 10. Return the integrated terminal for the **train-detector** folder, and enter the following command to run the program:
     
-**C#**
+    **C#**
 
-```
-dotnet run
-```
+    ```
+    dotnet run
+    ```
     
 11. Wait for the program to end. Then return to your browser and view the **Training Images** page for your project in the Custom Vision portal (refreshing the browser if necessary).
 
 12. Verify that some new tagged images have been added to the project.
 
-## Train and test a model
+## Task 4: Train and test a model
 
 Now that you've tagged the images in your project, you're ready to train a model.
 
@@ -113,7 +128,7 @@ Now that you've tagged the images in your project, you're ready to train a model
 
 3. At the top right of the page, click **Quick Test**, and then in the **Image URL** box, enter `https://aka.ms/apple-orange` and view the prediction that is generated. Then close the **Quick Test** window.
 
-## Publish the object detection model
+## Task 5: Publish the object detection model
 
 Now you're ready to publish your trained model so that it can be used from a client application.
 
@@ -125,7 +140,7 @@ Now you're ready to publish your trained model so that it can be used from a cli
 
 3. On the Custom Vision portal home page, at the top right, click the *settings* (&#9881;) icon to view the settings for your Custom Vision service. Then, under **Resources**, find your *prediction* (evident by the **-prediction** suffix) resource (<u>not</u> the training resource) to determine its **Key** and **Endpoint** values (you can also obtain this information by viewing the resource in the Azure portal).
 
-## Use the image classifier from a client application
+## Task 6: Use the image classifier from a client application
 
 Now that you've published the image classification model, you can use it from a client application. Once again, you can choose to use **C#**.
 
@@ -133,11 +148,11 @@ Now that you've published the image classification model, you can use it from a 
 
 2. Right-click the **test-detector** folder and open an integrated terminal. Then enter the following SDK-specific command to install the Custom Vision Prediction package:
 
-**C#**
+    **C#**
 
-```
-dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction --version 2.0.0
-```
+    ```
+    dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction --version 2.0.0
+    ```
 
 3. Open the configuration file for your client application (*appsettings.json* for C#) and update the configuration values it contains to reflect the endpoint and key for your Custom Vision *prediction* (evident by the **-prediction** suffix) resource, the project ID for the object detection project, and the name of your published model (which should be *fruit-detector*). Save your changes.
 
@@ -148,14 +163,22 @@ dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Predict
 
 5. Return to the integrated terminal for the **test-detector** folder, and enter the following command to run the program:
 
-**C#**
+    **C#**
 
-```
-dotnet run
-```
+    ```
+    dotnet run
+    ```
 
 6. After the program has completed, view the resulting **output.jpg** file to see the detected objects in the image.
 
-## More information
+### Review
+In this lab, you have completed:
 
-For more information about object detection with the Custom Vision service, see the [Custom Vision documentation](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/).
++ Created a Custom Vision project
++ Added and tag images
++ Used the Training API to upload images
++ Trained and test a model
++ Published the object detection model
++ Used the image classifier from a client application
+   
+## You have successfully completed the lab

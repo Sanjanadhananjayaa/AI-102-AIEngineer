@@ -8,7 +8,7 @@
 
 In this exercise, you'll use both of these APIs to implement a speaking clock application.
 
- > **!NOTE** This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
+> **Note:** This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
 
 ## Objectives
 
@@ -19,7 +19,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Prepare to use Azure AI speech
 + Task 4: Recognize speech
 + Task 5: Synthesize speech
-+ Task 6: Use Speech Synthesis Markup Language
++ Task 6: Use a different voice
++ Task 7: Use Speech Synthesis Markup Language
 
 ## Estimated timing: 120 minutes
 
@@ -28,30 +29,36 @@ In this lab, you will complete the following tasks:
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Start Visual Studio Code.
+
 1. Open the New Terminal  and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
 
    ![](./images/Terminal_new_vs_1.png)
    
 1. When the repository has been cloned, open the folder in Visual Studio Code.
-1. Wait while additional files are installed to support the C# code projects in the repo.
 
-   > **NOTE**: If you are prompted to add required assets to build and debug, select **Not Now**.
+   > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
 ## Task 2: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
+1. Open the Azure portal.
+
 1. Enter **Azure AI** in the search field at the top of the portal. Then select **Azure AI services** in the suggestions dropdown that appears.
+
 1. Select **Create** under **Speech service** in the results page.
+
 1. Create a resource with the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
     - **Region**: *Choose any available region*
     - **Name**: *Enter a unique name*
     - **Pricing tier**: Standard S0
+
 1. Select **Review + Create,** then select **Create**.
+
 1. Wait for deployment to complete, and then view the deployment details.
+
 1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need one of the keys and the location in which the service is provisioned from this page in the next procedure.
 
 ## Task 3: Prepare to use the Azure AI Speech service
@@ -59,7 +66,8 @@ If you don't already have on in your subscription, you'll need to provision a **
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Speech SDK to recognize and synthesize speech.
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **07-speech** folder and expand the **C-Sharp** folder.
-2. Right-click the **speaking-clock** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
+
+1. Right-click the **speaking-clock** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
 
    **C#**
 
@@ -67,15 +75,17 @@ In this exercise, you'll complete a partially implemented client application tha
    dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
    ```
 
-3. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
+1. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
 
-    Open the configuration file and update the configuration values it contains to include an authentication **key** for Azure AI Speech resource, and the **location** where it is deployed. Save your changes.
-4. Note that the **speaking-clock** folder contains a code file for the client application:
+1. Open the configuration file and update the configuration values it contains to include an authentication **key** for Azure AI Speech resource, and the **location** where it is deployed. Save your changes.
+
+1. Note that the **speaking-clock** folder contains a code file for the client application:
+
 
     - **C#**: Program.cs
 
-    Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following language-specific code to import the namespaces you will need to use the Azure AI Speech SDK:
+1. Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following language-specific code to import the namespaces you will need to use the Azure AI Speech SDK:
 
     **C#**
 
@@ -97,9 +107,7 @@ In this exercise, you'll complete a partially implemented client application tha
     // Configure voice
     speechConfig.SpeechSynthesisVoiceName = "en-US-AriaNeural";
     ```
-
-
-6. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+6. **Save your changes** and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -113,7 +121,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
 Now that you have a **SpeechConfig** for the speech service in your Azure AI Speech resource, you can use the **Speech-to-text** API to recognize speech and transcribe it to text.
 
-### If you have a working microphone
+### Task 4.1: If you have a working microphone
 
 1. In the **Main** function for your program, note that the code uses the **TranscribeCommand** function to accept spoken input.
 1. In the **TranscribeCommand** function, under the comment **Configure speech recognition**, add the appropriate code below to create a **SpeechRecognizer** client that can be used to recognize and transcribe speech using the default system microphone:
@@ -129,7 +137,7 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
 
 1. Now skip ahead to the **Add code to process the transcribed command** section below.
 
-### Alternatively, use audio input from a file
+### Task 4.2: Alternatively, use audio input from a file
 
 1. In the terminal window, enter the following command to install a library that you can use to play the audio file:
 
@@ -160,7 +168,7 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
     using SpeechRecognizer speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
     ```
 
-### Add code to process the transcribed command
+### Task 4.3: Add code to process the transcribed command
 
 1. In the **TranscribeCommand** function, under the comment **Process speech input**, add the following code to listen for spoken input, being careful not to replace the code at the end of the function that returns the command:
 
@@ -186,7 +194,7 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
     }
     ```
 
-1. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+1. **Save your changes** and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -194,11 +202,11 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
     dotnet run
     ```
 
-1. If using a microphone, speak clearly and say "what time is it?". The program should transcribe your spoken input and display the time (based on the local time of the computer where the code is running, which may not be the correct time where you are).
+1. If using a microphone, speak clearly and say "**what time is it?**". The program should transcribe your spoken input and display the time (based on the local time of the computer where the code is running, which may not be the correct time where you are).
 
-    The SpeechRecognizer gives you around 5 seconds to speak. If it detects no spoken input, it produces a "No match" result.
+    - The SpeechRecognizer gives you around 5 seconds to speak. If it detects no spoken input, it produces a "No match" result.
 
-    If the SpeechRecognizer encounters an error, it produces a result of "Cancelled". The code in the application will then display the error message. The most likely cause is an incorrect key or region in the configuration file.
+    - If the SpeechRecognizer encounters an error, it produces a result of "Cancelled". The code in the application will then display the error message. The most likely cause is an incorrect key or region in the configuration file.
 
 ## Task 5: Synthesize speech
 
@@ -214,8 +222,7 @@ Your speaking clock application accepts spoken input, but it doesn't actually sp
     speechConfig.SpeechSynthesisVoiceName = "en-GB-RyanNeural";
     using SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer(speechConfig);
     ```
-
-    > **NOTE :** *The default audio configuration uses the default system audio device for output, so you don't need to explicitly provide an **AudioConfig**. If you need to     redirect     audio output to a file, you can use an **AudioConfig** with a filepath to do so.*
+    >**Note:** The default audio configuration uses the default system audio device for output, so you don't need to explicitly provide an **AudioConfig**. If you need to     redirect     audio output to a file, you can use an **AudioConfig** with a filepath to do so.
 
 1. In the **TellTime** function, under the comment **Synthesize spoken output**, add the following code to generate spoken output, being careful not to replace the code at the end of the function that prints the response:
 
@@ -230,7 +237,7 @@ Your speaking clock application accepts spoken input, but it doesn't actually sp
     }
     ```
 
-1. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+1. **Save your changes** and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -238,9 +245,9 @@ Your speaking clock application accepts spoken input, but it doesn't actually sp
     dotnet run
     ```
     
-1. When prompted, speak clearly into the microphone and say "what time is it?". The program should speak, telling you the time.
+1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak, telling you the time.
 
-## Use a different voice
+## Task 6: Use a different voice
 
 Your speaking clock application uses a default voice, which you can change. The Speech service supports a range of *standard* voices as well as more human-like *neural* voices. You can also create *custom* voices.
 
@@ -256,18 +263,16 @@ Your speaking clock application uses a default voice, which you can change. The 
     using SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer(speechConfig);
     ```
     
-1. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+1. **Save your changes** and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
     ```bash
     dotnet run
     ```
-`
+`1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak in the specified voice, telling you the time.
 
-1. When prompted, speak clearly into the microphone and say "what time is it?". The program should speak in the specified voice, telling you the time.
-
-## Task 6: Use Speech Synthesis Markup Language
+## Task 7: Use Speech Synthesis Markup Language
 
 Speech Synthesis Markup Language (SSML) enables you to customize the way your speech is synthesized using an XML-based format.
 
@@ -292,7 +297,7 @@ Speech Synthesis Markup Language (SSML) enables you to customize the way your sp
     }
     ```
 
-1. Save your changes and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
+1. **Save your changes** and return to the integrated terminal for the **speaking-clock** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -300,7 +305,7 @@ Speech Synthesis Markup Language (SSML) enables you to customize the way your sp
     dotnet run
     ```
 
-1. When prompted, speak clearly into the microphone and say "what time is it?". The program should speak in the voice that is specified in the SSML (overriding the voice specified in the SpeechConfig), telling you the time, and then after a pause telling you it's time to end this lab - which it is!
+1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak in the voice that is specified in the SSML (overriding the voice specified in the SpeechConfig), telling you the time, and then after a pause telling you it's time to end this lab - which it is!
 
 
 ### Review
@@ -311,6 +316,7 @@ In this lab, you have completed:
 + Prepared to use the Azure AI Speech service
 + Recognized speech
 + Synthesized speech
++ Used a different voice
 + Used Speech Synthesis Markup Language
 
 ## You have successfully completed the lab, proceed with the next exercises.

@@ -1,5 +1,4 @@
-# Exercise 2: Create a Custom Skill for Azure AI Search
-
+# Exercise 02: Create a Custom Skill for Azure AI Search
 
 ## Lab scenario
 Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated fields from documents and include them in a search index. There's a comprehensive set of built-in skills that you can use, but if you have a specific requirement that isn't met by these skills, you can create a custom skill.
@@ -383,10 +382,9 @@ Now that you have an index, you can search it.
     This query retrieves the **url** and **top_words** fields for all documents that mention *Las Vegas*.
 
 ### Review
-
 In this lab, you have completed:
 
-+ Clone the repository for this course
++ Cloned the repository for this course
 + Created Azure resources
 + Created a search solution
 + Searched the index

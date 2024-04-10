@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 + Task 6.1 : Get your API details
 + Task 7: Use the REST API
 
-## Estimated timing: 60 minutes
+## Estimated timing: 90 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
@@ -29,10 +29,7 @@ In this lab, you will complete the following tasks:
 
 2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\LabFiles\AI-102-AIEngineer-master**.
 
-    **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
-
-3.  Wait while additional files are installed to support the C# code projects in the repo.
-
+    > **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
 ## Task 2: Upload a video to Video Analyzer
 
@@ -41,6 +38,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 > **Tip**: If the Video Analyzer page is slow to load in the hosted lab environment, use your locally installed browser. You can switch back to the hosted VM for the later tasks.
 
 1. In your browser, open the Video Analyzer portal at `https://www.videoindexer.ai`.
+
 2. When Choose an account to continue: prompted select **Microsoft Entra ID (formerly Azure AD)** and sign-in with following credentials.
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -59,7 +57,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
     ![](./images/Ai_Video_Synthesizer_Status_2.png)
 
-> **Note**: In this exercise, we're using this video to explore Video Analyzer functionality; but you should take the time to watch it in full when you've finished the exercise as it contains useful information and guidance for developing AI-enabled applications responsibly! 
+    > **Note**: In this exercise, we're using this video to explore Video Analyzer functionality; but you should take the time to watch it in full when you've finished the exercise as it contains useful information and guidance for developing AI-enabled applications responsibly! 
 
 ## Task 3: Review video insights
 
@@ -173,12 +171,6 @@ All interactions with the Video Analyzer REST API follow the same pattern:
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
-   
-## More information
-
-Recognition of people and celebrities is still available, but following the [Responsible AI Standard](https://aka.ms/aah91ff) those are restricted behind a Limited Access policy. These features include facial identification and celebrity recognition. To learn more and apply for access, see the [Limited Access for Azure AI Services](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-limited-access).
-
-For more information about **Video Analyzer**, see the [Video Analyzer documentation](https://docs.microsoft.com/azure/azure-video-analyzer/video-analyzer-for-media-docs/).
 
 ### Review
 In this lab, you have completed:

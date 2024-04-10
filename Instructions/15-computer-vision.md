@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 + Task 10: Get moderation ratings for an image
 + Task 11: Generate a thumbnail image
 
-## Estimated timing: 120 minutes
+## Estimated timing: 90 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
