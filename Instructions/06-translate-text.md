@@ -1,4 +1,4 @@
-# Exercise 01: Translate Text
+# Exercise 02: Translate Text
 
 ## Lab scenario
 **Azure AI Translator** is a service that enables you to translate text between languages.
