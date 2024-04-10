@@ -1,5 +1,6 @@
-# Recognize and Synthesize Speech
+# Exercise 01: Recognize and Synthesize Speech
 
+## Lab scenario
 **Azure AI Speech** is a service that provides speech-related functionality, including:
 
 - A *speech-to-text* API that enables you to implement speech recognition (converting audible spoken words into text).
@@ -10,7 +11,20 @@ In this exercise, you'll use both of these APIs to implement a speaking clock ap
 > [!NOTE]
 > This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
 
-## Clone the repository for this course
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Clone the repo into your Azure Cloud Shell
++ Task 2: Provision an Azure AI Speech resource
++ Task 3: Prepare to use Azure AI speech
++ Task 4: Recognize speech
++ Task 5: Synthesize speech
++ Task 6: Use Speech Synthesis Markup Language
+
+## Estimated timing: 120 minutes
+
+## Task 1: Clone the repository for this course
 
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
@@ -25,7 +39,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 > [!NOTE]
 > If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Provision an Azure AI Speech resource
+## Task 2: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.
 
@@ -42,7 +56,7 @@ If you don't already have on in your subscription, you'll need to provision a **
 1. Wait for deployment to complete, and then view the deployment details.
 1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need one of the keys and the location in which the service is provisioned from this page in the next procedure.
 
-## Prepare to use the Azure AI Speech service
+## Task 3: Prepare to use the Azure AI Speech service
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Speech SDK to recognize and synthesize speech.
 
@@ -98,7 +112,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. If you are using C#, you can ignore any warnings about using the **await** operator in asynchronous methods - we'll fix that later. The code should display the region of the speech service resource the application will use.
 
-## Recognize speech
+## Task 4: Recognize speech
 
 Now that you have a **SpeechConfig** for the speech service in your Azure AI Speech resource, you can use the **Speech-to-text** API to recognize speech and transcribe it to text.
 
@@ -189,7 +203,7 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
 
     If the SpeechRecognizer encounters an error, it produces a result of "Cancelled". The code in the application will then display the error message. The most likely cause is an incorrect key or region in the configuration file.
 
-## Synthesize speech
+## Task 5: Synthesize speech
 
 Your speaking clock application accepts spoken input, but it doesn't actually speak! Let's fix that by adding code to synthesize speech.
 
@@ -257,7 +271,7 @@ Your speaking clock application uses a default voice, which you can change. The 
 
 1. When prompted, speak clearly into the microphone and say "what time is it?". The program should speak in the specified voice, telling you the time.
 
-## Use Speech Synthesis Markup Language
+## Task 6: Use Speech Synthesis Markup Language
 
 Speech Synthesis Markup Language (SSML) enables you to customize the way your speech is synthesized using an XML-based format.
 
@@ -292,6 +306,15 @@ Speech Synthesis Markup Language (SSML) enables you to customize the way your sp
 
 1. When prompted, speak clearly into the microphone and say "what time is it?". The program should speak in the voice that is specified in the SSML (overriding the voice specified in the SpeechConfig), telling you the time, and then after a pause telling you it's time to end this lab - which it is!
 
-## More information
 
-For more information about using the **Speech-to-text** and **Text-to-speech** APIs, see the [Speech-to-text documentation](/azure/ai-services/speech-service/index-speech-to-text) and [Text-to-speech documentation](/azure/ai-services/speech-service/index-text-to-speech).
+### Review
+In this lab, you have completed:
+
++ Cloned the repo into your Azure Cloud Shell
++ Provisioned an Azure AI Speech resource
++ Prepared to use the Azure AI Speech service
++ Recognized speech
++ Synthesized speech
++ Used Speech Synthesis Markup Language
+
+## You have successfully completed the lab
