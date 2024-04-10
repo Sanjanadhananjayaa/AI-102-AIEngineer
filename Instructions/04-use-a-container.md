@@ -13,6 +13,8 @@ In this lab, you will complete the following tasks:
 + Task 1: Deploy and run a Text Analytics container
 + Task 2: Use the container
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Deploy and run a Text Analytics container
 
 Many commonly used Azure AI services APIs are available in container images. For a full list, check out the [Azure AI services documentation](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-container-support#container-availability-in-azure-cognitive-services). In this exercise, you'll use the container image for the Text Analytics *language detection* API; but the principles are the same for all of the available images.

@@ -16,6 +16,8 @@ In this lab, you will complete the following tasks:
 + Task 4: Test the bot in the Bot Framework Emulator
 + Task 5: Modify the bot code
 
+## Estimated timing: 120 minutes
+
 ## Task 1: Update the Bot Framework Emulator
 
 You're going to use the Bot Framework SDK to create your bot, and the Bot Framework Emulator to test it. The Bot Framework Emulator is updated regularly, so let's make sure you have the latest version installed.
