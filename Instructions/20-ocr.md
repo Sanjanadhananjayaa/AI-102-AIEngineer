@@ -15,6 +15,7 @@ In this lab, you will complete the following tasks:
  + Task 5: Use the Read API to read text from a document
  + Task 6: Read handwritten text
 
+## Estimated timing: 30 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
