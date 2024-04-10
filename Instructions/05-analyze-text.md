@@ -76,8 +76,7 @@ Open the built-in code editor, and observe the text files in the `text-analysis`
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Language text analytics SDK to analyze hotel reviews.
 
-> [!NOTE]
-> > You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
+ > [!NOTE] You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
 
 1. In Cloud Shell, ensure you are in the **05-analyze-text** folder and have navigated to the **C-Sharp** > **text-analysis** or **Python** > **text-analysis** folder depending on your language preference.
 1. Install the Text Analytics SDK package by running the appropriate command for your language preference:
