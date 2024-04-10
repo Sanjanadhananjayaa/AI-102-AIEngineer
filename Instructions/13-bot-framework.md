@@ -86,20 +86,19 @@ You've created a bot based on the *EchoBot* template. Now you can run it locally
 
     >**Note:** When the bot starts, note the endpoint at which it is running is shown. This should be similar to **http://localhost:3978**.
 
-1. Start the **Bot Framework Emulator**, and select **open bot** by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**:
+2. Start the **Bot Framework Emulator**, and select **open bot** by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**:
 
     ![Visual Studio Code Icon](./images/open-bot.png)
     
     ![Visual Studio Code Icon](./images/openabot.png)
 
+3. After the conversation is opened in a **Live chat** pane, wait for the message *Hello and welcome!*.
 
-1. After the conversation is opened in a **Live chat** pane, wait for the message *Hello and welcome!*.
-
-1. Enter a message such as *Hello* and view the response from the bot, which should echo back the message you entered.
+4. Enter a message such as *Hello* and view the response from the bot, which should echo back the message you entered.
 
     ![Visual Studio Code Icon](./images/openchat.png)
 
-1. Close the Bot Framework Emulator and return to Visual Studio Code, then in the terminal window, enter **CTRL+C** to stop the bot.
+5. Close the Bot Framework Emulator and return to Visual Studio Code, then in the terminal window, enter **CTRL+C** to stop the bot.
 
 ## Task 5: Modify the bot code
 
@@ -111,13 +110,13 @@ You've created a bot that echoes the user's input back to them. It's not particu
 
         >**Note:** The code in this file consists of *activity handler* functions; one for the *Member Added* conversation update activity (when someone joins the chat session) and another for the *Message* activity (when a message is received). The conversation is based on the concept of *turns*, in which each turn represents an interaction in which the bot receives, processes, and responds to an activity. The *turn context* is used to track information about the activity being processed in the current turn.
 
-1. At the top of the code file, add the following namespace import statement:
+2. At the top of the code file, add the following namespace import statement:
 
     ```C#
     using System;
     ```
 
-1. Modify the activity handler function for the *Message* activity to match the following code:
+3. Modify the activity handler function for the *Message* activity to match the following code:
 
     ```C#
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -133,7 +132,7 @@ You've created a bot that echoes the user's input back to them. It's not particu
     }
     ```
 
-1. The code looks similar to this:
+4. The code looks similar to this:
 
     ```C#
     // Generated with EchoBot .NET Template version v4.22.0
@@ -164,7 +163,7 @@ You've created a bot that echoes the user's input back to them. It's not particu
     ```
 
 
-1. Save your changes, and then in the terminal pane, ensure that the current directory is the **TimeBot** folder containing your bot code files, and then enter the following command to start your bot running locally.
+5. Save your changes, and then in the terminal pane, ensure that the current directory is the **TimeBot** folder containing your bot code files, and then enter the following command to start your bot running locally.
 
     ```
     dotnet run
@@ -172,15 +171,15 @@ You've created a bot that echoes the user's input back to them. It's not particu
 
     >**Note:** As before, when the bot starts, note the endpoint at which it is running is shown.
 
-1. Start the Bot Framework Emulator, and open your bot by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**.
+6. Start the Bot Framework Emulator, and open your bot by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**.
 
     ![Visual Studio Code Icon](./images/open-bot.png)
     
     ![Visual Studio Code Icon](./images/openabot.png)
 
-1. After the conversation is opened in a **Live chat** pane, enter a message such as **Hello** and view the response from the bot, which should be **Ask me what the time is**.
+7. After the conversation is opened in a **Live chat** pane, enter a message such as **Hello** and view the response from the bot, which should be **Ask me what the time is**.
 
-1. Enter **What is the time?** and view the response.
+8. Enter **What is the time?** and view the response.
 
     >**Note:** The bot now responds to the query "What is the time?" by displaying the local time where the bot is running. For any other query, it prompts the user to ask it what the time is. This is a very limited bot, which could be improved through integration with the Language Understanding service and additional custom code, but it serves as a working example of how you can build a solution with the Bot Framework SDK by extending a bot created from a template.
 
