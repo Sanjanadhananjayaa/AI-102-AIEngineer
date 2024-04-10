@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 2.2: Use a service principal
 + Task 2.3: Use the service principal in an application
 
-## Estimated timing: 60 minutes
+## Estimated timing: 45 minutes
 
 ## Task 1: Manage authentication keys
 
@@ -203,9 +203,9 @@ Now you're ready to use the service principal identity in an application, so it 
     dotnet run
     ```
 
-1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "Hello", "Bonjour", and "Gracias".
+1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "**Hello**", "**Bonjour**", and "**Gracias**".
 
-1. When you have finished testing the application, enter "quit" to stop the program.
+1. When you have finished testing the application, enter "**quit**" to stop the program.
 
 ### Review
 In this lab, you have completed:

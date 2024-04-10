@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Configure an alert
 + Task 2: Visualize a metric
 
-## Estimated timing: 60 minutes
+## Estimated timing: 20 minutes
 
 ## Task 1: Configure an alert
 
@@ -51,7 +51,7 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
     >**Note:** If it doesn't show up, wait up to five minutes and refresh again.
 
-1. Select the alert to see its details.
+1. Select the alert to see its details, and review the information.
 
     ![Visual Studio Code Icon](./images/keylist.png)
 

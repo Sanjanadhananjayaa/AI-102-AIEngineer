@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 4: Test the bot in the Bot Framework Emulator
 + Task 5: Modify the bot code
 
-## Estimated timing: 120 minutes
+## Estimated timing: 45 minutes
 
 ## Task 1: Update the Bot Framework Emulator
 

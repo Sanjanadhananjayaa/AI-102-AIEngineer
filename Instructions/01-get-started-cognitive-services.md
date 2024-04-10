@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Use a REST Interface
 + Task 4: Use an SDK
 
-## Estimated timing: 60 minutes
+## Estimated timing: 45 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
@@ -26,8 +26,6 @@ In this lab, you will complete the following tasks:
     >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
 
     >**Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
-
-1.  Wait while additional files are installed to support the C# code projects in the repo.
 
 ## Task 2: Provision an Azure AI Services resource
 
@@ -77,7 +75,7 @@ Azure AI Services are cloud-based services that encapsulate artificial intellige
 
 ## Task 3: Use a REST Interface
 
-The cognitive services APIs are REST-based, so you can consume them by submitting JSON requests over HTTP. In this example, you'll explore a console application that uses the **Langauge** REST API to perform language detection; but the basic principle is the same for all of the APIs supported by the Cognitive Services resource.
+The Azure AI services APIs are REST-based, so you can consume them by submitting JSON requests over HTTP. In this example, you'll explore a console application that uses the **Language** REST API to perform language detection; but the basic principle is the same for all of the APIs supported by the Azure AI services resource.
 
 1. Open Visual Studio Code, in the **Explorer** pane, browse to the **01-getting-started** folder and expand the **C-Sharp** folder.
 
@@ -85,7 +83,7 @@ The cognitive services APIs are REST-based, so you can consume them by submittin
     
     - **C#**: appsettings.json
 
-        >**Note:** Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your cognitive services resource. Save your changes, by pressing **CTRL + S** on the keyboard.
+1. Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your Azure AI services resource. **Save your changes**, by pressing **CTRL + S** on the keyboard.
 
 1. Note that the **rest-client** folder contains a code file for the client application:
 
@@ -95,9 +93,9 @@ The cognitive services APIs are REST-based, so you can consume them by submittin
     
     - Various namespaces are imported to enable HTTP communication
     
-    - Code in the **Main** function retrieves the endpoint and key for your cognitive services resource - these will be used to send REST requests to the Text Analytics service.
+    - Code in the **Main** function retrieves the endpoint and key for your Azure AI services resource - these will be used to send REST requests to the Text Analytics service.
     
-    - The program accepts user input, and uses the **GetLanguage** function to call the Text Analytics language detection REST API for your cognitive services endpoint to detect the language of the text that was entered.
+    - The program accepts user input, and uses the **GetLanguage** function to call the Text Analytics language detection REST API for your Azure AI services endpoint to detect the language of the text that was entered.
     
     - The request sent to the API consists of a JSON object containing the input data - in this case, a collection of **document** objects, each of which has an **id** and **text**.
     
@@ -113,13 +111,13 @@ The cognitive services APIs are REST-based, so you can consume them by submittin
     dotnet run
     ```
 
-1. When prompted, enter some text and review the language that is detected by the service, which is returned in the JSON response. For example, try entering "Hello", "Bonjour", and "Hola".
+1. When prompted, enter some text and review the language that is detected by the service, which is returned in the JSON response. For example, try entering "**Hello**", "**Bonjour**", and "**Hola**".
 
-1. When you have finished testing the application, enter "quit" to stop the program.
+1. When you have finished testing the application, enter "**quit**" to stop the program.
 
 ## Task 4: Use an SDK
 
-You can write code that consumes cognitive services REST APIs directly, but there are software development kits (SDKs) for many popular programming languages, including Microsoft C#, Python, and Node.js. Using an SDK can greatly simplify development of applications that consume cognitive services.
+You can write code that consumes Azure AI services REST APIs directly, but there are software development kits (SDKs) for many popular programming languages, including Microsoft C#, Python, and Node.js. Using an SDK can greatly simplify development of applications that consume Azure AI services.
 
 1. In Visual Studio Code, in the **Explorer** pane, in the **01-getting-started** folder, expand the **C-Sharp** folder.
 
@@ -135,7 +133,7 @@ You can write code that consumes cognitive services REST APIs directly, but ther
     
     - **C#**: appsettings.json
 
-1. Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your cognitive services resource. Save your changes.
+1. Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your Azure AI services resource. **Save your changes**.
     
 1. Note that the **sdk-client** folder contains a code file for the client application:
 
@@ -145,7 +143,7 @@ You can write code that consumes cognitive services REST APIs directly, but ther
     
     - The namespace for the SDK you installed is imported
     
-    - Code in the **Main** function retrieves the endpoint and key for your cognitive services resource - these will be used with the SDK to create a client for the Text Analytics service.
+    - Code in the **Main** function retrieves the endpoint and key for your Azure AI services resource - these will be used with the SDK to create a client for the Text Analytics service.
     
     - The **GetLanguage** function uses the SDK to create a client for the service, and then uses the client to detect the language of the text that was entered.
 
@@ -157,9 +155,9 @@ You can write code that consumes cognitive services REST APIs directly, but ther
     dotnet run
     ```
 
-1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "Goodbye", "Au revoir", and "Hasta la vista".
+1. When prompted, enter some text and review the language that is detected by the service. For example, try entering "**Goodbye**", "**Au revoir**", and "**Hasta la vista**".
 
-1. When you have finished testing the application, enter "quit" to stop the program.
+1. When you have finished testing the application, enter "**quit**" to stop the program.
 
     > **Note**: Some languages that require Unicode character sets may not be recognized in this simple console application.
 
@@ -167,7 +165,7 @@ You can write code that consumes cognitive services REST APIs directly, but ther
 In this lab, you have completed:
 
 - Opened the cloned folder in Visual Studio Code
-- Provisioned a Cognitive Services resource
+- Provisioned a Azure AI services resource
 - Used a REST Interface
 - Used an SDK
 

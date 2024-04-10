@@ -14,6 +14,8 @@ In this lab, you will complete the following tasks:
 + Task 4: Prepare to use the Language service SDK
 + Task 5: Get a prediction from the Conversational Language model
 
+## Estimated timing: 30 minutes
+
 ## Task 1: Open the cloned folder in Visual Studio Code.
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
@@ -102,9 +104,10 @@ In this exercise, you'll complete a partially implemented client application tha
 
     - **C#**: appsettings.json
 
-    Open the configuration file and update the configuration values it contains to include the **Endpoint URL** and the **Primary key** for your Language resource and save the file. You can find the required values in the Azure portal or Language Studio as follows:
+1. Open the configuration file and update the configuration values it contains to include the **Endpoint URL** and the **Primary key** for your Language resource and save the file. You can find the required values in the Azure portal or Language Studio as follows:
 
     - Azure portal: Open your Language resource. Under **Resource Management**, select **Keys and Endpoint**. Copy the **KEY 1** and **Endpoint** values to your configuration settings file.
+    
     - Language Studio: Open your **Clock** project. The Language service endpoint can be found on the **Deploying a model** page under **Get prediction URL**, and the the **Primary key** can be found on the **Project settings** page. The Language service endpoint portion of the Prediction URL ends with **.cognitiveservices.azure.com/**. For example: `https://ai102-langserv.cognitiveservices.azure.com/`.
 
 4. Note that the **clock-client** folder contains a code file for the client application:
@@ -137,7 +140,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
     ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, credential);
     ```
 
-2. Note that the code in the **Main** function prompts for user input until the user enters "quit". Within this loop, find the comment **Call the Language service model to get intent and entities** and add the following code:
+2. Note that the code in the **Main** function prompts for user input until the user enters "**quit**". Within this loop, find the comment **Call the Language service model to get intent and entities** and add the following code:
 
     **C#**
 
@@ -180,7 +183,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
     }
     ```
 
-    The call to the Language service model returns a prediction/result, which includes the top (most likely) intent as well as any entities that were detected in the input utterance. Your client application must now use that prediction to determine and perform the appropriate action.
+    >**Note:** The call to the Language service model returns a prediction/result, which includes the top (most likely) intent as well as any entities that were detected in the input utterance. Your client application must now use that prediction to determine and perform the appropriate action.
 
 3. Find the comment **Apply the appropriate action**, and add the following code, which checks for intents supported by the application (**GetTime**, **GetDate**, and **GetDay**) and determines if any relevant entities have been detected, before calling an existing function to produce an appropriate response.
 
@@ -267,25 +270,22 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
 
     *What day is 01/01/2025?*
 
-> **Note**: The logic in the application is deliberately simple, and has a number of limitations. For example, when getting the time, only a restricted set of cities is supported and daylight savings time is ignored. The goal is to see an example of a typical pattern for using Language Service in which your application must:
->
->   1. Connect to a prediction endpoint.
->   2. Submit an utterance to get a prediction.
->   3. Implement logic to respond appropriately to the predicted intent and entities.
+    > **Note**: The logic in the application is deliberately simple, and has a number of limitations. For example, when getting the time, only a restricted set of cities is supported and daylight savings time is ignored. The goal is to see an example of a typical pattern for using Language Service in which your application must:
+    >
+    >   1. Connect to a prediction endpoint.
+    >   2. Submit an utterance to get a prediction.
+    >   3. Implement logic to respond appropriately to the predicted intent and entities.
 
-6. When you have finished testing, enter *quit*.
+6. When you have finished testing, enter **quit**.
 
-## More information
-
-To learn more about creating a Language Service client, see the [developer documentation](https://docs.microsoft.com/azure/cognitive-services/luis/developer-reference-resource)
 
 ### Review
 In this lab, you have completed:
 
-+ Open the cloned folder in Visual Studio Code
-+ Create Language service resources
-+ Import, train, and publish a Conversational language understanding model
-+ Prepare to use the Language service SDK
-+ Get a prediction from the Conversational Language model
++ Opened the cloned folder in Visual Studio Code
++ Created Language service resources
++ Imported, trained, and published a Conversational language understanding model
++ Prepared to use the Language service SDK
++ Got a prediction from the Conversational Language model
 
 ## You have successfully completed the lab, proceed with the next Module.
