@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 4: Detect language
 + Task 5: Translate text
 
-## Estimated timing: 60 minutes
+## Estimated timing: 120 minutes
 
 ## Task 1: Clone the repo into your Azure Cloud Shell
 
