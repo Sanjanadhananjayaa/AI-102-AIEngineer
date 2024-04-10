@@ -54,27 +54,22 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
 To create and host a knowledge base for question answering, you need a **Language service** resource in your Azure subscription.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
+1. Select the **&#65291;Create a resource** button, search for *Language*, and create a **Language service** resource.
 
-2. Select the **&#65291;Create a resource** button, search for *Language*, and create a **Language service** resource.
-
-3. Click **Select** on the **Custom question answering** block. Then click **Continue to create your resource**. You will need to enter the following settings:
+1. Click **Select** on the **Custom question answering** block. Then click **Continue to create your resource**. You will need to enter the following settings:
     
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
-    - **Region**: *Choose any available location*
-    - **Name**: *Enter a unique name*
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
+    - **Region**: **<inject key="Region" enableCopy="false"/>**
+    - **Name**: AI-Language-<inject key="DeploymentID" enableCopy="false"/>
     - **Pricing tier**: Standard S
-    - **Azure Search location**\*: *Choose a location in the same global region as your Language resource*.
+    - **Azure Search location**\*: **<inject key="Region" enableCopy="false"/>**.
     - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
-    - **Legal Terms**: _Agree_ 
-    - **Responsible AI Notice**: _Agree_
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
     
-    \*Custom Question Answering uses Azure Search to index and query the knowledge base of questions and answers.
+1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
 
-4. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
-
-5. Wait for deployment to complete, and then view the deployment details.
+1. Wait for deployment to complete, and then view the deployment details.
 
 ## Create a question answering project
 
