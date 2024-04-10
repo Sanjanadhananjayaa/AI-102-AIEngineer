@@ -1,10 +1,26 @@
-# Create a Custom Skill for Azure AI Search
+# Exercise 1: Create a Custom Skill for Azure AI Search
 
+
+## Lab scenario
 Azure AI Search uses an enrichment pipeline of AI skills to extract AI-generated fields from documents and include them in a search index. There's a comprehensive set of built-in skills that you can use, but if you have a specific requirement that isn't met by these skills, you can create a custom skill.
 
 In this exercise, you'll create a custom skill that tabulates the frequency of individual words in a document to generate a list of the top five most used words, and add it to a search solution for Margie's Travel - a fictitious travel agency.
 
-## Clone the repository for this course
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Clone the repository for this course
++ Task 2: Create Azure resources
++ Task 3: Create a search solution
++ Task 4: Search the index
++ Task 5: Create an Azure Function for a custom skill
++ Task 6: Add the custom skill to the search solution
++ Task 7: Search the index
+
+## Estimated timing: 120 minutes
+
+## Task 1: Clone the repository for this course
 
 If you have already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, open it in Visual Studio Code; otherwise, follow these steps to clone it now.
 
@@ -15,7 +31,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Create Azure resources
+## Task 2: Create Azure resources
 
 > **Note**: If you have previously completed the **[Create an Azure AI Search solution](22-azure-search.md)** exercise, and still have these Azure resources in your subscription, you can skip this section and start at the **Create a search solution** section. Otherwise, follow the steps below to provision the required Azure resources.
 
@@ -61,7 +77,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
 14. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
 
-## Create a search solution
+## Task 3: Create a search solution
 
 Now that you have the necessary Azure resources, you can create a search solution that consists of the following components:
 
@@ -109,7 +125,7 @@ In this exercise, you'll use the Azure AI Search REST interface to create these 
 
     *You can select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.*
 
-## Search the index
+## Task 4: Search the index
 
 Now that you have an index, you can search it.
 
@@ -122,7 +138,7 @@ Now that you have an index, you can search it.
 
     This query retrieves the **url**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that have a positive **sentiment** label (in other words, positive reviews that mention London)
 
-## Create an Azure Function for a custom skill
+## Task 5: Create an Azure Function for a custom skill
 
 The search solution includes a number of built-in AI skills that enrich the index with information from the documents, such as the sentiment scores and lists of key phrases seen in the previous task.
 
@@ -317,7 +333,7 @@ module.exports = async function (context, req) {
 
 9. Close the **Test/Run** pane and in the **wordcount** function blade, click **Get function URL**. Then copy the URL for the default key to the clipboard. You'll need this in the next procedure.
 
-## Add the custom skill to the search solution
+## Task 6: Add the custom skill to the search solution
 
 Now you need to include your function as a custom skill in the search solution skillset, and map the results it produces to a field in the index. 
 
@@ -350,7 +366,7 @@ Now you need to include your function as a custom skill in the search solution s
 
     *You can select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.*
 
-## Search the index
+## Task 7: Search the index
 
 Now that you have an index, you can search it.
 
@@ -366,6 +382,16 @@ Now that you have an index, you can search it.
 
     This query retrieves the **url** and **top_words** fields for all documents that mention *Las Vegas*.
 
-## More information
+### Review
 
-To learn more about creating custom skills for Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/cognitive-search-custom-skill-interface).
+In this lab, you have completed:
+
++ Clone the repository for this course
++ Created Azure resources
++ Created a search solution
++ Searched the index
++ Created an Azure Function for a custom skill
++ Added the custom skill to the search solution
++ Searched the index
+
+## You have successfully completed the lab, proceed with the next exercises.
