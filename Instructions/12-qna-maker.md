@@ -80,9 +80,9 @@ To create a knowledge base for question answering in your Language resource, you
 2. If prompted to choose a Language resource else click on **Sign in** and  select the following settings:
     - **Azure Directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Your Azure subscription.
-    - **Resource type** : Language
-    - **Language resource**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
-
+    - **Resource type** : Language.
+    - **Language resource**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**.
+    -  Select **Done**.
 3. If you are <u>not</u> prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
     2. On the **Settings** page, view the **Resources** tab.
