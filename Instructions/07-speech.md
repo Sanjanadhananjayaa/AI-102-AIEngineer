@@ -8,8 +8,7 @@
 
 In this exercise, you'll use both of these APIs to implement a speaking clock application.
 
-> [!NOTE]
-> This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
+ > **!NOTE** This exercise requires that you are using a computer with speakers/headphones. For the best experience, a microphone is also required. Some hosted virtual environments may be able to capture audio from your local microphone, but if this doesn't work (or you don't have a microphone at all), you can use a provided audio file for speech input. Follow the instructions carefully, as you'll need to choose different options depending on whether you are using a microphone or the audio file.
 
 ## Objectives
 
@@ -36,8 +35,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 1. When the repository has been cloned, open the folder in Visual Studio Code.
 1. Wait while additional files are installed to support the C# code projects in the repo.
 
-> [!NOTE]
-> If you are prompted to add required assets to build and debug, select **Not Now**.
+   > **NOTE**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
 ## Task 2: Provision an Azure AI Speech resource
 
@@ -63,12 +61,11 @@ In this exercise, you'll complete a partially implemented client application tha
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **07-speech** folder and expand the **C-Sharp** folder.
 1. Right-click the **speaking-clock** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
 
+   **C#**
 
-    **C#**
-
-    ```bash
-    dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
-    ```
+   ```bash
+   dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
+   ```
 
 1. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
