@@ -61,7 +61,7 @@ To create and host a knowledge base for question answering, you need a **Languag
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
     - **Region**: **<inject key="Region" enableCopy="false"/>**
-    - **Name**: AI-Language-<inject key="DeploymentID" enableCopy="false"/>
+    - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S
     - **Azure Search location**\*: **<inject key="Region" enableCopy="false"/>**.
     - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
@@ -77,10 +77,11 @@ To create a knowledge base for question answering in your Language resource, you
 
 1. In a new browser tab, go to the *Language Studio* portal at `https://language.azure.com` and sign in using the Microsoft account associated with your Azure subscription.
 
-2. If prompted to choose a Language resource, select the following settings:
+2. If prompted to choose a Language resource else click on **Sign in** and  select the following settings:
     - **Azure Directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Your Azure subscription.
-    - **Language resource**: The Language resource you created previously.
+    - **Resource type** : Language
+    - **Language resource**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
 
 3. If you are <u>not</u> prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
