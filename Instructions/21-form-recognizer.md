@@ -91,7 +91,7 @@ You'll use the sample forms from the **21-custom-form/sample-forms** folder in t
      az account list-locations -o table
      ```
 
-9. In the output, find the **Name** value that corresponds with the location of your resource group (for example, for *East US* the corresponding name is *eastus*).
+9. In the output, find the **Name** value that corresponds with the location of your resource group  **<inject key="Region" enableCopy="false"/>**.
 
     > **Important**: Record the **Name** value and use it in Step 12.
 
@@ -102,7 +102,7 @@ You'll use the sample forms from the **21-custom-form/sample-forms** folder in t
     - Upload files from your local _sampleforms_ folder to a container called _sampleforms_ in the storage account
     - Print a Shared Access Signature URI
 
-12. Modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for the subscription, resource group, and location name where you deployed the Document Intelligence resource. 
+12. Modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for the subscription, resource group, and location name which you noted in step 9. 
 Then **save** your changes.
 
     Leave the **expiry_date** variable as it is for the exercise. This variable is used when generating the Shared Access Signature (SAS) URI. In practice, you will want to set an appropriate expiry date for your SAS. You can learn more about SAS [here](https://docs.microsoft.com/azure/storage/common/storage-sas-overview#how-a-shared-access-signature-works).  
