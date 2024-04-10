@@ -113,8 +113,7 @@ The first thing we'll do in the new project is to define some intents.
     `what time is it?`
 
     `tell me the time`
-
-
+   
 1. After you've added these utterances, select **Save changes** and go back to the **Schema definition** page.
 
 1. On the **Schema definition** page, on the **Intents** tab, select **&#65291; Add**, and under **Intent name** type **GetDay**, and select **Add intent**.
