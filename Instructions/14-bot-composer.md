@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 + Task 6.2: Add a card
 + Task 6.3: Test the new user interface
 
-## Estimated timing: 120 minutes
+## Estimated timing: 60 minutes
 
 ## Task 1: Get an OpenWeather API key
 

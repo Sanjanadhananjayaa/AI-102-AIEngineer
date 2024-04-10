@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Deploy and run a Text Analytics container
 + Task 2: Use the container
 
-## Estimated timing: 60 minutes
+## Estimated timing: 20 minutes
 
 ## Task 1: Deploy and run a Text Analytics container
 

@@ -27,6 +27,8 @@ In this lab, you will complete the following tasks:
 + Task 7: Call the API from the Azure Cloud Shell
 + Task 8: Export the project
 
+## Estimated timing: 45 minutes
+
 ## Task 1: Create an Azure AI Language resource
 
 To create a conversational language model, you need a **Azure AI Language service** resource in a supported region.
@@ -47,7 +49,9 @@ To create a conversational language model, you need a **Azure AI Language servic
     - **Name**: **AIservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.
     - **Pricing tier**: Select either **Free (F0)** or **Standard (S)** tier if Free is not available.
     - **Responsible AI Notice**: Agree.
+
 1. Select **Review + create** and **Create**.
+
 1. Wait for deployment to complete, and then view the deployment details.
 
 ## Task 2: Create a conversational language understanding project
