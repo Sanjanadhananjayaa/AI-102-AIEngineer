@@ -1,4 +1,4 @@
-# Exercise 1: Create a Custom Skill for Azure AI Search
+# Exercise 2: Create a Custom Skill for Azure AI Search
 
 
 ## Lab scenario
