@@ -36,7 +36,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
     ![](./images/gext.png)
 
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
+    >**Note:** You will get the **Hourglass** icon when 15 minutes are remaining in the lab.
 
 2. Click **OK** to extend your lab duration.
  

@@ -27,8 +27,6 @@ In this lab, you will complete the following tasks:
 
     >**Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
-1.  Wait while additional files are installed to support the C# code projects in the repo.
-
 ## Task 2: Provision an Azure AI Services resource
 
 Azure AI Services are cloud-based services that encapsulate artificial intelligence capabilities you can incorporate into your applications. You can provision individual Azure AI services resources for specific APIs (for example, **Language** or **Vision**), or you can provision a single **Azure AI Services** resource that provides access to multiple Azure AI services APIs through a single endpoint and key. In this case, you'll use a single **Azure AI Services** resource.
