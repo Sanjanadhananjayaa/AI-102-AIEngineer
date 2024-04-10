@@ -43,12 +43,11 @@ In this exercise, you'll complete a partially implemented client application tha
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **08-speech-translation** folder and expand the **C-Sharp** folder.
 1. Right-click the **translator** folder and open an integrated terminal. Then install the Speech SDK package by running the appropriate command for your language preference:
 
+   **C#**
 
-    **C#**
-
-    ```csharp
-    dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
-    ```
+   ```csharp
+   dotnet add package Microsoft.CognitiveServices.Speech --version 1.30.0
+   ```
 
 
 1. View the contents of the **translator** folder, and note that it contains a file for configuration settings:
@@ -128,8 +127,7 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
     ```
 
 
-> [!NOTE]
->  The code in your application translates the input to all three languages in a single call. Only the translation for the specific language is displayed, but you could retrieve any of the translations by specifying the target language code in the **translations** collection of the result.
+    > **NOTE :** The code in your application translates the input to all three languages in a single call. Only the translation for the specific language is displayed, but you could retrieve any of the translations by specifying the target language code in the **translations** collection of the result.
 
 1. Now skip ahead to the **Run the program** section below.
 
