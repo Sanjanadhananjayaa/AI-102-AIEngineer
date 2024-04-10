@@ -195,11 +195,11 @@ First, you need to define a dialog flow that will be used to handle questions ab
 
 1. If the call was successful, you need to store the response in a variable. On the authoring canvas, in the **True** branch, add a **Manage properties** > **Set properties** action. Then in the properties pane, add the following property assignments:
 
-    | Property        | Value                                     |
-    |-----------------|-------------------------------------------|
-    | dialog.weather | =dialog.api_response.content.weather[0].description |
-    | dialog.temp    | =round(dialog.api_response.content.main.temp)       |
-    | dialog.icon    | =dialog.api_response.content.weather[0].icon      |
+        | Property        | Value                                     |
+        |-----------------|-------------------------------------------|
+        | dialog.weather | =dialog.api_response.content.weather[0].description |
+        | dialog.temp    | =round(dialog.api_response.content.main.temp)       |
+        | dialog.icon    | =dialog.api_response.content.weather[0].icon      |
 
 
 1. Still in the **True** branch, add a **Send a response** action under the **Set a property** action and set its text to:
