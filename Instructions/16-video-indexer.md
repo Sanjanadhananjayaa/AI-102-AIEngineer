@@ -133,20 +133,18 @@ Video Analyzer provides a REST API that you can use to upload and manage videos 
 
 To use the Video Analyzer API, you need some information to authenticate requests:
 
-1. In the Video Analyzer portal, expand the menu (>>) on the left side and select the **Account settings** page.
-
-2. Note the **Account ID** on this page - you will need it later.
+1. In the Video Analyzer portal, expand the menu (>>) on the left side and select the **Account settings** page. Note the **Account ID** on this page - you will need it later.
 
     ![Video Analyzer search results for Bee](./images/copy.png)
 
-3. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
+2. Open a new browser tab and go to the Video Analyzer developer portal at `https://api-portal.videoindexer.ai`, signing in using the credentials for your Video Analyzer account.
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-4. On the **Profile** page, view the **Subscriptions** associated with your profile.
-5. On the page with your subscription(s), observe that you have been assigned two keys (primary and secondary) for each subscription. Then select **Show** for any of the keys to see it and copy the Keys You will need this shortly.
+3. On the **Profile** page, view the **Subscriptions** associated with your profile.
+4. On the page with your subscription(s), observe that you have been assigned two keys (primary and secondary) for each subscription. Then select **Show** for any of the keys to see it and copy the Keys You will need this shortly.
 
     ![Video Analyzer search results for Bee](./images/lab8-image4.png)
 
