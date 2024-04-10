@@ -391,4 +391,4 @@ In this lab, you have completed:
 + Extracted entities
 + Extracted linked entities
 
-## You have successfully completed the lab
+## You have successfully completed the lab, proceed with the next exercises.
