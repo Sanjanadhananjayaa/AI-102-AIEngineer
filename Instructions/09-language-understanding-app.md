@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 + Task 7: Call the API from the Azure Cloud Shell
 + Task 8: Export the project
 
-## Estimated timing: 45 minutes
+## Estimated timing: 60 minutes
 
 ## Task 1: Create an Azure AI Language resource
 
