@@ -8,17 +8,32 @@ The **Language** service includes a *question answering* capability that enables
 
 > **Note**: The question answering capability in the Language service is a newer version of the QnA Maker service - which is still available as a separate service.
 
-## Open the cloned folder in Visual Studio Code.
+## Clone the repository for this course to Azure Cloud Shell
 
-1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
+Open up a new browser tab to work with Cloud Shell. If you haven't cloned this repository to Cloud Shell recently, follow the steps below to make sure you have the most recent version. Otherwise, open Cloud Shell and navigate to your clone.
 
-     ![Visual Studio Code Icon](./images/vscode.png)
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\AllFiles\AI-102-AIEngineer-prod**.
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](images/cloudshell-launch-portal.png#lightbox)
 
-    **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3.  Wait while additional files are installed to support the C# code projects in the repo.
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Show advance settings**. Then wait a minute or so for the storage to be created.
+
+4. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+5. Once the terminal starts, run the following commands to download a copy of the repo into your Cloud Shell:
+
+    ```bash
+    rm -r azure-ai-eng -f
+   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
+    ```
+
+6. The files have been downloaded into a folder called **azure-ai-eng**. Let's change into that folder by running:
+
+    ```bash
+    cd azure-ai-eng/12-qna
+    ```
 
 ## Create a Language resource
 
