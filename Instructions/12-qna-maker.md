@@ -23,6 +23,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 60 minutes
 
+## Architecture diagram
+
+![](./images/mod-6-ex1.JPG)
+
 ## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
