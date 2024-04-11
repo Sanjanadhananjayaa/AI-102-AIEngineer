@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-2-ex-4.JPG)
+![](./images/a(4).JPG)
 
 ## Task 1: Deploy and run a Text Analytics container
 

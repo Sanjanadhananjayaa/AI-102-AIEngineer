@@ -25,7 +25,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-6-ex1.JPG)
+![](./images/a(11).JPG)
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 

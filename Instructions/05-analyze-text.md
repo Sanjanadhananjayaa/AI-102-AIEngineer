@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-3-ex-1.JPG)
+![](./images/a(5).JPG)
 
 ## Task 1: Provision an Azure AI Language resource
 
