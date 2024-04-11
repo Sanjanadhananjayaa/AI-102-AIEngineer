@@ -1,6 +1,6 @@
+# Exercise 01: Create a Question Answering Solution
 
-
-# Create a Question Answering Solution
+## Lab scenario
 
 One of the most common conversational scenarios is providing support through a knowledge base of frequently asked questions (FAQs). Many organizations publish FAQs as documents or web pages, which works well for a small set of question and answer pairs, but large documents can be difficult and time-consuming to search.
 
@@ -8,7 +8,22 @@ The **Language** service includes a *question answering* capability that enables
 
 > **Note**: The question answering capability in the Language service is a newer version of the QnA Maker service - which is still available as a separate service.
 
-## Open the cloned folder in Visual Studio Code.
+## Objectives
+
+In this lab, you will complete the following tasks:
+
++ Task 1: Open the cloned folder in Visual Studio Code
++ Task 2: Create a Language resource
++ Task 3: Create a question answering project
++ Task 4: Add a sources to the knowledge base
++ Task 5: Edit the knowledge base
++ Task 6: Train and test the knowledge base
++ Task 7: Deploy and test the knowledge base
++ Task 8: Create a bot for the knowledge base
+
+## Estimated timing: 60 minutes
+
+## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the bottom taskbar).
 
@@ -18,13 +33,11 @@ The **Language** service includes a *question answering* capability that enables
 
     **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
-3.  Wait while additional files are installed to support the C# code projects in the repo.
-
-## Create a Language resource
+## Task 2: Create a Language resource
 
 To create and host a knowledge base for question answering, you need a **Language service** resource in your Azure subscription.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
+1. Open the Azure portal.
 
 2. Select the **&#65291;Create a resource** button, search for *Language*, and create a **Language service** resource.
 
@@ -46,7 +59,7 @@ To create and host a knowledge base for question answering, you need a **Languag
 
 5. Wait for deployment to complete, and then view the deployment details.
 
-## Create a question answering project
+## Task 3: Create a question answering project
 
 To create a knowledge base for question answering in your Language resource, you can use the Language Studio portal to create a question answering project. In this case, you'll create a knowledge base containing questions and answers about [Microsoft Learn](https://docs.microsoft.com/learn).
 
@@ -74,7 +87,7 @@ To create a knowledge base for question answering in your Language resource, you
 
 7. On the **Review and finish** page, click **Create project**.
 
-## Add a sources to the knowledge base
+## Task 4: Add a sources to the knowledge base
 
 You can create a knowledge base from scratch, but it's common to start by importing questions and answers from an existing FAQ page or document. In this case, you'll import data from an existing FAQ web page for Microsoft learn, and you'll also import some pre-defined "chit chat" questions and answers to support common conversational exchanges.
 
@@ -84,7 +97,7 @@ You can create a knowledge base from scratch, but it's common to start by import
 
 2. On the **Manage sources** page for your question answering project, in the **&#9547; Add source** list, select **Chitchat**. The in the **Add chit chat** dialog box, select **Friendly** and click **Add chit chat**.
 
-## Edit the knowledge base
+## Task 5: Edit the knowledge base
 
 Your knowledge base has been populated with question and answer pairs from the Microsoft Learn FAQ, supplemented with a set of conversational *chit-chat* question  and answer pairs. You can extend the knowledge base by adding additional question and answer pairs.
 
@@ -98,7 +111,7 @@ Your knowledge base has been populated with question and answer pairs from the M
 
 5. In the **Answer** box, type `The Microsoft Certified Professional program enables you to validate and prove your skills with Microsoft technologies.` Then press **Enter** and click **Submit** to add the question (including alternative phrasing) and answer to the knowledge base.
 
-    In some cases, it makes sense to enable the user to follow up on answer to create a *multi-turn* conversation that enables the user to iteratively refine the question to get to the answer they need.
+    >**Note:** In some cases, it makes sense to enable the user to follow up on answer to create a *multi-turn* conversation that enables the user to iteratively refine the question to get to the answer they need.
 
 6. Under the answer you entered for the certification question, select **&#65291; Add follow-up prompts**.
 
@@ -107,7 +120,7 @@ Your knowledge base has been populated with question and answer pairs from the M
     - Select **Create link to new pair**, and enter this text: `You can learn more about certification on the [Microsoft certification page](https://docs.microsoft.com/learn/certifications/).`
     - **Show in contextual flow only**: Selected. *This option ensures that the answer is only ever returned in the context of a follow-up question from the original certification question.*
 
-## Train and test the knowledge base
+## Task 6: Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it in the QnA Maker portal.
 
@@ -126,7 +139,7 @@ Now that you have a knowledge base, you can test it in the QnA Maker portal.
 7. Select the **Learn more about certification** follow-up link. The follow-up answer with a link to the certification page should be returned.
 8. When you're done testing the knowledge base, close the test pane.
 
-## Deploy and test the knowledge base
+## Task 7: Deploy and test the knowledge base
 
 The knowledge base provides a back-end service that client applications can use to answer questions. Now you are ready to publish your knowledge base and access its REST interface from a client.
 
@@ -163,7 +176,7 @@ The knowledge base provides a back-end service that client applications can use 
 
 11. In the terminal pane, enter the command `.\ask-question.cmd` to run the script and view the JSON response that is returned by the service, which should contain an appropriate answer to the question *What is a learning path?*.
 
-## Create a bot for the knowledge base
+## Task 8: Create a bot for the knowledge base
 
 Most commonly, the client applications used to retrieve answers from a knowledge base are bots.
 
@@ -190,6 +203,16 @@ Most commonly, the client applications used to retrieve answers from a knowledge
 
 5. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting `What is Microsoft certification?`.
 
-## More information
+### Review
+In this lab, you have completed:
 
-To learn more about question answering in the Language service, see the [Language service documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/overview).
++ Opened the cloned folder in Visual Studio Code
++ Created a Language resource
++ Created a question answering project
++ Added a sources to the knowledge base
++ Edited the knowledge base
++ Trained and test the knowledge base
++ Deployed and test the knowledge base
++ Created a bot for the knowledge base
+
+## You have successfully completed the lab.
