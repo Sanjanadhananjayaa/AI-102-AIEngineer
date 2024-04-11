@@ -33,9 +33,9 @@ If you don't already have one in your subscription, you'll need to provision an 
 1. Select **Continue to create your resource**.
 1. Provision the resource using the following settings:
     - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*.
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Region**:*Choose any available region*
-    - **Name**: *Enter a unique name*.
+    - **Name**: **aisearch<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Select either **Free (F0)** or **Standard (S)* *tier if Free is not available.
     - **Responsible AI Notice**: Agree.
 1. Select **Review + create**.
