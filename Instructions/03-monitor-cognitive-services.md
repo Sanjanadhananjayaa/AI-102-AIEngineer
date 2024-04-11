@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-2-ex-3.jpg)
+![](./images/mod-2-ex-3.JPG)
 
 ## Task 1: Configure an alert
 
