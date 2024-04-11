@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 6: Prepare to use the Face SDK
 + Task 7: Detect and analyze faces
 
-## Estimated timing: 60 minutes
+## Estimated timing: 90 minutes
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 
