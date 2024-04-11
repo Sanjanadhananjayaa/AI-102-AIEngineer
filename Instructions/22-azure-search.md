@@ -54,9 +54,9 @@ The solution you will create for Margie's Travel requires the following resource
     
     - **Subscription**: *Your Azure subscription*
     
-    - **Resource group**: *Create a new resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     
-    - **Service name**: *Enter a unique name*
+    - **Service name**: **aisearch<inject key="DeploymentID" enableCopy="false"/>**
     
     - **Location**: *Select a location - note that your Azure AI Search and Azure AI Services resources must be in the same location*
     
@@ -72,9 +72,9 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *Azure AI Services*, and create an **Azure AI Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *The same resource group as your Azure AI Search resource*
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *The same location as your Azure AI Search resource*
-    - **Name**: *Enter a unique name*
+    - **Name**: **aisearch1<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 2. Select the required checkboxes and create the resource.
 3. Wait for deployment to complete, and then view the deployment details.
@@ -83,8 +83,8 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: **The same resource group as your Azure AI Search and Azure AI Services resources*
-    - **Storage account name**: *Enter a unique name*
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Storage account name**: **blob<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
     - **Performance**: Standard
     - **Replication**: Locally-redundant storage (LRS)
