@@ -42,6 +42,13 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
    > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
+1.  Open Explorer, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
+
+    >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
+
+    >**Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
+
+
 ## Task 2: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.
