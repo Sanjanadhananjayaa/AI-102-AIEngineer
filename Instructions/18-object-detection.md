@@ -17,6 +17,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 60 minutes
 
+## Architecture diagram
+
+![](./images/mod9-ex2-dia.PNG)
+
 ## Task 1: Create a Custom Vision project
 
 To train an object detection model, you need to create a Custom Vision project based on your training resource. To do this, you'll use the Custom Vision portal.
