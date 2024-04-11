@@ -84,13 +84,14 @@ You've created a bot based on the *EchoBot* template. Now you can run it locally
     dotnet run
     ```
 
-    >**Note:** When the bot starts, note the endpoint at which it is running is shown. This should be similar to **http://localhost:3978**.
+    >**Note:** When the bot starts, note the endpoint at which it is running is shown. This should be similar to    
+ **http://localhost:3978**.
 
 2. Start the **Bot Framework Emulator**, and select **open bot** by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**:
 
-    ![Visual Studio Code Icon](./images/open-bot.png)
+     ![Visual Studio Code Icon](./images/open-bot.png)
     
-    ![Visual Studio Code Icon](./images/openabot.png)
+     ![Visual Studio Code Icon](./images/openabot.png)
 
 3. After the conversation is opened in a **Live chat** pane, wait for the message *Hello and welcome!*.
 
