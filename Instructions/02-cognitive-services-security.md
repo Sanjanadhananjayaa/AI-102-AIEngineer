@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-2-ex-2.JPG)
+![](./images/a(2).JPG)
 
 ## Task 1: Manage authentication keys
 

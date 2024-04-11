@@ -26,7 +26,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-4-ex-1.JPG)
+![](./images/a(7).JPG)
 
 ## Task 1: Clone the repository for this course
 
