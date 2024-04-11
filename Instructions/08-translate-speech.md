@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod-4-ex-2.jpg)
+![](./images/mod-4-ex-2.JPG)
 
 ## Task 1: Provision an Azure AI Speech resource
 
