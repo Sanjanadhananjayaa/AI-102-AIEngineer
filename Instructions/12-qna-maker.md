@@ -126,7 +126,7 @@ Your knowledge base has been populated with question and answer pairs from the M
     - **Question**: `What is Microsoft certification?`
     - **Answer**: `The Microsoft Certified Professional program enables you to validate and prove your skills with Microsoft technologies.`
 1. Select **Done**.
-1. In the page for the **What is Microsoft certification?** question that is created, expand **Alternate questions**. Then add the alternate question `How can I demonstrate my Microsoft technology skills?`.
+1. On the **Question answer pairs** tab search for the **What is Microsoft certification?** question that is created, on the right hand side expand **Alternate questions**. then add the alternate question `How can I demonstrate my Microsoft technology skills?`. and click on enter.
 
     >**Note:** In some cases, it makes sense to enable the user to follow up on an answer by creating a *multi-turn* conversation that enables the user to iteratively refine the question to get to the answer they need.
 
