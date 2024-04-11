@@ -52,13 +52,26 @@ To create and host a knowledge base for question answering, you need a **Languag
     - **Region**: **<inject key="Region" enableCopy="false"/>**
     - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S
-    - **Azure Search location**: **<inject key="Region" enableCopy="false"/>**.
     - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
     
 1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
 
 1. Wait for deployment to complete, and then view the deployment details.
+
+1. In the search field at the top, search for **Azure AI services**. Then, Then select **Azure AI services** in the suggestions dropdown that appears.
+   
+1. Select **Create** under **AI Search** in the results page.
+1. Provision the resource using the following settings:
+    - **Subscription**: *Your Azure subscription*.
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Region**: **<inject key="Region" enableCopy="false"/>**
+    - **Name**: **ai-search-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*).
+      
+1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**..
+
+1. Wait for deployment to complete, and then view the deployment details
 
 ## Task 3: Create a question answering project
 
@@ -79,14 +92,20 @@ To create a knowledge base for question answering in your Language resource, you
 
 4. At the top of the portal, in the **Create new** menu, select **Custom question answering**.
 
-5. In the ***Create a project*** wizard, on the **Choose language setting** page, select the option to set the language for all projects in this resource, and select **English** as the language. Then click **Next**.
+5. Click on **Connect to Azure Search**.
 
-6. On the **Enter basic information** page, enter the following details and then click **Next**:
+6. On the top left click on **Select azure search resource** and select the **ai-search-<inject key="DeploymentID" enableCopy="false"/>** which you created.
+
+7. Once you select the **ai-search-<inject key="DeploymentID" enableCopy="false"/>** you will get the popup and you need to click on the **Select resource and delete projects**.
+
+9. Click on Language Studio at top of the page and in the ***Create a project*** wizard, on the **Choose language setting** page, select the option to set the language for all projects in this resource, and select **English** as the language. Then click **Next**.
+
+10. On the **Enter basic information** page, enter the following details and then click **Next**:
     - **Name** LearnFAQ
     - **Description**: FAQ for Microsoft Learn
     - **Default answer when no answer is returned**: Sorry, I don't understand the question
 
-7. On the **Review and finish** page, click **Create project**.
+11. On the **Review and finish** page, click **Create project**.
 
 ## Task 4: Add a sources to the knowledge base
 
