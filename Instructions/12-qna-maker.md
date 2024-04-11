@@ -153,7 +153,7 @@ Now that you have a knowledge base, you can test it in Language Studio.
 
 The knowledge base provides a back-end service that client applications can use to answer questions. Now you are ready to publish your knowledge base and access its REST interface from a client.
 
-1. In the **LearnFAQ** project in Language Studio, select the **Deploy knowledge base** page.
+1. In the **LearnFAQ** project in Language Studio, expand the hamburger and select the **Deploy knowledge base** page.
 
 2. At the top of the page, click **Deploy**. Then click **Deploy** to confirm you want to deploy the knowledge base.
 
