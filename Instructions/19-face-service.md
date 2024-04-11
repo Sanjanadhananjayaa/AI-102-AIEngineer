@@ -40,9 +40,9 @@ If you don't already have one in your subscription, you'll need to provision a *
 
 2. Select the **&#65291;Create a resource** button, search for *cognitive services*, and create a **Azure AI Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Choose or create a resource group Ai-102-DeploymentID*
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
-    - **Name**: *Enter a unique name*
+    - **Name**: **aicognitive<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 
 3. Select the required checkboxes and create the resource.
