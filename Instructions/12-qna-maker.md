@@ -48,7 +48,7 @@ To create and host a knowledge base for question answering, you need a **Languag
     - **Region**: **<inject key="Region" enableCopy="false"/>**
     - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S
-    - **Azure Search location**\*: **<inject key="Region" enableCopy="false"/>**.
+    - **Azure Search location**: **<inject key="Region" enableCopy="false"/>**.
     - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
     

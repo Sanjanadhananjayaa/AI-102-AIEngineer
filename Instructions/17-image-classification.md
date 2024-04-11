@@ -48,7 +48,7 @@ In this exercise, you'll create **Custom Vision** resources for training and pre
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Choose a resource group (Ai-102-<inject key="DeploymentID" enableCopy="false"/>)*
     - **Region**: *Choose any available region*
-    - **Name**: *Vison-<inject key="DeploymentID" enableCopy="false"/>
+    - **Name**: Vison-<inject key="DeploymentID" enableCopy="false"/>
     - **Training location**: *Choose any available region*
     - **Training pricing tier**: F0
     - **Prediction location**: *The same region as the training resource*
@@ -80,19 +80,19 @@ To train an image classification model, you need to create a Custom Vision proje
 
 5. In the new project, click **\[+\] Add images**, and select all of the files in the **C:\LabFiles\AI-102-AIEngineer-master\17-image-classification\training-images\apple** folder you viewed previously. Then upload the image files, specifying the tag *apple*, like this:
 
-![Upload apple with apple tag](./images/upload_apples.jpg)
+   ![Upload apple with apple tag](./images/upload_apples.jpg)
    
 6. Repeat the previous step to upload the images in the **banana** folder with the tag *banana*, and the images in the **orange** folder with the tag *orange*.
 
 7. Explore the images you have uploaded in the Custom Vision project - there should be 15 images of each class, like this:
 
-![Tagged images of fruit - 15 apples, 15 bananas, and 15 oranges](./images/fruit.jpg)
+   ![Tagged images of fruit - 15 apples, 15 bananas, and 15 oranges](./images/fruit.jpg)
     
 8. In the Custom Vision project, above the images, click **Train** to train a classification model using the tagged images. Select the **Quick Training** option, and then wait for the training iteration to complete (this may take a minute or so).
 
 9. When the model iteration has been trained, review the *Precision*, *Recall*, and *AP* performance metrics - these measure the prediction accuracy of the classification model, and should all be high.
 
-> **Note**: The performance metrics are based on a probability threshold of 50% for each prediction (in other words, if the model calculates a 50% or higher probability that an image is of a particular class, then that class is predicted). You can adjust this at the top-left of the page.
+>**Note**: The performance metrics are based on a probability threshold of 50% for each prediction (in other words, if the model calculates a 50% or higher probability that an image is of a particular class, then that class is predicted). You can adjust this at the top-left of the page.
 
 ## Task 4: Test the model
 
@@ -126,11 +126,11 @@ The Custom Vision portal provides a convenient user interface that you can use t
 
 2. Right-click the **train-classifier** folder and open an integrated terminal. Then install the Custom Vision Training package by running the appropriate command for your language preference:
 
-**C#**
+    **C#**
 
-```
-dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training --version 2.0.0
-```
+    ```
+    dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training --version 2.0.0
+    ```
 
 3. View the contents of the **train-classifier** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
