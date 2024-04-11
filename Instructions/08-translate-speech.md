@@ -32,9 +32,9 @@ If you don't already have on in your subscription, you'll need to provision a **
 
 1. Create a resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Choose or create a resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
-    - **Name**: *Enter a unique name*
+    - **Name**: **aiseeech1<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 
 1. Select **Review + Create,** then select **Create**.
