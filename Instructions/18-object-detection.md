@@ -48,7 +48,7 @@ To train an object detection model, you need to upload images that contain the c
 
      ![The default region for an object](./images/object-region.jpg)
 
-Alternatively, you can simply drag around the object to create a region.
+   Alternatively, you can simply drag around the object to create a region.
 
 6. When the region surrounds the object, add a new tag with the appropriate object type (*apple*, *banana*, or *orange*) as shown here:
 
