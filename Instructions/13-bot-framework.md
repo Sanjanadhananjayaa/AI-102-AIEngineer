@@ -18,6 +18,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 45 minutes
 
+## Architecture diagram
+
+![](./images/mod7-ex1-dia.PNG)
+
 ## Task 1: Update the Bot Framework Emulator
 
 You're going to use the Bot Framework SDK to create your bot, and the Bot Framework Emulator to test it. The Bot Framework Emulator is updated regularly, so let's make sure you have the latest version installed.
