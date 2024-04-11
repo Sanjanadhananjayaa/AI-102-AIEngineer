@@ -29,6 +29,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 60 minutes
 
+## Architecture diagram
+
+![](./images/mod-5-ex-1.JPG)
+
 ## Task 1: Create an Azure AI Language resource
 
 To create a conversational language model, you need a **Azure AI Language service** resource in a supported region.

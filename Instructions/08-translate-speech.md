@@ -16,6 +16,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 120 minutes
 
+## Architecture diagram
+
+![](./images/mod-4-ex-2.jpg)
+
 ## Task 1: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.

@@ -24,6 +24,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 120 minutes
 
+## Architecture diagram
+
+![](./images/mod-4-ex-1.jpg)
+
 ## Task 1: Clone the repository for this course
 
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
