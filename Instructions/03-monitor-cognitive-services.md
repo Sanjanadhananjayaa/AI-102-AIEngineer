@@ -13,6 +13,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 20 minutes
 
+## Architecture diagram
+
+![](./images/mod-2-ex-3.jpg)
+
 ## Task 1: Configure an alert
 
 Let's start monitoring by defining an alert rule so you can detect activity in your Azure AI services resource.

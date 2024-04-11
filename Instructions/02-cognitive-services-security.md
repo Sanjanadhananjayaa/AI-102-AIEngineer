@@ -12,11 +12,12 @@ In this lab, you will complete the following tasks:
 
 + Task 1: Manage authentication keys
 + Task 2: Secure key access with Azure Key Vault
-+ Task 2.1: Create a key vault and add a secret
-+ Task 2.2: Use a service principal
-+ Task 2.3: Use the service principal in an application
 
 ## Estimated timing: 45 minutes
+
+## Architecture diagram
+
+![](./images/mod-2-ex-2.jpg)
 
 ## Task 1: Manage authentication keys
 
@@ -212,8 +213,5 @@ In this lab, you have completed:
 
 + Managed authentication keys
 + Secured key access with Azure Key Vault
-+ Created a key vault and add a secret
-+ Used a service principal
-+ Used the service principal in an application
 
 ## You have successfully completed the lab, proceed with the next exercises.

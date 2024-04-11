@@ -76,7 +76,8 @@ In this exercise, you'll complete a partially implemented client application tha
    ```
 
 1. View the contents of the **speaking-clock** folder, and note that it contains a file for configuration settings:
-    - **C#**: appsettings.json
+    
+     - **C#**: appsettings.json
 
 1. Open the configuration file and update the configuration values it contains to include an authentication **key** for Azure AI Speech resource, and the **location** where it is deployed. Save your changes.
 
@@ -270,7 +271,8 @@ Your speaking clock application uses a default voice, which you can change. The 
     ```bash
     dotnet run
     ```
-`1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak in the specified voice, telling you the time.
+
+1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak in the specified voice, telling you the time.
 
 ## Task 7: Use Speech Synthesis Markup Language
 

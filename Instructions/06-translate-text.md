@@ -17,6 +17,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 120 minutes
 
+## Architecture diagram
+
+![](./images/mod-3-ex-2.jpg)
+
 ## Task 1: Clone the repo into your Azure Cloud Shell
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal. 

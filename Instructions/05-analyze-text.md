@@ -20,6 +20,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 120 minutes
 
+## Architecture diagram
+
+![](./images/mod-3-ex-1.jpg)
+
 ## Task 1: Provision an Azure AI Language resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Language service** resource in a supported region.
@@ -64,19 +68,20 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
    cd azure-ai-eng/05-analyze-text
     ```
 
-Applications for both C# and Python have been provided, as well as a supporting files you'll use to test the feature. Both apps feature the same functionality. Navigate to the folder of your preferred language.
+    - Applications for both C# and Python have been provided, as well as a supporting files you'll use to test the feature. Both apps feature the same functionality. Navigate to the folder of your preferred language.
 
-Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
 
-    
-      code .
+    ```
+    code .
+    ```
 
 
 ## Task 3: Prepare to use the Azure AI Language SDK for text analytics
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Language text analytics SDK to analyze hotel reviews.
 
- > [!NOTE] You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
+ > **Note:** You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
 
 1. In Cloud Shell, ensure you are in the **05-analyze-text** folder and have navigated to the **C-Sharp** > **text-analysis** or **Python** > **text-analysis** folder depending on your language preference.
 1. Install the Text Analytics SDK package by running the appropriate command for your language preference:
