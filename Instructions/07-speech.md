@@ -87,7 +87,6 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. Note that the **speaking-clock** folder contains a code file for the client application:
 
-
     - **C#**: Program.cs
 
 1. Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following language-specific code to import the namespaces you will need to use the Azure AI Speech SDK:
