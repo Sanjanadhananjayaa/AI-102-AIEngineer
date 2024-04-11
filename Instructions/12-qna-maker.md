@@ -52,13 +52,26 @@ To create and host a knowledge base for question answering, you need a **Languag
     - **Region**: **<inject key="Region" enableCopy="false"/>**
     - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S
-    - **Azure Search location**: **<inject key="Region" enableCopy="false"/>**.
     - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
     
 1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
 
 1. Wait for deployment to complete, and then view the deployment details.
+
+1. In the search field at the top, search for **Azure AI services**. Then, Then select **Azure AI services** in the suggestions dropdown that appears.
+   
+1. Select **Create** under **AI Search** in the results page.
+1. Provision the resource using the following settings:
+    - **Subscription**: *Your Azure subscription*.
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Region**: **<inject key="Region" enableCopy="false"/>**
+    - **Name**: **ai-search-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*).
+      
+1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**..
+
+1. Wait for deployment to complete, and then view the deployment details
 
 ## Task 3: Create a question answering project
 
