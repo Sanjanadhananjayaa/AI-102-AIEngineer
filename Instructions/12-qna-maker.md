@@ -120,7 +120,7 @@ You can create a knowledge base from scratch, but it's common to start by import
 
 Your knowledge base has been populated with question and answer pairs from the Microsoft Learn FAQ, supplemented with a set of conversational *chit-chat* question  and answer pairs. You can extend the knowledge base by adding additional question and answer pairs.
 
-1. In your **LearnFAQ** project in Language Studio, select the **Edit knowledge base** page to see the existing question and answer pairs (if some tips are displayed, read them and choose **Got it** to dismiss them, or select **Skip all**)
+1. In your **LearnFAQ** project in Language Studio, Click on Project **LearnFAQ** navigate and click on to the **source type URL** in manage sources. select the **Edit knowledge base** page to see the existing question and answer pairs (if some tips are displayed, read them and choose **Got it** to dismiss them, or select **Skip all**)
 1. In the knowledge base, on the **Question answer pairs** tab, select **&#65291;**, and create a new question answer pair with the following settings:
     - **Source**: `https://docs.microsoft.com/en-us/learn/support/faq`
     - **Question**: `What is Microsoft certification?`
