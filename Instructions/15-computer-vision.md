@@ -9,7 +9,7 @@ Azure AI Vision is an artificial intelligence capability that enables software s
 In this lab, you will complete the following tasks:
 
 + Task 1: Open the cloned folder in Visual Studio Code
-+ Task 2: Provision a Cognitive Services resource
++ Task 2: Provision a Azure AI services resource
 + Task 3: Prepare to use the Azure AI Vision SDK
 + Task 4: View the images you will analyze
 + Task 5: Analyze an image to suggest a caption
@@ -38,7 +38,7 @@ In this lab, you will complete the following tasks:
   
       **Note:** When **Do you trust the authors of the filesin tjis folder?** prompted select **Yes, I trust the authors**.
 
-## Task 2: Provision a Cognitive Services resource
+## Task 2: Provision a Azure AI services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
@@ -397,7 +397,7 @@ In some cases, you may need to create a smaller version of an image named a *thu
 In this lab, you have completed:
 
 + Opened the cloned folder in Visual Studio Code
-+ Provisioned a Cognitive Services resource
++ Provisioned a Azure AI services resource
 + Prepared to use the Azure AI Vision SDK
 + Viewed the images you will analyze
 + Analyzed an image to suggest a caption
