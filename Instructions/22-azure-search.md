@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod11-ex2-dia.PNG)
+   ![](./images/arch22.png)
 
 ## Task 1: Clone the repository for this course
 
