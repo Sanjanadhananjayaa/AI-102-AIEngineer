@@ -29,7 +29,7 @@ In this lab, you will complete the following tasks:
   
       **Note:** When **Do you trust the authors of the filesin tjis folder?** prompted select **Yes, I trust the authors**.
 
-## Task 2: Provision a Cognitive Services resource
+## Task 2: Provision Azure AI Services resource
 
 If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
 
