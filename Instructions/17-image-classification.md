@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod9-ex1-dia.PNG)
+![](./images/mod9-ex1-dia.png)
 
 ## Task 1: Open the cloned folder in Visual Studio Code
 

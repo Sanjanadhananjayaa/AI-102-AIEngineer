@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](./images/mod12-ex2-dia.PNG)
+![](./images/mod12-ex2-dia.png)
 
 ## Task 1: Clone the repository for this course
 
