@@ -17,6 +17,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 30 minutes
 
+## Architecture diagram
+
+![](./images/arch20.png)
+
 ## Task 1: Open the cloned folder in Visual Studio Code
 
 1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
