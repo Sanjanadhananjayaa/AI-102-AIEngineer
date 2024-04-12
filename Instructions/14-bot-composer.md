@@ -98,7 +98,7 @@ Now you're ready to use the Bot Framework Composer to create a bot.
 
     - Select the **Start** button.
 
-    - Select the **Power** button, and click on **Restart**.
+    - Select the **Power** button, and click on **Restart**. Now, re-connect again with the **Lab-VM**.
 
 1. Close the **Get Started** pane if it opens, and then in the navigation pane on the left, select **Greeting** to open the authoring canvas and show the *ConversationUpdate* activity that is called when a user initially joins a conversation with the bot. The activity consists of a flow of actions.
 
