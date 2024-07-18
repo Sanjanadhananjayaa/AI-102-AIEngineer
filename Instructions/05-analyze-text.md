@@ -38,7 +38,7 @@ If you don't already have one in your subscription, you'll need to provision an 
     - **Name**: **aisearch<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Select either **Free (F0)** or **Standard (S)* *tier if Free is not available.
     - **Responsible AI Notice**: Agree.
-1. Select **Review + create**.
+1. Select **Review + create** and then select **create**.
 1. Wait for deployment to complete, and then view the deployment details.
 
 ## Task 2: Clone the repository for this course in Cloud Shell
