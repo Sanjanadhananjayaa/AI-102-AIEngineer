@@ -51,18 +51,26 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created.
+3. If you're prompted to create storage for your Cloud Shell, select **Subscription**  and select **mount storage account**, click on apply.
+   
+4. Select **I want to create a storage account**, click on **apply**. provide the unique name to **storage account** and **file share**.
+   
+5. select the **resource group** and **region**. click on apply make sure to subscription is selected.
 
-4. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+    > **Note**: If you face any issues with respect to regions while creating storage account. please select the east us region.
+   
+6. . Then wait a minute or so for the storage to be created.
 
-5. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-ai-eng`.
+7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-ai-eng`.
 
     ```bash
    rm -r azure-ai-eng -f
    git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
     ```
   
-6. The files are downloaded to a folder named **azure-ai-eng**. Navigate to the lab files for this exercise using the following command.
+9. The files are downloaded to a folder named **azure-ai-eng**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-ai-eng/05-analyze-text
@@ -70,12 +78,12 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     - Applications for both C# and Python have been provided, as well as a supporting files you'll use to test the feature. Both apps feature the same functionality. Navigate to the folder of your preferred language.
 
-1. Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
+10. Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
 
     ```
     code .
     ```
-
+    > **Note**: If you asked for switch to classic shell please click on confirm.
 
 ## Task 3: Prepare to use the Azure AI Language SDK for text analytics
 
