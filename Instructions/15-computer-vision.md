@@ -387,7 +387,7 @@ In some cases, you may need to create a smaller version of an image named a *thu
      **C#**
 
      ```
-     dotnet run thumbnail.jpg
+     dotnet run .\thumbnail.jpg
      ```
 
     > **Note**: If you face any issues after running the command like process cannot access the file because it is being used by another process please ignore and proceed with next lab.
