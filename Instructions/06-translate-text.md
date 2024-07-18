@@ -171,8 +171,6 @@ Azure AI Translator can automatically detect the source language of text to be t
  
     ![](./images/10.png)
 
-    ![](./images/11.png)
-
 1. In the **GetLanguage** function, under the comment **Use the Translator detect function**, add the following code to use the Azure AI Translator's REST API to detect the language of the specified text, being careful not to replace the code at the end of the function that returns the language:
 
     **C#**
@@ -264,7 +262,7 @@ Azure AI Translator can automatically detect the source language of text to be t
 Now that your application can determine the language in which reviews are written, you can use Azure AI Translator to translate any non-English reviews into English.
 
 1. In your code file, find the **Translate** function, which currently returns and empty string for all text values.
-1. In the **Translate** function, under the comment **Use the Azure AI Translator translate function**, add the following code to use the Azure AI Translator's REST API to translate the specified text from its source language into English, being careful not to replace the code at the end of the function that returns the translation:
+1. In the **Translate** function, under the comment **Use the Azure AI Translator translate function**, replace the following code to use the Azure AI Translator's REST API to translate the specified text from its source language into English, being careful not to replace the code at the end of the function that returns the translation:
 
    **C#**
 
