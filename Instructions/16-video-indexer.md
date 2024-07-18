@@ -33,7 +33,6 @@ In this lab, you will complete the following tasks:
 
 2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\LabFiles\AI-102-AIEngineer-master**.
 
-    > **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
 ## Task 2: Upload a video to Video Analyzer
 
