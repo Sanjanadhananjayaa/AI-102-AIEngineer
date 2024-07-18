@@ -213,6 +213,8 @@ Now that you have a **SpeechConfig** for the speech service in your Azure AI Spe
     dotnet run
     ```
 
+    >**Note:** You may be prompted to speak the question, but we are using a virtual environment where voice communication from your laptop or desktop to the virtual environment is not supported
+
 1. If using a microphone, speak clearly and say "**what time is it?**". The program should transcribe your spoken input and display the time (based on the local time of the computer where the code is running, which may not be the correct time where you are).
 
     - The SpeechRecognizer gives you around 5 seconds to speak. If it detects no spoken input, it produces a "No match" result.
@@ -319,6 +321,7 @@ Speech Synthesis Markup Language (SSML) enables you to customize the way your sp
 
 1. When prompted, speak clearly into the microphone and say "**what time is it?**". The program should speak in the voice that is specified in the SSML (overriding the voice specified in the SpeechConfig), telling you the time, and then after a pause telling you it's time to end this lab - which it is!
 
+    >**Note:** You may be prompted to speak the question, but we are using a virtual environment where voice communication from your laptop or desktop to the virtual environment is not supported
 
 ### Review
 In this lab, you have completed:
