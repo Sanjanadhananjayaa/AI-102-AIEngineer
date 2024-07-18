@@ -53,13 +53,14 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
 3. If you're prompted to create storage for your Cloud Shell, select **Subscription**  and select **mount storage account**, click on apply.
    
-4. Select **I want to create a storage account**, click on **apply**. provide the unique name to **storage account** and **file share**.
+4. Select **I want to create a storage account**, click on **apply**.
    
-5. select the **resource group** and **region**. click on apply make sure to subscription is selected.
+5. Please make sure you have selected your resource group **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> 
+   (2)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (3)** For the **File share name**, then click on **Create Storage (4)**.
 
     > **Note**: If you face any issues with respect to regions while creating storage account. please select the east us region.
    
-6. . Then wait a minute or so for the storage to be created.
+6. Then wait a minute or so for the storage to be created.
 
 7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
