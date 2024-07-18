@@ -52,7 +52,7 @@ First, you'll need to sign into the Video Analyzer portal and upload a video.
 
     ![](./images/Ai_Video_Synthesizer_download_1.png)
    
-5. In Video Analyzer, select the **Upload** option. Then select the option to **Browse for files** and Select the **Video downloaded** in earlier step and click on **Open**. select the checkbox to verify compliance with Microsoft's policies for facial recognition, and Click on **Upload + Index**. do not close the upload and index page it will cause interruption in the index of video.
+5. In Video Analyzer, select the **Upload** option. Then select the option to **Browse for files** and Select the **Video downloaded** in earlier step and click on **Open**. click on **review+upload**.  select the checkbox to verify compliance with Microsoft's policies for facial recognition, and Click on **Upload + Index**. do not close the upload and index page it will cause interruption in the index of video.
        
     ![Video Analyzer search results for Bee](./images/lab8-image1.png)
 
