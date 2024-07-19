@@ -37,12 +37,12 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
  ![](./images/Terminal_new_vs_1.png)
 
-4. When the repository has been cloned, open the folder in Visual Studio Code.
-5. Wait while additional files are installed to support the C# code projects in the repo.
+3. When the repository has been cloned, open the folder in Visual Studio Code.
+4. Wait while additional files are installed to support the C# code projects in the repo.
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-6.  Select **File**, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
+5.  Select **File**, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
 
     >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
 
