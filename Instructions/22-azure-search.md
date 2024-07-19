@@ -32,6 +32,8 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
 1. Start Visual Studio Code.
 2. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+   
+   >**Note:** Please use this url if you face any issues running the git clone command, **git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer**.
 
  ![](./images/Terminal_new_vs_1.png)
 
