@@ -72,9 +72,11 @@ The solution you will create for Margie's Travel requires the following resource
     
     - **Pricing tier**: Basic
 
-3. Wait for deployment to complete, and then go to the deployed resource.
+3. Select **review+create** and click on **create**
 
-4. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
+4. Wait for deployment to complete, and then go to the deployed resource.
+
+5. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
 ### Task 2.2: Create an Azure AI Services resource
 
