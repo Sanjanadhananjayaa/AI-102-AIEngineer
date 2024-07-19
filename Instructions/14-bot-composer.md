@@ -42,7 +42,7 @@ In this exercise, you will create a bot that uses the OpenWeather service to ret
 
 1. After signing up, view the **API keys** page to see your API key.
 
-1. Open a new tab, go to the Outlook site at 'https://www.microsoft.com/en-us/microsoft-365/outlook/log-in'.
+1. Open a new tab, go to the Outlook site at 'https://www.microsoft.com/en-us/microsoft-365/outlook'.
 
 1. Use these credentials, for siging in:
 
@@ -54,7 +54,7 @@ In this exercise, you will create a bot that uses the OpenWeather service to ret
 
 1. After approving the email, you will recieve new email regarding your **API keys**.
 
-    >**Note:** Do not close the outlook page.
+    >**Note:** You might not be receiving the email because of openweather site issues, Do not close the outlook page. you can proceed with the next task.
 
 ## Task 2: Update Bot Framework Composer
 
