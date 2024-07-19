@@ -89,7 +89,8 @@ If you don't already have one in your subscription, you'll need to provision an 
     - **Name**: **aisearch1<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 2. Select the required checkboxes and create the resource.
-3. Wait for deployment to complete, and then view the deployment details.
+3. Select **review+create** and click on **create**
+4. Wait for deployment to complete, and then view the deployment details.
 
 ### Task 2.3: Create a storage account
 
@@ -101,9 +102,10 @@ If you don't already have one in your subscription, you'll need to provision an 
     - **Performance**: Standard
     - **Replication**: Locally-redundant storage (LRS)
     - On the **Advanced** tab, check the box next to *Allow enabling anonymous access on individual containers*
-2. Wait for deployment to complete, and then go to the deployed resource.
-3. On the **Overview** page, note the **Subscription ID** -this identifies the subscription in which the storage account is provisioned.
-4. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+2. Select **review+create** and click on **create**
+3. Wait for deployment to complete, and then go to the deployed resource.
+4. On the **Overview** page, note the **Subscription ID** -this identifies the subscription in which the storage account is provisioned.
+5. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
 
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
 
