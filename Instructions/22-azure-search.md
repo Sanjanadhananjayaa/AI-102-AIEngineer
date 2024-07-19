@@ -41,7 +41,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-6.  Open Explorer, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
+6.  Select **File**, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
 
     >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
 
