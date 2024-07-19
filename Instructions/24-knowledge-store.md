@@ -199,7 +199,7 @@ The ability to create *object* projections like this enables you to generate enr
 
 The *file* projections defined in the skillset create JPEG files for each image that was extracted from the documents during the indexing process.
 
-1. In the storage explorer interface in the Azure portal, select the **margies-images** blob container. This container contains a folder for each document that contained images.
+1. In the storage browser interface in the Azure portal, select the **margies-images** blob container. This container contains a folder for each document that contained images.
 2. Open any of the folders and view its contents - each folder contains at least one \*.jpg file.
 3. Open any of the image files to verify that they contain images extracted from the documents.
 
