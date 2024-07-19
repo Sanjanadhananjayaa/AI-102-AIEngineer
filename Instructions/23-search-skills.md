@@ -29,6 +29,9 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
 1. Start Visual Studio Code.
 2. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+
+   >**Note:** Please use this url if you face any issues running the git clone command, **git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer**.
+   
 3. When the repository has been cloned, open the folder in Visual Studio Code.
 4. Wait while additional files are installed to support the C# code projects in the repo.
 
@@ -335,6 +338,8 @@ To implement the word count functionality as a custom skill, you'll create an Az
     ```
 
 9. Close the **Test/Run** pane and in the **wordcount** function blade, click **Get function URL**. Then copy the URL for the default key to the clipboard. You'll need this in the next procedure.
+
+   >**Note:** Please use the Detault **Function Key** option.
 
 ## Task 6: Add the custom skill to the search solution
 
