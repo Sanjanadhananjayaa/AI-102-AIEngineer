@@ -71,11 +71,12 @@ Azure AI Services are cloud-based services that encapsulate artificial intellige
 
         >**Note:** Copy the values of **Endpoint** and **Key 1**, in a notepad. You will use this in the next task.
 
+<validation step="fe4194bf-9530-4184-8b85-c29e2532b9b6" />
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 3: Use a REST Interface
 
