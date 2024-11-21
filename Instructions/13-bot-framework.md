@@ -28,7 +28,7 @@ You're going to use the Bot Framework SDK to create your bot, and the Bot Framew
 
 > **Note**: Updates may include changes to the user interface that affect the instructions in this exercise.
 
-1. Open an edge browser, copy and paste this link, `https://github.com/microsoft/BotFramework-Emulator/releases/download/v4.5.2/BotFramework-Emulator-4.5.2-windows-setup.exe`, download the **Bot Framework Emulator**.
+1. Open an edge browser, copy and paste this link, `https://github.com/microsoft/BotFramework-Emulator/releases/download/v4.15.1/BotFramework-Emulator-4.15.1-windows-setup.exe`, download the **Bot Framework Emulator**.
 
 1. Start the **Bot Framework Emulator**, and if you are prompted to install an update, do so for the currently logged in user. If you are not prompted automatically, use the **Check for update** option on the **Help** menu to check for updates.
 
