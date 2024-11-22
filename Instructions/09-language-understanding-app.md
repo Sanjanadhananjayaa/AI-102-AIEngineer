@@ -58,6 +58,13 @@ To create a conversational language model, you need a **Azure AI Language servic
 
 1. Wait for deployment to complete, and then view the deployment details.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="c04b552b-faf9-49fc-81fb-0c49393a3afa" />
+
 ## Task 2: Create a conversational language understanding project
 
 Now that you have created an authoring resource, you can use it to create a conversational language understanding project.
