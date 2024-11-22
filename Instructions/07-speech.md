@@ -48,7 +48,6 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     >**Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
-
 ## Task 2: Provision an Azure AI Speech resource
 
 If you don't already have on in your subscription, you'll need to provision a **Azure AI Speech service** resource.
@@ -57,16 +56,19 @@ If you don't already have on in your subscription, you'll need to provision a **
 
 1. Enter **Azure AI** in the search field at the top of the portal. Then select **Azure AI services** in the suggestions dropdown that appears.
 
+   ![](./images/azureaiservice1.png)
+
 1. Select **Create** under **Speech service** in the results page.
 
-1. Create a resource with the following settings:
+1. Create a resource using the provided settings. Once completed, click **Review + Create** to validate the configuration, and then click **Create** to deploy the resource.
+
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
     - **Name**: **aispeech<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Standard S0 or S1 based on Availability of the Tier
 
-1. Select **Review + Create,** then select **Create**.
+    ![](./images/azureaiservice2.png)
 
 1. Wait for deployment to complete, and then view the deployment details.
 
