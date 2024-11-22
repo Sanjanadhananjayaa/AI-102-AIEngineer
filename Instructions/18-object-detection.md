@@ -175,6 +175,13 @@ Now that you've published the image classification model, you can use it from a 
 
 6. After the program has completed, view the resulting **output.jpg** file to see the detected objects in the image.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="fac5566b-e63b-4d4a-9dd7-a4f6b883c9c2" />
+
 ### Review
 In this lab, you have completed:
 
