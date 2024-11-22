@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 Let's start monitoring by defining an alert rule so you can detect activity in your Azure AI services resource.
 
-1. In the Azure portal, go to your **Azure AI services** resource and view its **Alerts** page under the **Monitoring** section.
+1. In the Azure portal, go to your **Azure AI services** resource that you have created in the previous exercise and view its **Alerts** page under the **Monitoring** section.
 
     ![Visual Studio Code Icon](./images/alerts.png)
 
@@ -31,11 +31,11 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
 1. In the **Create an alert rule** page, under **Scope**, verify that the your Azure AI services resource is listed.
 
-1. Select **Condition** tab, and view the **Select a signal** pane that appears on the right, where you can select a signal type to monitor.
+    ![Visual Studio Code Icon](./images/a-34.png)
 
-1. In the **Signal type** list, under **Activity Log**, in the filtered list, select **List Keys (1)**, and select **Apply (2)**.
+1. Select **Condition** tab, and click on **See all signals *(1)**.On the **Select a signal** pane that appears on the right, where you can select a signal type to monitor. Search for **List (2)** then select **List keys (3)** under Activity log and then click on **Apply (4)**.
 
-    ![Visual Studio Code Icon](./images/alertrule.png)
+    ![Visual Studio Code Icon](./images/a-35.png)
 
 1. Review the activity over the past 6 hours.
 
@@ -43,15 +43,19 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
 1. Select the **Actions** tab. Note that you can specify an *action group*. This enables you to configure automated actions when an alert is fired - for example, sending an email notification. We won't do that in this exercise; but it can be useful to do this in a production environment.
 
-1. In the **Details** tab, set the **Alert rule name** to **Key List Alert**.
+1. In the **Details** tab, set the **Alert rule name** to **Key List Alert (1)** and then select **Review + create (2)**.
 
-1. Select **Review + create**.
+    ![Visual Studio Code Icon](./images/a-36.png)
 
 1. Review the configuration for the alert. Select **Create** and wait for the alert rule to be created. 
 
-1. In Visual Studio Code, right-click the **03-monitor** folder and open an integrated terminal.
+1. In Visual Studio Code, right-click the **03-monitor** folder and then select **Open an integrated terminal**.
 
-1. Switch back to the browser containing the Azure portal, and refresh your **Alerts page**. You should see a **Sev 4** alert listed in the table 
+    ![Visual Studio Code Icon](./images/a-37.png)
+
+1. Switch back to the browser containing the Azure portal, and refresh your **Alerts page**.  Navigate to **Alert rules** from the top bar. You should see a **Sev 4** alert listed in the table.
+
+    ![Visual Studio Code Icon](./images/a-46.png)
 
     >**Note:** If it doesn't show up, wait up to five minutes and refresh again.
 
