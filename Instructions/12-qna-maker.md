@@ -73,6 +73,13 @@ To create and host a knowledge base for question answering, you need a **Languag
 
 1. Wait for deployment to complete, and then view the deployment details
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="b2ea815a-f69c-4ce2-9be7-9fff27b6fca1" />
+
 ## Task 3: Create a question answering project
 
 To create a knowledge base for question answering in your Language resource, you can use the Language Studio portal to create a question answering project. In this case, you'll create a knowledge base containing questions and answers about [Microsoft Learn](https://docs.microsoft.com/learn).
@@ -213,6 +220,13 @@ Most commonly, the client applications used to retrieve answers from a knowledge
 1. To open the  bot, select the Azure Bot resource in the resources list.
 1. In the overview pane for your bot, select the **Test in Web Chat** page, and wait until the bot displays the message **Hello and welcome!** (it may take a few seconds to initialize).
 1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting `What is Microsoft certification?`.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="857df81b-de5f-4b4c-945d-af7650044b03" />
 
 ### Review
 In this lab, you have completed:
