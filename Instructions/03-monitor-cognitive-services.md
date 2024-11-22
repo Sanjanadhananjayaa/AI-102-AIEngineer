@@ -53,7 +53,9 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
     ![Visual Studio Code Icon](./images/a-37.png)
 
-1. Switch back to the browser containing the Azure portal, and refresh your **Alerts page**. You should see a **Sev 4** alert listed in the table 
+1. Switch back to the browser containing the Azure portal, and refresh your **Alerts page**.  Navigate to **Alert rules** from the top bar. You should see a **Sev 4** alert listed in the table.
+
+    ![Visual Studio Code Icon](./images/a-46.png)
 
     >**Note:** If it doesn't show up, wait up to five minutes and refresh again.
 
