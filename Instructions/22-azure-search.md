@@ -79,6 +79,13 @@ The solution you will create for Margie's Travel requires the following resource
 
 5. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="6cbaad12-ad3b-48d8-9a96-088e83af5b84" />
+
 ### Task 2.2: Create an Azure AI Services resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
@@ -92,6 +99,13 @@ If you don't already have one in your subscription, you'll need to provision an 
 2. Select the required checkboxes and create the resource.
 3. Select **review+create** and click on **create**
 4. Wait for deployment to complete, and then view the deployment details.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="9a5c0568-3ad3-4983-9e42-c9baba1ebb22" />
 
 ### Task 2.3: Create a storage account
 
