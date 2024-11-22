@@ -318,6 +318,13 @@ One of the most fundamental capabilities of the Face service is to detect faces 
 
 7. View the **detected_faces.jpg** file that is generated in the same folder as your code file to see the annotated faces.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="8b14af8e-6a29-4e7e-a695-8261457d1a46" />
+
 ### Review
 In this lab, you have completed:
 
