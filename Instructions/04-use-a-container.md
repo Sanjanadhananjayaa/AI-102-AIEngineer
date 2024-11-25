@@ -87,7 +87,6 @@ Many commonly used Azure AI services APIs are available in container images. For
 
         - Select **Review + create (4)** 
 
-
           ![Visual Studio Code Icon](./images/a-44.png)               
 
 1. Click on **Create**.        

@@ -270,11 +270,11 @@ In some cases, valid values for an entity can be restricted to a list of specifi
 
       ![](images/c-23.png)
 
-1. On the page for the **Weekday** entity, in the **List (1)** section, select **&#65291; Add new list (2)**. Then enter the following value and synonym **(3)** and select **Save (4)**:
+1. On the page for the **Weekday** entity, in the **List (1)** section, select **&#65291; Add new list (2)**. Then enter the following value and synonym and select **Save (5)**:
 
     | List key | synonyms|
     |-------------------|---------|
-    | Sunday | Sun |
+    | Sunday **(3)** | Sun **(4)** |
 
       ![](images/c-24.png)
 

@@ -85,25 +85,25 @@ In this lab, you will complete the following tasks:
 
 1. Select the user icon from the top right corner, under **Current resource** choose **Select**.
 
-      ![](images/mod-5-60.png)
-
+     ![](images/mod-5-60.png)
+ 
 1. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language (1)** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.  Click **Done (3)**.
 
-      ![](images/c-45.png)
+     ![](images/c-45.png)
       
 1. Sign in using the Microsoft account associated with your Azure subscription. If this is the first time you have signed into the Language Service portal, you may need to grant the app some permissions to access your account details. Then complete the *Welcome* steps by selecting your Azure subscription and the authoring resource you just created.
 
 1. Open the **Conversational Language Understanding** page.
 
-      ![](images/c-46.png)
+     ![](images/c-46.png)
 
 1. Next to **&#65291;Create new project**, select **Import (1)**. Click **Choose File (2)**.
 
-      ![](images/c-47.png)
-
+     ![](images/c-47.png)
+  
 1. Select **Clock.json (1)**, click **Open (2)**.
 
-      ![](images/c-48.png)
+     ![](images/c-48.png)
 
 1. Under Name provide **Clock** and then click **Done**.
 
@@ -111,13 +111,13 @@ In this lab, you will complete the following tasks:
 
 1. At the left of the Language Studio portal, select **Training jobs** to train the app. Click **Start a training job**, name the model **Clock** and keep default training mode (Standard) and data splitting. Select **Train**. Training may take several minutes to complete.
 
-    > **Note**: Select **>>** to open the left explorer if not opened. Because the model name **Clock** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.    
+     >**Note**: Select **>>** to open the left explorer if not opened. Because the model name **Clock** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.    
 
 1. Once the training is succeeded, at the left of the Language Studio portal, select **Deploying a model** and use **Add deployment** to create deployment for the **Clock (2)** model that's named **production (1)**. Click on **Deploy (3)**.
 
-    > **Note**: Because the deployment name **production** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.
+     >**Note**: Because the deployment name **production** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.
 
-    ![](images/c-49.png)     
+      ![](images/c-49.png)     
 
 1. The client applications needs the **Endpoint URL** and **Primary key** to use your deployed model. You had already copied it in the **Task 1**. If not please follow the given steps. After the deployment is complete, to get those parameters, open the Azure portal at [https://portal.azure.com](https://portal.azure.com/?azure-portal=true), and sign in using the Microsoft account associated with your Azure subscription. On the Search bar, search for **Language** and select it to choose the *Azure AI Services|Language service*.
 
@@ -125,7 +125,7 @@ In this lab, you will complete the following tasks:
 
 1. On the left hand menu, under the *Resource Management* section, select **Keys and Endpoint (1)**. Make a copy of your **KEY 1 (1)** and your **Endpoint (2)**.
 
-      ![](images/c-50.png)
+     ![](images/c-50.png)
 
 1. Client applications need information from the prediction URL endpoint and the Language service key to connect to your deployed model and be authenticated.
 
@@ -139,7 +139,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. Right-click the **clock-client (1)** folder and then select **Open in Integrated Terminal (2)**. 
 
-      ![](images/c-51.png)
+     ![](images/c-51.png)
 
 1. Then install the Conversational Language Service SDK package by running the appropriate command for your language preference:
 
