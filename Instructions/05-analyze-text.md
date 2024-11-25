@@ -29,17 +29,44 @@ In this lab, you will complete the following tasks:
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Language service** resource in a supported region.
 
 1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
-1. In the search field at the top, search for **Azure AI services**. Then, in the results, select **+ Create** under **Language service**.
-1. Select **Continue to create your resource**.
-1. Provision the resource using the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**:*Choose any available region*
-    - **Name**: **aisearch<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Pricing tier**: Select either **Free (F0)** or **Standard (S)* *tier if Free is not available.
-    - **Responsible AI Notice**: Agree.
-1. Select **Review + create** and then select **Create**.
+
+1. 1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+
+    ![Visual Studio Code Icon](./images/a-2.png)
+
+1. Select **Language Service (1)** from the left navigation pane. Then click on **Create (2)**.
+
+    ![Visual Studio Code Icon](./images/b-1.png)
+
+1. Scroll down to the bottom and select **Continue to create your resource**.
+
+1. Provision the resource using the following settings and then click on **Review+Create (7)**.
+
+    - **Subscription**: **Leave the default Azure subscription (1)**.
+
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+    - **Region**: **Choose any available region (3)**.
+
+    - **Name**: **aisearch<inject key="DeploymentID" enableCopy="false"/> (4)**.
+
+    - **Pricing tier**: Select either **Free (F0)** or **Standard (S)** tier if Free is not available. **(5)**
+
+    - **Responsible AI Notice**: Check the checkbox **(6)**
+
+      ![Visual Studio Code Icon](./images/b-2.png)    
+    .
+1. Click on **create**.
+
 1. Wait for deployment to complete, and then view the deployment details.
+
+1. Select **Go to resource**.
+
+    ![Visual Studio Code Icon](./images/a-5.png)
+
+1. From the left navigation menu, select **Keys and Endpoint (1)** under Resource management.Copy the values of **Key 1 (2)** and **Endpoint (3)** , in a notepad. You will use this in the next task.
+
+    ![Visual Studio Code Icon](./images/b-4.png)
 
 ## Task 2: Clone the repository for this course in Cloud Shell
 
@@ -49,29 +76,40 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](./images/powershell-portal-guide-1.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, select **Subscription**  and select **Mount storage account**, click on **Apply**.
+1. If you're prompted to create storage for your Cloud Shell, select **Mount storage account** and select your default **Subscription** , and then click on **Apply**.
    
-4. Select **I want to create a storage account**, click on **Next**.
+1. Select **I want to create a storage account**, click on **Next**.
+
+1. On the **Create Storage account** page, provid the following details and then click on **Create (6)**.
+
+    - **Subscription**: **Choose the deafult Subscription (1)**
+
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
    
-5. Please make sure you have selected your **region**, resource group **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> 
-   (2)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (3)** For the **File share name**, then click on **Create (4)**.
+    - **Region**: **<inject key="Region" enableCopy="false" /></inject> (3)**.
 
-    > **Note**: If you face any issues with respect to regions while creating storage account. please select the east us region.
+    - **Storage account name:** Enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)**
+
+    - **File share:** Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (5)**
+
+      ![Visual Studio Code Icon](./images/b-3.png)
+
+      > **Note**: If you face any issues with respect to regions while creating storage account. please select the east us region.
    
-6. Then wait a minute or so for the storage to be created.
+1. Then wait a minute or so for the storage to be created.
 
-7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to **Bash**. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-ai-eng`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-ai-eng`.
 
     ```bash
    rm -r azure-ai-eng -f
    git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
     ```
   
-9. The files are downloaded to a folder named **azure-ai-eng**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-ai-eng**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-ai-eng/05-analyze-text
@@ -79,12 +117,16 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     - Applications for both C# and Python have been provided, as well as a supporting files you'll use to test the feature. Both apps feature the same functionality. Navigate to the folder of your preferred language.
 
-10. Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and observe the text files in the `text-analysis` folder. Use the following command to open the lab files in the code editor.
 
     ```
     code .
     ```
     > **Note**: If you asked for switch to classic shell please click on confirm.
+
+    > **Note**: If you don't see the built-in code editor, please repeat steps 8 and 9 accordingly.   
+
+    ![Visual Studio Code Icon](./images/b-6.png)     
 
 ## Task 3: Prepare to use the Azure AI Language SDK for text analytics
 
@@ -93,6 +135,21 @@ In this exercise, you'll complete a partially implemented client application tha
  > **Note:** You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
 
 1. In Cloud Shell, ensure you are in the **05-analyze-text** folder and have navigated to the **C-Sharp** > **text-analysis** or **Python** > **text-analysis** folder depending on your language preference.
+
+1. Use the following commands to navigate the the specific **C-Sharp** or **Python**'s **text-analysis** folder depending on your language preference.
+
+    **C#**
+
+    ```bash
+    cd C-Sharp/text-analysis
+    ```
+
+    **Python**
+
+    ```bash
+    cd Python/text-analysis
+    ```
+
 1. Install the Text Analytics SDK package by running the appropriate command for your language preference:
 
     **C#**
@@ -106,13 +163,18 @@ In this exercise, you'll complete a partially implemented client application tha
     ```bash
     pip install azure-ai-textanalytics==5.3.0
     pip install python-dotenv
-    ```
+   ```
 
 1. View the contents of the **text-analysis** folder in the code window, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
+
     - **Python**: .env
 
-    Open the configuration file and update the configuration values it contains to reflect the **endpoint** and an authentication **key** for your Azure AI Language service resource. Save your changes.
+1. Open the configuration file and update the configuration values with **Key1** and **Endpoint** thats you had copied previously, to reflect the **endpoint** and an authentication **key** for your Azure AI Language service resource. Save your changes by clicking **Ctrl+S** in your keyboard.
+
+    - This is how it looks for **C#**: appsettings.json file.
+
+      ![Visual Studio Code Icon](./images/b-5.png)       
 
 1. Note that the **text-analysis** folder contains a code file for the client application:
 
@@ -391,6 +453,8 @@ In addition to categorized entities, the Text Analytics API can detect entities 
     ```bash
     python text-analysis.py
     ```
+
+    ![Visual Studio Code Icon](./images/b-9.png)       
 
 1. Observe the output, noting the linked entities that are identified.
 

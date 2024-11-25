@@ -37,56 +37,97 @@ In this lab, you will complete the following tasks:
 
 1. Open the Azure portal.
 
-2. Select the **&#65291;Create a resource** button, search and select *language service*, and select **Create** button and then select **Continue to create your resource** resource with the following settings:
+1. Select the **&#65291;Create a resource** button.
 
-    - **Subscription**: *Keep it as default*
-    - **Resource group**: *Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>*.
-    - **Region**: *Choose same as resource group location.*
-    - **Name**: *languageservice-<inject key="DeploymentID" enableCopy="false" /></inject>*
-    - **Pricing tier**: *S*
-    - **Responsible AI Notice**: *Select check box to confirm*
+      ![](images/a-23.png)
 
-3. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
+1. Search for **language service (1)**,press enter and select **language service (2)** from the services.
 
-4. Wait for the resources to be created, and note that two Language Understanding resources are provisioned; one for authoring, and another for prediction. You can view both of these by navigating to the resource group where you created them.
+      ![](images/c-41.png)
+
+1. Select **Create** button 
+
+      ![](images/c-42.png)
+
+1. Scroll down and select **Continue to create your resource** 
+
+1. Create resource with the following settings and then click on **Review + Create (7)**.
+
+    - **Subscription**: **Keep it as default (1)**
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.
+    - **Region**: **<inject key="Region" enableCopy="false" /></inject> (3)**
+    - **Name**: **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (4)**
+    - **Pricing tier**: **S (5)**
+    - **Responsible AI Notice**: **Select check box to confirm(6)**
+
+      ![](images/c-43.png)
+
+      ![](images/c-44.png)      
+
+1. click on **Create**.
+
+1. Wait for the resources to be created, click on **Go to resource**.
+
+1. Navigate to the **Keys and Enpoint** under **Resource Management**. Make a copy of **Key1 (2)** and **Endpoint (3)** and then paste it in notepad. You will be using it in the upcoming tasks.
+
+      ![](images/c-50.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="c04b552b-faf9-49fc-81fb-0c49393a3afa" />      
 
 ## Task 3: Import, train, and publish a Conversational language understanding model
 
 1. In a new browser tab, open the Language Studio - Preview portal at `https://language.cognitive.azure.com`.
 
-2. Select the user icon from the top right corner, under **Current resource** choose **Select**.
+1. Select the user icon from the top right corner, under **Current resource** choose **Select**.
 
       ![](images/mod-5-60.png)
 
-3. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject>**.  Click **Done**.
+1. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language (1)** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.  Click **Done (3)**.
 
-      ![](images/mod-5-61.png)
+      ![](images/c-45.png)
       
-4. Sign in using the Microsoft account associated with your Azure subscription. If this is the first time you have signed into the Language Service portal, you may need to grant the app some permissions to access your account details. Then complete the *Welcome* steps by selecting your Azure subscription and the authoring resource you just created.
+1. Sign in using the Microsoft account associated with your Azure subscription. If this is the first time you have signed into the Language Service portal, you may need to grant the app some permissions to access your account details. Then complete the *Welcome* steps by selecting your Azure subscription and the authoring resource you just created.
 
-5. Open the **Conversational Language Understanding** page.
+1. Open the **Conversational Language Understanding** page.
 
-6. Next to **&#65291;Create new project**, select **Import**. Click **Choose File** and then browse to the **10b-clu-client-(preview)** subfolder in the project folder containing the lab files for this exercise. Select **Clock.json**, click **Open**, Under Name provide **Clock** and then click **Done**.
+      ![](images/c-46.png)
 
-7. If a panel with tips for creating an effective Language service app is displayed, close it.
+1. Next to **&#65291;Create new project**, select **Import (1)**. Click **Choose File (2)**.
 
-8. At the left of the Language Studio portal, select **Training jobs** to train the app. Click **Start a training job**, name the model **Clock** and keep default training mode (Standard) and data splitting. Select **Train**. Training may take several minutes to complete.
+      ![](images/c-47.png)
 
-    > **Note**: Select **>>** to open the left explorer if not opened. Because the model name **Clock** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.
+1. Select **Clock.json (1)**, click **Open (2)**.
 
-9. At the left of the Language Studio portal, select **Deploying a model** and use **Add deployment** to create deployment for the Clock model that's named **production**.
+      ![](images/c-48.png)
 
-    > **Note**: Because the deployment name **production** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described. 
+1. Under Name provide **Clock** and then click **Done**.
 
-10. The client applications needs the **Endpoint URL** and **Primary key** to use your deployed model. After the deployment is complete, to get those parameters, open the Azure portal at [https://portal.azure.com](https://portal.azure.com/?azure-portal=true), and sign in using the Microsoft account associated with your Azure subscription. On the Search bar, search for **Language** and select it to choose the *Azure AI Services|Language service*.
+1. If a panel with tips for creating an effective Language service app is displayed, close it.
 
-11. Your Language service resource should be listed, select that resource.
+1. At the left of the Language Studio portal, select **Training jobs** to train the app. Click **Start a training job**, name the model **Clock** and keep default training mode (Standard) and data splitting. Select **Train**. Training may take several minutes to complete.
 
-12. On the left hand menu, under the *Resource Management* section, select **Keys and Endpoint**.
+    > **Note**: Select **>>** to open the left explorer if not opened. Because the model name **Clock** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.    
 
-13. Make a copy of your **KEY 1** and your **Endpoint**.
+1. Once the training is succeeded, at the left of the Language Studio portal, select **Deploying a model** and use **Add deployment** to create deployment for the **Clock (2)** model that's named **production (1)**. Click on **Deploy (3)**.
 
-14. Client applications need information from the prediction URL endpoint and the Language service key to connect to your deployed model and be authenticated.
+    > **Note**: Because the deployment name **production** is hard-coded in the clock-client code (used later in the lab), capitalize and spell the name exactly as described.
+
+    ![](images/c-49.png)     
+
+1. The client applications needs the **Endpoint URL** and **Primary key** to use your deployed model. You had already copied it in the **Task 1**. If not please follow the given steps. After the deployment is complete, to get those parameters, open the Azure portal at [https://portal.azure.com](https://portal.azure.com/?azure-portal=true), and sign in using the Microsoft account associated with your Azure subscription. On the Search bar, search for **Language** and select it to choose the *Azure AI Services|Language service*.
+
+1. Your Language service resource should be listed, select that resource.
+
+1. On the left hand menu, under the *Resource Management* section, select **Keys and Endpoint (1)**. Make a copy of your **KEY 1 (1)** and your **Endpoint (2)**.
+
+      ![](images/c-50.png)
+
+1. Client applications need information from the prediction URL endpoint and the Language service key to connect to your deployed model and be authenticated.
 
 ## Task 4: Prepare to use the Language service SDK
 
@@ -96,7 +137,11 @@ In this exercise, you'll complete a partially implemented client application tha
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **10b-clu-client-(preview)** folder and expand the **C-Sharp** folder depending on your language preference.
 
-2. Right-click the **clock-client** folder and then select **Open in Integrated Terminal**. Then install the Conversational Language Service SDK package by running the appropriate command for your language preference:
+1. Right-click the **clock-client (1)** folder and then select **Open in Integrated Terminal (2)**. 
+
+      ![](images/c-51.png)
+
+1. Then install the Conversational Language Service SDK package by running the appropriate command for your language preference:
 
     **C#**
 
@@ -112,10 +157,10 @@ In this exercise, you'll complete a partially implemented client application tha
 1. Open the configuration file and update the configuration values it contains to include the **Endpoint URL** and the **Primary key** for your Language resource and save the file. You can find the required values in the Azure portal or Language Studio as follows:
 
     - Azure portal: Open your Language resource. Under **Resource Management**, select **Keys and Endpoint**. Copy the **KEY 1** and **Endpoint** values to your configuration settings file.
-    
-    - Language Studio: Open your **Clock** project. The Language service endpoint can be found on the **Deploying a model** page under **Get prediction URL**, and the the **Primary key** can be found on the **Project settings** page. The Language service endpoint portion of the Prediction URL ends with **.cognitiveservices.azure.com/**. For example: `https://ai102-langserv.cognitiveservices.azure.com/`.
 
-4. Note that the **clock-client** folder contains a code file for the client application:
+      ![](images/c-52.png)   
+
+1. Note that the **clock-client** folder contains a code file for the client application:
 
     - **C#**: Program.cs
 
@@ -145,7 +190,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
     ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, credential);
     ```
 
-2. Note that the code in the **Main** function prompts for user input until the user enters "**quit**". Within this loop, find the comment **Call the Language service model to get intent and entities** and add the following code:
+1. Note that the code in the **Main** function prompts for user input until the user enters "**quit**". Within this loop, find the comment **Call the Language service model to get intent and entities** and add the following code:
 
     **C#**
 
@@ -190,7 +235,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
 
     >**Note:** The call to the Language service model returns a prediction/result, which includes the top (most likely) intent as well as any entities that were detected in the input utterance. Your client application must now use that prediction to determine and perform the appropriate action.
 
-3. Find the comment **Apply the appropriate action**, and add the following code, which checks for intents supported by the application (**GetTime**, **GetDate**, and **GetDay**) and determines if any relevant entities have been detected, before calling an existing function to produce an appropriate response.
+1. Find the comment **Apply the appropriate action**, and add the following code, which checks for intents supported by the application (**GetTime**, **GetDate**, and **GetDay**) and determines if any relevant entities have been detected, before calling an existing function to produce an appropriate response.
 
     **C#**
 
@@ -251,7 +296,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
     }
     ```
 
-4. Save your changes and return to the integrated terminal for the **clock-client** folder, and enter the following command to run the program:
+1. Save your changes and return to the integrated terminal for the **clock-client** folder, and enter the following command to run the program:
 
     **C#**
 
@@ -259,7 +304,7 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
     dotnet run
     ```
 
-5. When prompted, enter utterances to test the application. For example, try:
+1. When prompted, enter utterances to test the application. For example, try:
 
     *Hello*
     
@@ -275,13 +320,15 @@ Now you're ready to implement code that uses the SDK to get a prediction from yo
 
     *What day is 01/01/2025?*
 
+    ![](images/c-53.png)    
+
     > **Note**: The logic in the application is deliberately simple, and has a number of limitations. For example, when getting the time, only a restricted set of cities is supported and daylight savings time is ignored. The goal is to see an example of a typical pattern for using Language Service in which your application must:
     >
     >   1. Connect to a prediction endpoint.
     >   2. Submit an utterance to get a prediction.
     >   3. Implement logic to respond appropriately to the predicted intent and entities.
 
-6. When you have finished testing, enter **quit**.
+1. When you have finished testing, enter **quit**.
 
 
 ### Review

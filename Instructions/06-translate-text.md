@@ -57,32 +57,36 @@ In this lab, you will complete the following tasks:
     ```
      ![](./images/21.png)
 
+    > **Note**: If you asked for switch to classic shell please click on confirm.     
+
+     > **Note**: If you don't see the built-in code editor, please repeat steps 5 and 6 accordingly.   
+
 ## Task 2: Provision an Azure AI Translator resource
 
 1. Open a new tab, and open Azure portal at `https://portal.azure.com`.
 
 1. In the Azure Portal click the **&#65291;Create a resource** button.
 
-     ![](images/ai900mod1img1.png)
+     ![](images/a-23.png)
    
-1. In the Marketplace page search for **azure ai Services** and Select **azure ai Services** 
+1. In the Marketplace page search for **Azure ai Services (1)** then press Enter and then Select **Azure ai Services (2)**. 
    
-   ![](images/23.png)
+   ![](images/b-10.png)
      
 1. On Cognitive Services Page Click on **Create**. 
      
-     ![](images/24.png)
+     ![](images/b-11.png)
 
-1. Create a resource with the following settings:
+1. Create a resource with the following settings and then click on **Review_Create (7)**.
 
-    - **Subscription (1)**: Use default Subscription
-    - **Resource group (2)**: Ai-102-<inject key="DeploymentID" enableCopy="false"/> 
-    - **Region (3)**: **<inject key="Region" enableCopy="false"/>**
-    - **Name (4)**: aiservices-<inject key="DeploymentID" enableCopy="false"/> 
-    - **Pricing tier (5)**: Standard S0
-    - By checking this box I acknowledge that I have read and understood all the terms below: **Selected**
+    - **Subscription (1)**: **Use default Subscription (1)**
+    - **Resource group (2)**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - **Region (3)**: **<inject key="Region" enableCopy="false"/> (3)**
+    - **Name (4)**: **aiservices-<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Pricing tier (5)**: **Standard S0 (5)**
+    - By checking this box I acknowledge that I have read and understood all the terms below: **Selected (6)**
 
-1. Select **Review + create**.
+      ![Visual Studio Code Icon](./images/b-12.png)       
 
 1. Select **Create**.
 
@@ -92,11 +96,11 @@ In this lab, you will complete the following tasks:
 
    ![](images/27.png)
 
-1. When the resource has been deployed, go to it and view its **Keys and Endpoint** page. You will need one of the **keys** and the **location** in which the service is provisioned from this page in the next procedure.
+1. When the resource has been deployed, go to it and view its **Keys and Endpoint (1)** page. You will need one of the **keys** and the **location** in which the service is provisioned from this page in the next procedure.
 
-   ![](images/28.png)
+   >**Note:** Copy the value of **KEY 1 (2)** and **Location (3)**, paste it inside the Notepad, you will use these values in next task.
 
-   >**Note:** Copy the value of **KEY 1** and **Location**, paste it inside the Notepad, you will use these values in next task.
+   ![](images/b-13.png)
 
 ## Task 3: Prepare to use Azure AI Translator
 

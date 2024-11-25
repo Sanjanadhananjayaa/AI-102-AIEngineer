@@ -63,7 +63,6 @@ Many commonly used Azure AI services APIs are available in container images. For
         
         - **Ports**: Change the TCP port from 80 to **5000 (3)**
 
-
           ![Visual Studio Code Icon](./images/a-40.png)      
 
     - On the **Monitoring** tab:
@@ -105,7 +104,9 @@ Many commonly used Azure AI services APIs are available in container images. For
     
     - **FQDN**: This is the *fully-qualified domain name* of the container instances resource, you can use this to access the container instances instead of the IP address. **(3)**
 
-      ![Visual Studio Code Icon](./images/a-42.png)          
+      ![Visual Studio Code Icon](./images/a-42.png)      
+
+      >**Note:** You don't need to execute the command in the note section below; simply read it.          
 
       > **Note**: In this exercise, you've deployed the Azure AI services container image for text translation to an Azure Container Instances (ACI) resource. You can use a similar approach to deploy it to a *[Docker](https://www.docker.com/products/docker-desktop)* host on your own computer or network by running the following command (on a single line) to deploy the language detection container to your local Docker instance, replacing *&lt;yourEndpoint&gt;* and *&lt;yourKey&gt;* with your endpoint URI and either of the keys for your Azure AI services resource.
       > The command will look for the image on your local machine, and if it doesn't find it there it will pull it from the *mcr.microsoft.com* image registry and deploy it to your Docker instance. When deployment is complete, the container will start and listen for incoming requests on port 5000.
