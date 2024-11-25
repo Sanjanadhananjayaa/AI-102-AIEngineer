@@ -35,7 +35,9 @@ In this lab, you will complete the following tasks:
 
 2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\AllFiles\AI-102-AIEngineer-prod**.
 
-    **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
+    >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
+
+    >**Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
 
 ## Task 2: Create a Language resource
 
@@ -43,9 +45,15 @@ To create and host a knowledge base for question answering, you need a **Languag
 
 1. Open the Azure portal.
 
-1. Select the **&#65291;Create a resource** button, search for *Language*, and create a **Language service** resource.
+1. In the search field at the top, search for **Language**. Then, Then select **Language** in the suggestions dropdown that appears.
 
-1. Click **Select** on the **Custom question answering** block. Then click **Continue to create your resource**. You will need to enter the following settings:
+   ![](./images/language1.png)
+
+1. Click **Select** on the **Custom question answering** block. Then click **Continue to create your resource**.
+
+   ![](./images/language2.png)
+
+1. You will need to enter the following settings:
     
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
@@ -59,10 +67,14 @@ To create and host a knowledge base for question answering, you need a **Languag
 
 1. Wait for deployment to complete, and then view the deployment details.
 
-1. In the search field at the top, search for **Azure AI services**. Then, Then select **Azure AI services** in the suggestions dropdown that appears.
+1. In the search field at the top, search for **Azure AI**. Then, Then select **Azure AI services** in the suggestions dropdown that appears.
+
+   ![](./images/azureaiservice1.png)
    
 1. Select **Create** under **AI Search** in the results page.
+
 1. Provision the resource using the following settings:
+
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Region**: **<inject key="Region" enableCopy="false"/>**
@@ -87,17 +99,23 @@ To create a knowledge base for question answering in your Language resource, you
 1. In a new browser tab, go to the *Language Studio* portal at `https://language.azure.com` and sign in using the Microsoft account associated with your Azure subscription.
 
 2. If prompted to choose a Language resource else click on **Sign in** and  select the following settings:
+
     - **Azure Directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Your Azure subscription.
     - **Resource type** : Language.
     - **Language resource**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**.
     -  Select **Done**.
+
+   ![](./images/language3.png)
+
 3. If you are <u>not</u> prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
     2. On the **Settings** page, view the **Resources** tab.
     3. At the top of the page, click **Language Studio** to return to the Language Studio home page.
 
 4. At the top of the portal, in the **Create new** menu, select **Custom question answering**.
+
+   ![](./images/language4.png)
 
 5. Click on **Connect to Azure Search**.
 
@@ -108,9 +126,12 @@ To create a knowledge base for question answering in your Language resource, you
 9. Click on Language Studio at top of the page and in the ***Create a project*** wizard, on the **Choose language setting** page, select the option to set the language for all projects in this resource, and select **English** as the language. Then click **Next**.
 
 10. On the **Enter basic information** page, enter the following details and then click **Next**:
+
     - **Name** LearnFAQ
     - **Description**: FAQ for Microsoft Learn
     - **Default answer when no answer is returned**: Sorry, I don't understand the question
+
+      ![](./images/language5.png)
 
 11. On the **Review and finish** page, click **Create project**.
 
@@ -118,42 +139,85 @@ To create a knowledge base for question answering in your Language resource, you
 
 You can create a knowledge base from scratch, but it's common to start by importing questions and answers from an existing FAQ page or document. In this case, you'll import data from an existing FAQ web page for Microsoft learn, and you'll also import some pre-defined "chit chat" questions and answers to support common conversational exchanges.
 
-1. On the **Manage sources** page for your question answering project, in the **&#9547; Add source** list, select **URLs**. Then in the **Add URLs** dialog box, select **&#9547; Add url** and set the following name and URL  before you select **Add all** to add it to the knowledge base:
+1. On the **Manage sources** page for your question answering project, in the **&#9547; Add source** list, select **URLs**.
+
+   ![](./images/language6.png)
+
+1. Then in the **Add URLs** dialog box, select **&#9547; Add url** and set the following name and URL  before you select **Add all** to add it to the knowledge base:
+
     - **Name**: `Learn FAQ Page`
     - **URL**: `https://docs.microsoft.com/en-us/learn/support/faq`
-1. On the **Manage sources** page for your question answering project, in the **&#9547; Add source** list, select **Chitchat**. The in the **Add chit chat** dialog box, select **Friendly** and select **Add chit chat**.
+
+    ![](./images/language7.png)
+
+1. On the **Manage sources** page for your question answering project, in the **&#9547; Add source** list, select **Chitchat**.
+
+    ![](./images/language8.png)
+
+1. The in the **Add chit chat** dialog box, select **Friendly** and select **Add chit chat**.
+
+    ![](./images/language9.png)
 
 ## Task 5: Edit the knowledge base
 
 Your knowledge base has been populated with question and answer pairs from the Microsoft Learn FAQ, supplemented with a set of conversational *chit-chat* question  and answer pairs. You can extend the knowledge base by adding additional question and answer pairs.
 
-1. In your **LearnFAQ** project in Language Studio, Click on Project **LearnFAQ** navigate and click on to the **source type URL** in manage sources. select the **Edit knowledge base** page to see the existing question and answer pairs (if some tips are displayed, read them and choose **Got it** to dismiss them, or select **Skip all**)
-1. In the knowledge base, on the **Question answer pairs** tab, select **&#65291;**, and create a new question answer pair with the following settings:
+1. In your **LearnFAQ** project in Language Studio, Click on Project **LearnFAQ** navigate and click on to the **source type URL** in manage sources.
+
+    ![](./images/language10.png)
+
+1. select the **Edit knowledge base** page to see the existing question and answer pairs (if some tips are displayed, read them and choose **Got it** to dismiss them, or select **Skip all**)
+
+    ![](./images/language11.png)
+
+1. In the knowledge base, on the **Question answer pairs** tab, select **&#65291;**, and create a new question answer pair with the following settings, then Select **Done**.
+
     - **Source**: `https://docs.microsoft.com/en-us/learn/support/faq`
     - **Question**: `What is Microsoft certification?`
     - **Answer**: `The Microsoft Certified Professional program enables you to validate and prove your skills with Microsoft technologies.`
-1. Select **Done**.
+
+    ![](./images/language12.png)
+
 1. On the **Question answer pairs** tab search for the **What is Microsoft certification?** question that is created, on the right hand side expand **Alternate questions**. then add the alternate question `How can I demonstrate my Microsoft technology skills?`. and click on enter.
+
+    ![](./images/language13.png)
 
     >**Note:** In some cases, it makes sense to enable the user to follow up on an answer by creating a *multi-turn* conversation that enables the user to iteratively refine the question to get to the answer they need.
 
-1. Under the answer you entered for the certification question, expand **Follow-up prompts** and add  the following follow-up prompt:
+1. Under the answer you entered for the certification question, expand **Follow-up prompts** and add  the following follow-up prompt, then select **Add prompt**
+
     - **Text displayed in the prompt to the user**: `Learn more about certification`.
+
     - Select the **Create link to new pair** tab, and enter this text: `You can learn more about certification on the [Microsoft certification page](https://docs.microsoft.com/learn/certifications/).`
+
     - Select **Show in contextual flow only**. This option ensures that the answer is only ever returned in the context of a follow-up question from the original certification question.
-1. Select **Add prompt**.
+
+     ![](./images/language14.png)
 
 ## Task 6: Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it in Language Studio.
 
 1. Save the changes to your knowledge base by selecting the **Save** button under the **Question answer pairs** tab on the left.
+
+     ![](./images/language15.png)
+
 1. After the changes have been saved, select the **Test** button to open the test pane.
+
+     ![](./images/language16.png)
+
 1. In the test pane, at the top, deselect **Include short answer response** (if not already unselected). Then at the bottom enter the message `Hello`. A suitable response should be returned.
+
+     ![](./images/language17.png)
+
 1. In the test pane, at the bottom enter the message `What is Microsoft Learn?`. An appropriate response from the FAQ should be returned.
+
 1. Enter the message `Thanks!` An appropriate chit-chat response should be returned.
+
 1. Enter the message `Tell me about Microsoft certification`. The answer you created should be returned along with a follow-up prompt link.
+
 1. Select the **Learn more about certification** follow-up link. The follow-up answer with a link to the certification page should be returned.
+
 1. When you're done testing the knowledge base, close the test pane.
 
 ## Task 7: Deploy and test the knowledge base
@@ -162,15 +226,22 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. In the **LearnFAQ** project in Language Studio, expand the hamburger and select the **Deploy knowledge base** page.
 
+     ![](./images/language18.png)
+
 2. At the top of the page, click **Deploy**. Then click **Deploy** to confirm you want to deploy the knowledge base.
 
 3. When deployment is complete, click **Get prediction URL** to view the REST endpoint for your knowledge base, and copy it to the clipboard (but don't close the dialog box yet).
+
+     ![](./images/language19.png)
+     ![](./images/language20.png)
 
 4. In Visual Studio Code, in the **12-qna** folder, open **ask-question.cmd**. This script uses *Curl* to call the REST interface of a question answering endpoint.
 
 5. In the script, replace *YOUR_PREDICTION_ENDPOINT* with the prediction endpoint you copied (ensuring it is enclosed in the quotation marks).
 
 6. Return to the browser and in the **Get prediction URL** dialog box, note that the sample request includes a value for the **Ocp-Apim-Subscription-Key** parameter, which looks similar to *ab12c345de678fg9hijk01lmno2pqrs34*. This is the authorization key for your resource. Copy it to the clipboard, and then click **Close** to close the dialog box.
+
+   ![](./images/language21.png)
 
 7. Return to Visual Studio Code, and in the **ask-question.cmd** script, replace *YOUR_KEY* with the key you copied (ensuring it is enclosed in the quotation marks).
 
@@ -198,6 +269,9 @@ The knowledge base provides a back-end service that client applications can use 
 Most commonly, the client applications used to retrieve answers from a knowledge base are bots.
 
 1. Return to Language Studio in the browser, and in the **Deploy knowledge base** page, select **Create Bot**. This opens the Azure portal in a new browser tab so you can create a bot in your Azure subscription (if prompted, sign in).
+
+   ![](./images/language22.png)
+
 1. In the Azure portal, create a bot with the following settings (most of these will be pre-populated for you):
 
     *If some values are missing, refresh your browser.*  
@@ -214,11 +288,18 @@ Most commonly, the client applications used to retrieve answers from a knowledge
     - **SDK language**: *Choose either C# or Node.js*
     - **Creation type**: *This may be set automatically to a suitable plan if one exists. If not, select **Create a new app service plan***.
     - **Language Resource Key**: *They key you copied earlier*.
+
 1. Select **Review + create**. Then select **Create**.
 
 1. Wait for your bot to be created. Then select **Go to resource group** (or alternatively, on the home page, select **Resource groups**).
+
 1. To open the  bot, select the Azure Bot resource in the resources list.
+
 1. In the overview pane for your bot, select the **Test in Web Chat** page, and wait until the bot displays the message **Hello and welcome!** (it may take a few seconds to initialize).
+
+   ![](./images/language23.png)
+   ![](./images/language24.png)
+
 1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting `What is Microsoft certification?`.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -241,5 +322,3 @@ In this lab, you have completed:
 + Created a bot for the knowledge base
 
 ## You have successfully completed the lab.
-
-
