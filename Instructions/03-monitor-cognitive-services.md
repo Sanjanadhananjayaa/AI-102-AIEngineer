@@ -33,7 +33,7 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
     ![Visual Studio Code Icon](./images/a-34.png)
 
-1. Select **Condition** tab, and click on **See all signals *(1)**.On the **Select a signal** pane that appears on the right, where you can select a signal type to monitor. Search for **List (2)** then select **List keys (3)** under Activity log and then click on **Apply (4)**.
+1. Select **Condition** tab, and click on **See all signals (1)**.On the **Select a signal** pane that appears on the right, where you can select a signal type to monitor. Search for **List (2)** then select **List keys (3)** under Activity log and then click on **Apply (4)**.
 
     ![Visual Studio Code Icon](./images/a-35.png)
 
@@ -59,10 +59,6 @@ Let's start monitoring by defining an alert rule so you can detect activity in y
 
     >**Note:** If it doesn't show up, wait up to five minutes and refresh again.
 
-1. Select the alert to see its details, and review the information.
-
-    ![Visual Studio Code Icon](./images/keylist.png)
-
 <validation step="e5e37da8-8734-4f3e-b645-a692151ad796" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -76,11 +72,15 @@ As well as defining alerts, you can view metrics for your Azure AI services reso
 
 1. In the Azure portal, in the page for your Azure AI services resource, select **Metrics** under the **Monitoring** section, from the left navigation menu.
 
-1. If there is no existing chart, select **+ New chart**. Then in the **Metric** list, review the possible metrics you can visualize and select **Total Calls**.
+    ![Visual Studio Code Icon](./images/a-47.png)
 
-1. In the **Aggregation** list, select **Count**.  This will enable you to monitor the total calls to you Cognitive Service resource; which is useful in determining how much the service is being used over a period of time.
+1. If there is no existing chart, select **+ New chart (1)**. Then in the **Metric** list, review the possible metrics you can visualize and select **Total Calls (2)**.
 
-    ![Visual Studio Code Icon](./images/metrics.png)
+1. In the **Aggregation** list, select **Count (3)**.  This will enable you to monitor the total calls to you Cognitive Service resource; which is useful in determining how much the service is being used over a period of time.
+
+    ![Visual Studio Code Icon](./images/a-48.png)
+
+    >**Note:** Sometimes, you may not be able to select Total calls and Count; in such cases, please proceed to the next step.    
 
 1. To generate some requests to your cognitive service, you will use **curl** - a command line tool for HTTP requests. In Visual Studio Code, in the **03-monitor** folder, open **rest-test.cmd** and edit the **curl** command it contains (shown below), replacing *&lt;yourEndpoint&gt;* and *&lt;yourKey&gt;* with your endpoint URI and **Key1** key to use the Text Analytics API in your Azure AI services resource.
 
