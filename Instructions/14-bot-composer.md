@@ -80,7 +80,7 @@ Now you're ready to use the Bot Framework Composer to create a bot.
 
 1. On the **Select a template** pop-up, select **Empty Bot** and select **Next**. Name it as **WeatherBot**, select **Location** as **C:\** folder, and select **Create**.
 
-    >**Note:** If the Node js required pop-up appears, select **Cancel**, anf follow these steps:
+    >**Note:** If the Node js required pop-up appears, select **Cancel**, and follow these steps:
 
     - Select the **Start** button.
 

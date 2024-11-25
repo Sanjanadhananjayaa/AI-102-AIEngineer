@@ -44,14 +44,14 @@ If you don't already have one in your subscription, you'll need to provision a *
 
 2. Select the **&#65291;Create a resource** button, search for *cognitive services*, and create a **Azure AI Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
     - **Name**: **aicognitive<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 
 3. Select the required checkboxes and create the resource.
 
-4. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
+4. Select **Review + create** to navigate to the **Review + create** tab, and then select **Create**.
 
 5. Wait for deployment to complete, and and then click **Go to resource**.
 
@@ -82,7 +82,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
     - **C#**: Program.cs
 
-6. Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following code to import the namespaces you will need to use the Computer Vision SDK:
+6. Open the code file and at the top, under the existing namespace references, find the comment **Import namespaces**. Then, under this comment, add the following code to import the namespaces you will need to use the Computer Vision SDK and save the file:
 
     **C#**
 

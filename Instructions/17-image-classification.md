@@ -31,9 +31,10 @@ In this lab, you will complete the following tasks:
 
      ![Visual Studio Code Icon](./images/vscode.png)
 
-2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\AllFiles\AI-102-AIEngineer-prod**.
+2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\AllFiles\AI-102-AIEngineer-prod** and select **select folder**.
 
     **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
+    **Note:** In the Do you trust the authors of the files in this folder? prompt, select **Yes, I trust the authors**
 
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
@@ -47,20 +48,18 @@ In this exercise, you'll create **Custom Vision** resources for training and pre
     - Email/Username: <inject key="AzureAdUserEmail"></inject>
     - Password: <inject key="AzureAdUserPassword"></inject>
 
-2. Select the **&#65291;Create a resource** button, search for *custom vision*, and create a **Custom Vision** resource with the following settings:
+2. Select the **&#65291;Create a resource** button, search for *custom vision* and select it, and create a **Custom Vision** resource with the following settings:
     - **Create options**: Both
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Choose a resource group (Ai-102-<inject key="DeploymentID" enableCopy="false"/>)*
     - **Region**: *Choose any available region*
-    - **Name**: Vison-<inject key="DeploymentID" enableCopy="false"/>
-    - **Training location**: *Choose any available region*
+    - **Name**: Vision-<inject key="DeploymentID" enableCopy="false"/>
     - **Training pricing tier**: F0
-    - **Prediction location**: *The same region as the training resource*
     - **Prediction pricing tier**: F0
 
         > **Note**: If you already have an F0 custom vision service in your subscription, select **S0** for this one.
 
-3. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
+3. Select **Review + create** to navigate to the **Review + create** tab, and then select **Create**.
 
 4. Wait for the resources to be created, and then view the deployment details and note that two Custom Vision resources are provisioned; one for training, and another for prediction. You can view these by navigating to the resource group where you created them.
 
@@ -74,12 +73,13 @@ To train an image classification model, you need to create a Custom Vision proje
 
 1. In a new browser tab, open the Custom Vision portal at `https://customvision.ai`. If prompted, sign in using the Microsoft account associated with your Azure subscription and agree to the terms of service.
 
-4. In the Custom Vision portal, create a new project with the following settings:
+4. In the Custom Vision portal, select **NEW PROJECT** to create a new project with the following settings:
+
     - **Name**: Classify Fruit
     - **Description**: Image classification for fruit
     - **Resource**: *The Custom Vision resource you created previously*
     - **Project Types**: Classification
-    - **Classification Types**: Multiclass (single tag per image)
+    - **Classification Types**: Multiclass (Single tag per image)
     - **Domains**: Food
 
 5. In the new project, click **\[+\] Add images**, and select all of the files in the **C:\LabFiles\AI-102-AIEngineer-master\17-image-classification\training-images\apple** folder you viewed previously. Then upload the image files, specifying the tag *apple*, like this:
