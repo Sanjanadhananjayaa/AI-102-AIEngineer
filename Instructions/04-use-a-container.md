@@ -124,13 +124,12 @@ Many commonly used Azure AI services APIs are available in container images. For
 
 1. Save your changes to the script. Note that you do not need to specify the Azure AI services endpoint or key - the request is processed by the containerized service. The container in turn communicates periodically with the service in Azure to report usage for billing, but does not send request data.
 
-
 1. Right-click the **04-containers** folder and open an integrated terminal. Then enter the following command to run the script:
 
     ```
     .\rest-test
     ```
-
+    
 1. Verify that the command returns a JSON document containing information about the language detected in the two input documents (which should be English and French).
 
 <validation step="3df31d12-06bc-4ed4-b1dc-acdbdb892ae1" />
