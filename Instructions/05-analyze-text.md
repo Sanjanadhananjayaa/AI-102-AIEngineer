@@ -106,7 +106,7 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
     ```bash
    rm -r azure-ai-eng -f
-   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
+   git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer azure-ai-eng
     ```
   
 1. The files are downloaded to a folder named **azure-ai-eng**. Navigate to the lab files for this exercise using the following command.
