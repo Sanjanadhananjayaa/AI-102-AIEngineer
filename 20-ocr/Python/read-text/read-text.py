@@ -17,17 +17,17 @@ def main():
         cog_endpoint = os.getenv('COG_SERVICE_ENDPOINT')
         cog_key = os.getenv('COG_SERVICE_KEY')
 
-        # Authenticate Computer Vision client
+        # Authenticate Azure AI Vision client
         
         
 
 
         # Menu for text reading functions
-        print('1: Use OCR API\n2: Use Read API\n3: Read handwriting\nAny other key to quit')
+        print('1: Use Read API for image\n2: Use Read API for document\n3: Read handwriting\nAny other key to quit')
         command = input('Enter a number:')
         if command == '1':
             image_file = os.path.join('images','Lincoln.jpg')
-            GetTextOcr(image_file)
+            GetTextRead(image_file)
         elif command =='2':
             image_file = os.path.join('images','Rome.pdf')
             GetTextRead(image_file)
@@ -38,11 +38,6 @@ def main():
 
     except Exception as ex:
         print(ex)
-
-def GetTextOcr(image_file):
-    print('Reading text in {}\n'.format(image_file))
-
-
 
 def GetTextRead(image_file):
     print('Reading text in {}\n'.format(image_file))
