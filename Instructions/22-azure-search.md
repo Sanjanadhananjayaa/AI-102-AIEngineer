@@ -347,9 +347,9 @@ Now that you have the documents in place, you can create a search solution by in
      
     The indexer is run automatically and runs the indexing pipeline, which:
   
-    1. Extracts the document metadata fields and content from the data source
-    2. Runs the skillset of cognitive skills to generate additional enriched fields
-    3. Maps the extracted fields to the index.
+    - Extracts the document metadata fields and content from the data source
+    - Runs the skillset of cognitive skills to generate additional enriched fields
+    - Maps the extracted fields to the index.
 
 1. In the bottom half of the **Overview** page for your Azure AI Search resource, view the **Indexers** tab, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 

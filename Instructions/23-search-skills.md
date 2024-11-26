@@ -57,11 +57,9 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
     ![Visual Studio Code Icon](./images/d-43.png) 
 
-1. In Visual Studio Code, expand the **23-custom-search-skill** folder and select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
+1. In Visual Studio Code, expand the **23-custom-search-skill** folder,under that expand **create-search** and then select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
 
-1. Right-click the the 
-**23-custom-search-skill** folder and select **Open in Integrated Terminal**.
-
+1. Right click on the **23-custom-search-skill** folder and select **Open in Integrated Terminal**.
 1. In the terminal pane, enter the following command to establish an authenticated connection to your Azure subscription.
 
     ```

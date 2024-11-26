@@ -40,7 +40,7 @@ In this lab, you will complete the following tasks:
 
     ```bash
     rm -r azure-ai-eng -f
-    git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer azure-ai-eng
+    git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer azure-ai-eng
     ```
 
      ![](./images/20.png)
@@ -143,7 +143,7 @@ In this exercise, you'll complete a partially implemented client application tha
     dotnet run
     ```
 
-     ![](./images/14.png)
+     ![](./images/a-52.png)
 
     **Python**
 
@@ -180,7 +180,7 @@ Azure AI Translator can automatically detect the source language of text to be t
     **C#**
 
     ```csharp
-    // Use the Azure AI Translator translate function
+    // Use the Azure AI Translator detect function
     object[] body = new object[] { new { Text = text } };
     var requestBody = JsonConvert.SerializeObject(body);
     using (var client = new HttpClient())
@@ -188,25 +188,25 @@ Azure AI Translator can automatically detect the source language of text to be t
         using (var request = new HttpRequestMessage())
         {
             // Build the request
-            string path = "/translate?api-version=3.0&from=" + sourceLanguage + "&to=en";
+            string path = "/detect?api-version=3.0";
             request.Method = HttpMethod.Post;
             request.RequestUri = new Uri(translatorEndpoint + path);
             request.Content = new StringContent(requestBody, Encoding.UTF8, "application/json");
             request.Headers.Add("Ocp-Apim-Subscription-Key", cogSvcKey);
             request.Headers.Add("Ocp-Apim-Subscription-Region", cogSvcRegion);
-
+    
             // Send the request and get response
             HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false);
             // Read response as a string
             string responseContent = await response.Content.ReadAsStringAsync();
-
-            // Parse JSON array and get translation
+    
+            // Parse JSON array and get language
             JArray jsonResponse = JArray.Parse(responseContent);
-            translation = (string)jsonResponse[0]["translations"][0]["text"];  
+            language = (string)jsonResponse[0]["language"]; 
         }
     }
-
     ```
+
    ![](./images/8.png)
 
     **Python**
