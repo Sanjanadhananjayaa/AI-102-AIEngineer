@@ -31,18 +31,22 @@ In this lab, you will complete the following tasks:
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Start Visual Studio Code.
-2. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+
+1. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+
+1. Run the following command to clone the repository to a local folder.
    
-   >**Note:** Please use this url if you face any issues running the git clone command, **git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer**.
+   `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
- ![](./images/Terminal_new_vs_1.png)
+   ![](./images/Terminal_new_vs_1.png)
 
-3. When the repository has been cloned, open the folder in Visual Studio Code.
-4. Wait while additional files are installed to support the C# code projects in the repo.
+1. When the repository has been cloned, open the folder in Visual Studio Code. Wait while additional files are installed to support the C# code projects in the repo.
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-5.  Select **File**, select **Open Folder** and open **C:\Users\azureuser\AI-102-AIEngineer**.
+1. Select **File (1)**, select **Open Folder (2)**.
+
+1. Open **C:\Users\azureuser\AI-102-AIEngineer (1)**, press enter and then click on **Select folder (2)**.
 
     >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
 
@@ -73,9 +77,9 @@ The solution you will create for Margie's Travel requires the following resource
     
     - **Pricing tier**: Basic
 
-3. Select **review+create** and click on **create**
+3. Select **Review+create** and click on **create**
 
-4. Wait for deployment to complete, and then go to the deployed resource.
+4. Wait for deployment to complete, and click on **Go to resources**.
 
 5. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
