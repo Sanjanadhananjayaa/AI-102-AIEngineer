@@ -35,7 +35,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
    
    `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-   ![](./images/Terminal_new_vs_1.png)
+   ![](./images/d-3.png)
    
 1. When the repository has been cloned, open the folder in Visual Studio Code.
 

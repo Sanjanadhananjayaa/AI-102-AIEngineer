@@ -30,13 +30,13 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 
-1. 1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
 
     ![Visual Studio Code Icon](./images/a-2.png)
 
 1. Select **Language Service (1)** from the left navigation pane. Then click on **Create (2)**.
 
-    ![Visual Studio Code Icon](./images/b-1.png)
+    ![Visual Studio Code Icon](./images/a-3.png)
 
 1. Scroll down to the bottom and select **Continue to create your resource**.
 
@@ -44,7 +44,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     - **Subscription**: **Leave the default Azure subscription (1)**.
 
-    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
     - **Region**: **Choose any available region (3)**.
 

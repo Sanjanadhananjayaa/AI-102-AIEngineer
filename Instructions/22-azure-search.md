@@ -137,6 +137,10 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     - **Select the required checkboxes (6)**.
 
+      ![Visual Studio Code Icon](./images/d--8.png)    
+
+      ![Visual Studio Code Icon](./images/d-9.png)    
+
 1. Click on **Create**.
 
 1. Wait for deployment to complete, and click on **Go to resources** then view the deployment details.
@@ -293,7 +297,7 @@ Now that you have the documents in place, you can create a search solution by in
 
     - Leave the **Enrichment granularity level** as **Source field**, which is set the entire contents of the document being indexed; but note that you can change this to extract information at more granular levels, like pages or sentences.
 
-    - Select the following enriched fields: **(4)**
+    - Select the following enriched fields: **(3)**
 
         | Cognitive Skill | Parameter | Field name |
         | --------------- | ---------- | ---------- |
@@ -496,7 +500,7 @@ While you can use the portal to create and modify search solutions, it's often d
     }
     ```
 
-The new skill is named **get-sentiment**, and for each **document** level in a document, it, will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English), and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
+    The new skill is named **get-sentiment**, and for each **document** level in a document, it, will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English), and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
 
 1. Save the changes you've made to **skillset.json**.
 

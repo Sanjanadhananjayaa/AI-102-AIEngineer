@@ -34,7 +34,6 @@ In this lab, you will complete the following tasks:
 
 3.  Wait while additional files are installed to support the C# code projects in the repo.
 
-
 ## Task 2: Create a Azure AI Document Intelligence resource
 
 To use the Form Recognizer service, you need a Form Recognizer resource in your Azure subscription. You'll use the Azure portal to create a resource.
