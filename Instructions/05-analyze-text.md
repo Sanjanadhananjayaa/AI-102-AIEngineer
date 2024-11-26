@@ -36,7 +36,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Select **Language Service (1)** from the left navigation pane. Then click on **Create (2)**.
 
-    ![Visual Studio Code Icon](./images/a-3.png)
+    ![Visual Studio Code Icon](./images/a-59.png)
 
 1. Scroll down to the bottom and select **Continue to create your resource**.
 
