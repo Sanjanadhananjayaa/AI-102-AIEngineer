@@ -49,7 +49,9 @@ Many commonly used Azure AI services APIs are available in container images. For
         
         - **OS type**: **Linux (8)**
         
-        - **Size**: **1 vcpu, 12 GB memory (9)**
+        - **Size**: Click on **Change size** then set **4 vcpu, 16 GB memory (9)** and then **Ok (3)**.
+
+          ![Visual Studio Code Icon](./images/a-49.png)        
 
           ![Visual Studio Code Icon](./images/a-38.png)        
     
@@ -83,9 +85,9 @@ Many commonly used Azure AI services APIs are available in container images. For
             | Yes | `Billing` | *The endpoint URI for your Azure AI services resource* |
             | No | `Eula` | `accept` |
 
-        - **Command override**: [ ] **(3)**
+        - **Command override**: [ ] 
 
-        - Select **Review + create (4)** 
+        - Select **Review + create (3)** 
 
           ![Visual Studio Code Icon](./images/a-44.png)               
 
@@ -124,14 +126,17 @@ Many commonly used Azure AI services APIs are available in container images. For
 
 1. Save your changes to the script. Note that you do not need to specify the Azure AI services endpoint or key - the request is processed by the containerized service. The container in turn communicates periodically with the service in Azure to report usage for billing, but does not send request data.
 
+    ![Visual Studio Code Icon](./images/a-50.png)
 
 1. Right-click the **04-containers** folder and open an integrated terminal. Then enter the following command to run the script:
 
     ```
     .\rest-test
     ```
-
+    
 1. Verify that the command returns a JSON document containing information about the language detected in the two input documents (which should be English and French).
+
+    ![Visual Studio Code Icon](./images/a-51.png)
 
 <validation step="3df31d12-06bc-4ed4-b1dc-acdbdb892ae1" />
 

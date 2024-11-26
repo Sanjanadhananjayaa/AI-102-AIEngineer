@@ -124,7 +124,7 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
     ```
     > **Note**: If you asked for switch to classic shell please click on confirm.
 
-    > **Note**: If you don't see the built-in code editor, please repeat steps 8 and 9 accordingly.   
+    > **Note**: If you don't see the built-in code editor, please repeat steps 9 and 10 accordingly.   
 
     ![Visual Studio Code Icon](./images/b-6.png)     
 
