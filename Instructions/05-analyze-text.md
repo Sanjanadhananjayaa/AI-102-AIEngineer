@@ -30,13 +30,13 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 
-1. 1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
 
     ![Visual Studio Code Icon](./images/a-2.png)
 
 1. Select **Language Service (1)** from the left navigation pane. Then click on **Create (2)**.
 
-    ![Visual Studio Code Icon](./images/b-1.png)
+    ![Visual Studio Code Icon](./images/a-3.png)
 
 1. Scroll down to the bottom and select **Continue to create your resource**.
 
@@ -44,7 +44,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     - **Subscription**: **Leave the default Azure subscription (1)**.
 
-    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
     - **Region**: **Choose any available region (3)**.
 
@@ -166,6 +166,7 @@ In this exercise, you'll complete a partially implemented client application tha
    ```
 
 1. View the contents of the **text-analysis** folder in the code window, and note that it contains a file for configuration settings:
+
     - **C#**: appsettings.json
 
     - **Python**: .env
@@ -226,6 +227,8 @@ In this exercise, you'll complete a partially implemented client application tha
     dotnet run
     ```
 
+    ![Visual Studio Code Icon](./images/a-53.png)     
+
     **Python**
 
     ```bash
@@ -266,6 +269,8 @@ Now that you have created a client for the API, let's use it to detect the langu
     dotnet run
     ```
 
+    ![Visual Studio Code Icon](./images/a-55.png) 
+
     **Python**
 
     ```bash
@@ -303,6 +308,8 @@ Now that you have created a client for the API, let's use it to detect the langu
     ```bash
     dotnet run
     ```
+
+    ![Visual Studio Code Icon](./images/a-56.png) 
 
     **Python**
 
@@ -351,6 +358,8 @@ It can be useful to identify key phrases in a body of text to help determine the
     ```bash
     dotnet run
     ```
+
+    ![Visual Studio Code Icon](./images/a-57.png)     
 
     **Python**
 
@@ -447,6 +456,8 @@ In addition to categorized entities, the Text Analytics API can detect entities 
     ```bash
     dotnet run
     ```
+
+    ![Visual Studio Code Icon](./images/a-58.png)     
 
     **Python**
 
