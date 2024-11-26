@@ -35,7 +35,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
    
    `git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
 
-   ![](./images/d-3.png)
+   ![](./images/d-81.png)
    
 1. When the repository has been cloned, open the folder in Visual Studio Code.
 
@@ -182,6 +182,8 @@ In this exercise, you'll use the Azure AI Search REST interface to create these 
 
 1. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
 
+    ![Visual Studio Code Icon](./images/d-63.png) 
+
     *You can select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.*
 
 ## Task 4: Search the index
@@ -195,6 +197,8 @@ Now that you have an index, you can search it.
     ```
     search=London&$select=url,sentiment,keyphrases&$filter=metadata_author eq 'Reviewer' and sentiment eq 'positive'
     ```
+
+    ![Visual Studio Code Icon](./images/d-64.png)     
 
     This query retrieves the **url**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that have a positive **sentiment** label (in other words, positive reviews that mention London)
 
@@ -447,9 +451,11 @@ Now you need to include your function as a custom skill in the search solution s
 
 1. Review the skillset definition. It includes the same skills as before, as well as a new **WebApiSkill** skill named **get-top-words**.
 
-1. Edit the **get-top-words** skill definition to set the **uri** value to the URL for your Azure function (which you copied to the clipboard in the previous procedure), replacing **YOUR-FUNCTION-APP-URL**.
+1. Edit the **get-top-words** skill definition to set the **uri** value to the URL for your Azure function (which you copied to the clipboard in the previous procedure), replacing **YOUR-FUNCTION-APP-URL (1)**.
 
-1. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_AI_SERVICES_KEY** placeholder with either of the keys for your Azure AI Services resources.
+1. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_AI_SERVICES_KEY (2)** placeholder with either of the keys for your Azure AI Services resources.
+
+    ![Visual Studio Code Icon](./images/d-65.png) 
 
     *You can find the keys on the **Keys and Endpoint** page for your Azure AI Services resource in the Azure portal.*
 
@@ -465,6 +471,8 @@ Now you need to include your function as a custom skill in the search solution s
 10. In the **update-search** folder, open **update-search.cmd**. This batch script uses the cURL utility to submit the updated JSON definitions to the REST interface for your Azure AI Search resource.
 
 1. Replace the **YOUR_SEARCH_URL** and **YOUR_ADMIN_KEY** variable placeholders with the **Url** and one of the **admin keys** for your Azure AI Search resource.
+
+    ![Visual Studio Code Icon](./images/d-66.png) 
 
     *You can find these values on the **Overview** and **Keys** pages for your Azure AI Search resource in the Azure portal.*
 
@@ -496,6 +504,8 @@ Now that you have an index, you can search it.
       "select": "url,top_words"
     }
     ```
+
+    ![Visual Studio Code Icon](./images/d-67.png) 
 
     This query retrieves the **url** and **top_words** fields for all documents that mention *Las Vegas*.
 

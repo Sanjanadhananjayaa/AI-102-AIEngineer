@@ -29,9 +29,18 @@ In this lab, you will complete the following tasks:
 If you have already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, open it in Visual Studio Code; otherwise, follow these steps to clone it now.
 
 1. Start Visual Studio Code.
-2. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
-3. When the repository has been cloned, open the folder in Visual Studio Code.
-4. Wait while additional files are installed to support the C# code projects in the repo.
+
+1. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+
+1. Run the following command to clone the repository to a local folder.
+   
+   `git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
+
+   ![](./images/d-81.png)
+
+1. When the repository has been cloned, open the folder in Visual Studio Code.
+
+1. Wait while additional files are installed to support the C# code projects in the repo.
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
@@ -40,27 +49,48 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 > **Note**: If you have previously completed the **[Create an Azure AI Search solution](22-azure-search.md)** exercise, and still have these Azure resources in your subscription, you can skip this section and start at the **Create a search solution** section. Otherwise, follow the steps below to provision the required Azure resources.
 
 1. In a web browser, open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
-2. View the **ai-102-<inject key="DeploymentID" enableCopy="false"/>** resource group in your subscription.
-3. If you are using a restricted subscription in which a resource group has been provided for you, select the resource group to view its properties. Otherwise, create a new resource group with a name of your choice, and go to it when it has been created.
-4. On the **Overview** page for your resource group, note the **Subscription ID** and **Location**. You will need these values, along with the name of the resource group in subsequent steps.
-5. In Visual Studio Code, expand the **24-knowledge-store** folder and select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
-6. Right-click the the **24-knowledge-store** folder and select **Open in Integrated Terminal**.
-7. In the terminal pane, enter the following command to establish an authenticated connection to your Azure subscription.
+
+1. View the **ai-102-<inject key="DeploymentID" enableCopy="false"/>** resource group in your subscription.
+
+1. If you are using a restricted subscription in which a resource group has been provided for you, select the resource group to view its properties. Otherwise, create a new resource group with a name of your choice, and go to it when it has been created.
+
+1. On the **Overview** page for your resource group, note the **Subscription ID** and **Location**. You will need these values, along with the name of the resource group in subsequent steps.
+
+1. In Visual Studio Code, expand the **24-knowledge-store** folder and select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
+
+1. Right-click the the **24-knowledge-store** folder and select **Open in Integrated Terminal**.
+
+1. In the terminal pane, enter the following command to establish an authenticated connection to your Azure subscription.
 
     ```
     az login --output none
     ```
 
-8. When prompted, sign into your Azure subscription. Then return to Visual Studio Code and wait for the sign-in process to complete.
-9. Run the following command to list Azure locations.
+    A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
+
+    - If prompted select **Work or school account** then click on **Continue**.
+
+      ![Visual Studio Code Icon](./images/a-21.png)  
+
+    - Enter the Email address and Password provided in the **Environment** tab.
+
+    - Click on **No, sign in to this app only** to **Stay signed in ti all your apps**.
+
+1. Navigate back to the VS code, If prompted **Select a subscription and tenant (Type a number or Enter for no changes):** press **Enter**.       
+
+1. Run the following command to list Azure locations.
 
     ```
     az account list-locations -o table
     ```
 
-10. In the output, find the **Name** value that corresponds with the location of your resource group (for example, for *East US* the corresponding name is *eastus*).
-11. In the **setup.cmd** script, modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for your subscription ID, resource group name, and location name. Then save your changes.
-12. In the terminal for the **24-knowledge-store** folder, enter the following command to run the script:
+1. In the output, find the **Name** value that corresponds with the location of your resource group (for example, for *East US* the corresponding name is *eastus*).
+
+1. In the **setup.cmd** script, modify the **subscription_id**, **resource_group**, and **location** variable declarations with the appropriate values for your subscription ID, resource group name, and location name. Then save your changes.
+
+    ![Visual Studio Code Icon](./images/d-68.png) 
+
+1. In the terminal for the **24-knowledge-store** folder, enter the following command to run the script:
 
     ```
     .\setup.cmd
@@ -69,7 +99,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
     >
     > If the script fails, ensure you saved it with the correct variable names and try again.
 
-13. When the script completes, review the output it displays and note the following information about your Azure resources (you will need these values later):
+1. When the script completes, review the output it displays and note the following information about your Azure resources (you will need these values later):
     - Storage account name
     - Storage connection string
     - Azure AI Services account
@@ -78,7 +108,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
     - Search service admin key
     - Search service query key
 
-14. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
+1. In the Azure portal, refresh the resource group and verify that it contains the Azure Storage account, Azure AI Services resource, and Azure AI Search resource.
 
 ## Task 3: Create a search solution
 
@@ -96,7 +126,8 @@ In this exercise, you'll use the Azure AI Search REST interface to create these 
 You'll use the REST interface to submit JSON definitions for your Azure AI Search components.
 
 1. In Visual Studio Code, in the **24-knowledge-store** folder, expand the **create-search** folder and select **data_source.json**. This file contains a JSON definition for a data source named **margies-knowledge-data**.
-2. Replace the **YOUR_CONNECTION_STRING** placeholder with the connection string for your Azure storage account, which should resemble the following:
+
+1. Replace the **YOUR_CONNECTION_STRING** placeholder with the connection string for your Azure storage account, which should resemble the following:
 
     ```
     DefaultEndpointsProtocol=https;AccountName=ai102str123;AccountKey=12345abcdefg...==;EndpointSuffix=core.windows.net
@@ -104,46 +135,69 @@ You'll use the REST interface to submit JSON definitions for your Azure AI Searc
 
     *You can find the connection string on the **Access keys** page for your storage account in the Azure portal.*
 
-3. Save and close the updated JSON file.
-4. In the **create-search** folder, open **skillset.json**. This file contains a JSON definition for a skillset named **margies-knowledge-skillset**.
-5. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with either of the keys for your Azure AI Services resources.
+1. Save and close the updated JSON file.
+
+1. In the **create-search** folder, open **skillset.json**. This file contains a JSON definition for a skillset named **margies-knowledge-skillset**.
+
+1. At the top of the skillset definition, in the **cognitiveServices** element, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with either of the keys for your Azure AI Services resources.
+
+    ![Visual Studio Code Icon](./images/d-69.png) 
 
     *You can find the keys on the **Keys and Endpoint** page for your Azure AI Services resource in the Azure portal.*
 
-6. At the end of the collection of skills in your skillset, find the **Microsoft.Skills.Util.ShaperSkill** skill named **define-projection**. This skill defines a JSON structure for the enriched data that will be used for the projections that the pipeline will persist on the knowledge store for each document processed by the indexer.
-7. At the bottom of the skillset file, observe that the skillset also includes a **knowledgeStore** definition, which includes a connection string for the Azure Storage account where the knowledge store is to be created, and a collection of **projections**. This skillset includes three *projection groups*:
+1. At the end of the collection of skills in your skillset, find the **Microsoft.Skills.Util.ShaperSkill** skill named **define-projection**. This skill defines a JSON structure for the enriched data that will be used for the projections that the pipeline will persist on the knowledge store for each document processed by the indexer.
+
+1. At the bottom of the skillset file, observe that the skillset also includes a **knowledgeStore** definition, which includes a connection string for the Azure Storage account where the knowledge store is to be created, and a collection of **projections**. This skillset includes three *projection groups*:
+
     - A group containing an *object* projection based on the **knowledge_projection** output of the shaper skill in the skillset.
+    
     - A group containing a *file* projection based on the **normalized_images** collection of image data extracted from the documents.
+
     - A group containing the following *table* projections:
         - **KeyPhrases**: Contains an automatically generated key column and a **keyPhrase** column mapped to the **knowledge_projection/key_phrases/** collection output of the shaper skill.
         - **Locations**: Contains an automatically generated key column and a **location** column mapped to the **knowledge_projection/key_phrases/** collection output of the shaper skill.
         - **ImageTags**: Contains an automatically generated key column and a **tag** column mapped to the **knowledge_projection/image_tags/** collection output of the shaper skill.
         - **Docs**: Contains an automatically generated key column and all of the **knowledge_projection** output values from the shaper skill that are not already assigned to a table.
-8. Replace the **YOUR_CONNECTION_STRING** placeholder for the **storageConnectionString** value with the connection string for your storage account.
-9. Save and close the updated JSON file.
-10. In the **create-search** folder, open **index.json**. This file contains a JSON definition for an index named **margies-knowledge-index**.
-11. Review the JSON for the index, then close the file without making any changes.
-12. In the **create-search** folder, open **indexer.json**. This file contains a JSON definition for an indexer named **margies-knowledge-indexer**.
-13. Review the JSON for the indexer, then close the file without making any changes.
+
+1. Replace the **YOUR_CONNECTION_STRING** placeholder for the **storageConnectionString** value with the connection string for your storage account.
+
+    ![Visual Studio Code Icon](./images/d-71.png) 
+
+1. Save and close the updated JSON file.
+
+1. In the **create-search** folder, open **index.json**. This file contains a JSON definition for an index named **margies-knowledge-index**.
+
+1. Review the JSON for the index, then close the file without making any changes.
+
+1. In the **create-search** folder, open **indexer.json**. This file contains a JSON definition for an indexer named **margies-knowledge-indexer**.
+
+1. Review the JSON for the indexer, then close the file without making any changes.
 
 ### Task 3.2: Submit REST requests
 
 Now that you've prepared the JSON objects that define your search solution components, you can submit the JSON documents to the REST interface to create them.
 
 1. In the **create-search** folder, open **create-search.cmd**. This batch script uses the cURL utility to submit the JSON definitions to the REST interface for your Azure AI Search resource.
-2. Replace the **YOUR_SEARCH_URL** and **YOUR_ADMIN_KEY** variable placeholders with the **Url** and one of the **admin keys** for your Azure AI Search resource.
+
+1. Replace the **YOUR_SEARCH_URL** and **YOUR_ADMIN_KEY** variable placeholders with the **Url** and one of the **admin keys** for your Azure AI Search resource.
+
+    ![Visual Studio Code Icon](./images/d-70.png) 
 
     *You can find these values on the **Overview** and **Keys** pages for your Azure AI Search resource in the Azure portal.*
 
-3. Save the updated batch file.
-4. Right-click the the **create-search** folder and select **Open in Integrated Terminal**.
-5. In the terminal pane for the **create-search** folder, enter the following command run the batch script.
+1. Save the updated batch file.
+
+1. Right-click the the **create-search** folder and select **Open in Integrated Terminal**.
+
+1. In the terminal pane for the **create-search** folder, enter the following command run the batch script.
 
     ```
     .\create-search.cmd
     ```
 
-6. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
+1. When the script completes, in the Azure portal, on the page for your Azure AI Search resource, select the **Indexers** page and wait for the indexing process to complete.
+
+    ![Visual Studio Code Icon](./images/d-72.png) 
 
     *You can select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.*
 
@@ -157,11 +211,21 @@ After you have run an indexer that uses a skillset to create a knowledge store, 
 
 The *object* projections defined in the Margie's Travel skillset consist of a JSON file for each indexed document. These files are stored in a blob container in the Azure Storage account specified in the skillset definition.
 
-1. In the Azure portal, view the Azure Storage account you created previously.
-2. Select the **Storage browser** tab (in the pane on the left) to view the storage account in the storage explorer interface in the Azure portal.
-2. Expand **Blob containers** to view the containers in the storage account. In addition to the **margies** container where the source data is stored, there should be two new containers: **margies-images** and **margies-knowledge**. These were created by the indexing process.
-3. Select the **margies-knowledge** container. It should contain a folder for each indexed document.
-4. Open any of the folders, and then download and open the **knowledge-projection.json** file it contains. Each JSON file contains a representation of an indexed document, including the enriched data extracted by the skillset as shown here.
+1. In the Azure portal, view the Azure Storage account you created in this exercise.
+
+1. Select the **Storage browser (1)** tab (in the pane on the left) to view the storage account in the storage explorer interface in the Azure portal. Expand **Blob containers (2)** to view the containers in the storage account. In addition to the **margies** container where the source data is stored, there should be two new containers: **margies-images** and **margies-knowledge** **(3)**. These were created by the indexing process.
+
+    ![Visual Studio Code Icon](./images/d-73.png) 
+
+1. Select the **margies-knowledge** container. It should contain a folder for each indexed document.Open any of the folders.
+
+    ![Visual Studio Code Icon](./images/d-74.png) 
+
+1. Then **Download (1)** and **Open (2)** the **knowledge-projection.json** file it contains. 
+
+    ![Visual Studio Code Icon](./images/d-75.png) 
+
+1. Each JSON file contains a representation of an indexed document, including the enriched data extracted by the skillset as shown here.
 
     ```
     {
@@ -200,8 +264,16 @@ The ability to create *object* projections like this enables you to generate enr
 The *file* projections defined in the skillset create JPEG files for each image that was extracted from the documents during the indexing process.
 
 1. In the storage browser interface in the Azure portal, select the **margies-images** blob container. This container contains a folder for each document that contained images.
-2. Open any of the folders and view its contents - each folder contains at least one \*.jpg file.
-3. Open any of the image files to verify that they contain images extracted from the documents.
+
+    ![Visual Studio Code Icon](./images/d-76.png) 
+
+1. Open any of the folders and view its contents - each folder contains at least one \*.jpg file.
+
+    ![Visual Studio Code Icon](./images/d-77.png) 
+
+1. Download and open any of the image files to verify that they contain images extracted from the documents.
+
+    ![Visual Studio Code Icon](./images/d-78.png) 
 
 The ability to generate *file* projections like this makes indexing an efficient way to extract embedded images from a large volume of documents.
 
@@ -209,15 +281,22 @@ The ability to generate *file* projections like this makes indexing an efficient
 
 The *table* projections defined in the skillset form a relational schema of enriched data.
 
-1. In the storage explorer interface in the Azure portal, expand **Tables**.
-2. Select the **docs** table to view its columns. The columns include some standard Azure Storage table columns - to hide these, modify the **Column Options** to select only the following columns:
+1. In the storage explorer interface in the Azure portal, expand **Tables (1)**. Select the **docs (2)** table to view its columns. 
+
+    ![Visual Studio Code Icon](./images/d-79.png) 
+
+1. The columns include some standard Azure Storage table columns - to hide these, modify the **Column Options** to select only the following columns:
+
     - **document_id** (the key column automatically generated by the indexing process)
     - **file_id** (the encoded file URL)
     - **file_name** (the file name extracted from the document metadata)
     - **language** (the language in which the document is written)
     - **sentiment** the sentiment score calculated for the document.
     - **url** the URL for the document blob in Azure storage.
-3. View the other tables that were created by the indexing process:
+
+      ![Visual Studio Code Icon](./images/d-80.png)     
+
+1. View the other tables that were created by the indexing process:
     - **ImageTags** (contains a row for each individual image tag with the **document_id** for the document in which the tag appears).
     - **KeyPhrases** (contains a row for each individual key phrase with the **document_id** for the document in which the phrase appears).
     - **Locations** (contains a row for each individual location with the **document_id** for the document in which the location appears).

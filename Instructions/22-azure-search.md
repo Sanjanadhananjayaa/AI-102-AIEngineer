@@ -44,7 +44,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
    
    `git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
 
-    ![](./images/d-3.png)
+    ![](./images/d-81.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code. Wait while additional files are installed to support the C# code projects in the repo.
 
