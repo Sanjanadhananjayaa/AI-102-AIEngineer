@@ -29,11 +29,11 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
 1. Start Visual Studio Code.
 
-1. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+1. Open the New Terminal and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
 
 1. Run the following command to clone the repository to a local folder.
    
-   `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
+   `git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
 
    ![](./images/d-3.png)
    
@@ -57,7 +57,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
     ![Visual Studio Code Icon](./images/d-43.png) 
 
-1. In Visual Studio Code, expand the **23-custom-search-skill** folder,under that expand **create-search** and then select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
+1. In Visual Studio Code, expand the **23-custom-search-skill** folder and then select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
 
 1. Right click on the **23-custom-search-skill** folder and select **Open in Integrated Terminal**.
 1. In the terminal pane, enter the following command to establish an authenticated connection to your Azure subscription.
