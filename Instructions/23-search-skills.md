@@ -53,9 +53,9 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
 
 1. If you are using a restricted subscription in which a resource group has been provided for you, select the resource group to view its properties. Otherwise, create a new resource group with a name of your choice, and go to it when it has been created.
 
-1. On the **Overview** page for your resource group, note the **Subscription ID** and **Location**. You will need these values, along with the name of the resource group in subsequent steps.
+1. On the **Overview** page for your resource group, note the **Subscription ID (1)** and **Location (2)**. You will need these values, along with the name of the resource group in subsequent steps.
 
-    ![Visual Studio Code Icon](./images/d-43.png) 
+    ![Visual Studio Code Icon](./images/d-82.png) 
 
 1. In Visual Studio Code, expand the **23-custom-search-skill** folder and then select **setup.cmd**. You will use this batch script to run the Azure command line interface (CLI) commands required to create the Azure resources you need.
 
