@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 
      ![Visual Studio Code Icon](./images/vscode.png) 
 
-2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
+2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-prod** folder and select **select folder**
 
       **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
   
@@ -155,7 +155,7 @@ The **Read** API uses an asynchronous operation model, in which a request to sta
      }  
      ```
 
-   ![Visual Studio Code Icon](./images/lab11-image1.png)
+     ![Visual Studio Code Icon](./images/new-ai-102-13.png)
 
 
 4. Examine the code you added to the **GetTextRead** function. It submits a request for a read operation, and then repeatedly checks status until the operation has completed. If it was successful, the code processes the results by iterating through each page, and then through each line.
