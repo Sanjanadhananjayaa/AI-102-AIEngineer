@@ -152,13 +152,6 @@ First, you need to create a key vault and add a *secret* for the Azure AI servic
 
       ![Visual Studio Code Icon](./images/a-29.png)    
 
-<validation step="1e07fa06-8bcb-427e-910d-af8818d625e5" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
 ### Task 2.2: Use a service principal
 
 To access the secret in the key vault, your application must use a service principal that has access to the secret. You'll use the Azure command line interface (CLI) to use the service principal, find its object ID, and grant access to the secret in Azure Vault.
@@ -250,6 +243,13 @@ Now you're ready to use the service principal identity in an application, so it 
     ![Visual Studio Code Icon](./images/a-33.png)
 
 1. When you have finished testing the application, enter "**quit**" to stop the program.
+
+<validation step="1e07fa06-8bcb-427e-910d-af8818d625e5" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Review
 In this lab, you have completed:
