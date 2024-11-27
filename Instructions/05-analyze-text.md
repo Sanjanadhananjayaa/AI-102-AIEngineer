@@ -171,7 +171,7 @@ In this exercise, you'll complete a partially implemented client application tha
 
     - **Python**: .env
 
-1. Open the configuration file and update the configuration values with **Key1** and **Endpoint** thats you had copied previously, to reflect the **endpoint** and an authentication **key** for your Azure AI Language service resource. Save your changes by clicking **Ctrl+S** in your keyboard.
+1. Open the configuration file and update the configuration values with **Key1** and **Endpoint** that you had copied previously, to reflect the **endpoint** and an authentication **key** for your Azure AI Language service resource. Save your changes by clicking **Ctrl+S** in your keyboard.
 
     - This is how it looks for **C#**: appsettings.json file.
 
