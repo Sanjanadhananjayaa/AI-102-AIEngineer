@@ -115,8 +115,8 @@ In this exercise, you'll complete a partially implemented client application tha
     
     - **Python**: .env
 
-        >**Note:** Open the notepad, where you pasted the values and update the configuration values it contains to include an authentication **key** for your Azure AI Translator resource, and the **location** where it is deployed (<u>not</u> the endpoint). 
-    
+ 1. Open the notepad, where you pasted the values for **key1** and **Location** and update the configuration values it contains to include an authentication **key** for your Azure AI Translator resource, and the **location** where it is deployed (<u>not</u> the endpoint). Update the values in the file.
+
 1. Save your changes by pressing **CTRL + S**.
 
 1. Note that the **text-translation** folder contains a code file for the client application:
