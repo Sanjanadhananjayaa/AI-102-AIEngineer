@@ -49,7 +49,7 @@ Many commonly used Azure AI services APIs are available in container images. For
         
         - **OS type**: **Linux (8)**
         
-        - **Size**: Click on **Change size** then set **4 vcpu, 16 GB memory (9)** and then **Ok (3)**.
+        - **Size**: Click on **Change size** then set **4 vcpu (1), 16 GB memory (2)** and then **Ok (3)**. **(9)**
 
           ![Visual Studio Code Icon](./images/a-49.png)        
 
