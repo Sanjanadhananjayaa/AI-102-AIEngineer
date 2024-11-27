@@ -22,16 +22,16 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Open the cloned folder in Visual Studio Code.
 
-1.  Start Visual Studio Code (the program icon is pinned to the Desktop).
+1. Start Visual Studio Code (the program icon is pinned to the Desktop).
 
-     ![Visual Studio Code Icon](./images/vscode.png)
+    ![Visual Studio Code Icon](./images/vscode.png)
 
-2.  Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
+1. Open a file, From the top-left options, Click on **file->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
 
     **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
     **Note:** In the Do you trust the authors of the files in this folder? prompt, select **Yes, I trust the authors**
 
-3.  Wait while additional files are installed to support the C# code projects in the repo.
+1. Wait while additional files are installed to support the C# code projects in the repo.
 
 ## Task 2: Create Language service resources
 
@@ -64,7 +64,7 @@ In this lab, you will complete the following tasks:
 
       ![](images/c-44.png)      
 
-1. click on **Create**.
+1. Click on **Create**.
 
 1. Wait for the resources to be created, click on **Go to resource**.
 
@@ -85,7 +85,7 @@ In this lab, you will complete the following tasks:
 
 1. Select the user icon from the top right corner, under **Current resource** choose **Select**.
 
-    ![](images/mod-5-60.png)
+      ![](images/mod-5-60.png)
 
 1. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language (1)** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.  Click **Done (3)**.
 
