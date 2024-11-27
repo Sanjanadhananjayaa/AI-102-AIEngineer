@@ -81,13 +81,9 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Import, train, and publish a Conversational language understanding model
 
-1.  In a new browser tab, open the Language Studio - Preview portal at `https://language.cognitive.azure.com`.
+1. In a new browser tab, open the Language Studio - Preview portal at `https://language.cognitive.azure.com`.
 
-1.  Select the user icon from the top right corner, under **Current resource** choose **Select**.
-
-      ![](images/mod-5-60.png)       
-
-     ![](images/mod-5-60.png)
+1. Select the user icon from the top right corner, under **Current resource** choose **Select**.
 
 1. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language (1)** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.  Click **Done (3)**.
 
