@@ -317,7 +317,7 @@ Now that you have the documents in place, you can create a search solution by in
 
     - Ensure that the **Key** is set to **metadata_storage_path (2)** and leave the **Suggester name** blank and **Search mode** at its default.
 
-    - Make the following changes to the index fields, leaving all other fields with their default settings.
+    - Make the following changes to the index fields, leaving all other fields with their default settings. **(3)**
 
       ![Visual Studio Code Icon](./images/d-83.png) 
    
