@@ -77,7 +77,7 @@ In this lab, you will complete the following tasks:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
-<validation step="c04b552b-faf9-49fc-81fb-0c49393a3afa" />      
+<validation step="c04b552b-faf9-49fc-81fb-0c49393a3afa" />     
 
 ## Task 3: Import, train, and publish a Conversational language understanding model
 
@@ -85,7 +85,7 @@ In this lab, you will complete the following tasks:
 
 1. Select the user icon from the top right corner, under **Current resource** choose **Select**.
 
-    ![](images/mod-5-60.png)
+     ![](images/mod-5-60.png)
 
 1. In the Select an Azure resource tab, keep the Active directory and Azure subscription as default. Under Resource type select **Language (1)** and under resource name select **languageservice-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.  Click **Done (3)**.
 
