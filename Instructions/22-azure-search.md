@@ -100,9 +100,9 @@ The solution you will create for Margie's Travel requires the following resource
 
 1. Click on **Create**.
 
-4. Wait for deployment to complete, and click on **Go to resources**.
+1. Wait for deployment to complete, and click on **Go to resources**.
 
-5. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
+1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
