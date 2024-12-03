@@ -38,11 +38,11 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     ![Visual Studio Code Icon](./images/d-2.png)
 
-1. Run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
-
 1. Run the following command to clone the repository to a local folder.
    
-   `git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
+    ```
+    git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
+    ```
 
     ![](./images/d-81.png)
 
