@@ -88,7 +88,7 @@ The solution you will create for Margie's Travel requires the following resource
     
     - **Subscription**: **Leave default subscription (1)**
     
-    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**
     
     - **Service name**: **aisearch<inject key="DeploymentID" enableCopy="false"/> (3)**
     
