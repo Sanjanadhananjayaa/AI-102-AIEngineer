@@ -66,6 +66,7 @@ If you have already cloned **AI-102-AIEngineer** code repository to the environm
     az login --output none
     ```
 
+    If the **sign-in pop-up** doesn’t appear immediately, wait for **1-2 minutes**. Then, **minimize all tabs**, and you should find the pop-up on the desktop for signing in.
     A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
     - If prompted select **Work or school account** then click on **Continue**.
