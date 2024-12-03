@@ -33,6 +33,7 @@ When you created your Azure AI services resource, two authentication keys were g
     az login
     ```
 
+    - If you don't see the sign-in pop-up, try minimizing all your tabs; the pop-up should appear on your desktop.
     - If prompted select **Work or school account** then click on **Continue**.
 
       ![Visual Studio Code Icon](./images/a-21.png)  
