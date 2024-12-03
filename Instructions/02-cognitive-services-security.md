@@ -44,9 +44,9 @@ When you created your cognitive services resource, two authentication keys were 
     az login
     ```
 
-    A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
+    A web browser tab will open in your default browser and it will prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
-    > **Tip**: If you have multiple subscriptions, you'll need to ensure that you are working in the one that contains your cognitive services resource.  Use this command to         determine your current subscription - its unique ID is the **id** value in the JSON that gets returned.
+    > **Tip**: If you have multiple subscriptions, you'll need to ensure that you are working in the one that contains your cognitive services resource.  Use this command to determine your current subscription - its unique ID is the **id** value in the JSON that gets returned.
     >
     > ```
     > az account show
