@@ -41,7 +41,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 1. Run the following command to clone the repository to a local folder.
    
     ```
-    git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer`.
+    git clone https://github.com/CloudLabs-MOC/AI-102-AIEngineer
     ```
 
     ![](./images/d-81.png)
