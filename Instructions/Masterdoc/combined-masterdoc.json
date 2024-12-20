@@ -1,0 +1,103 @@
+[
+  {
+    "Name": "AI-102-Azure AI Engineer Associate",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/AI-102-AIEngineer/tree/stage",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/LabIntro.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/01-get-started-cognitive-services.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/02-cognitive-services-security.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/03-monitor-cognitive-services.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/05-analyze-text.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/06-translate-text.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/07-speech.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/08-translate-speech.md",
+        "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/09-language-understanding-app.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/10-language-understanding-client.md",
+        "Order": 10
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/12-qna-maker.md",
+        "Order": 11
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/13-bot-framework.md",
+        "Order": 12
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/14-bot-composer.md",
+        "Order": 13
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/15-computer-vision.md",
+        "Order": 14
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/16-video-indexer.md",
+        "Order": 15
+      },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/17-image-classification.md",
+        "Order": 16
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/18-object-detection.md",
+        "Order": 17
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/19-face-service.md",
+        "Order": 18
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/20-ocr.md",
+        "Order": 19
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/21-form-recognizer.md",
+        "Order": 20
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/22-azure-search.md",
+        "Order": 21
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/23-search-skills.md",
+        "Order": 22
+      },
+        {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-102-AIEngineer/stage/Instructions/24-knowledge-store.md",
+        "Order": 23
+      }
+    ] 
+  }
+]
+      
+      
