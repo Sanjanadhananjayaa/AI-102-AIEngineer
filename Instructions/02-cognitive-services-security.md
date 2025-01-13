@@ -129,7 +129,7 @@ First, you need to create a key vault and add a *secret* for the Azure AI servic
         
         - Scroll down to the **Access policies** section and select your user using the checkbox on the left **(2)**. Then click on **Review + create (3)**
 
-            ![Visual Studio Code Icon](./images/a-26.png)
+            ![Visual Studio Code Icon](./images/keyvaulteaccess.png)
 
     - Select **Review + create**, and **Create**.
 
