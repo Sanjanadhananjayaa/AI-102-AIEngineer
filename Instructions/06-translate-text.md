@@ -25,7 +25,7 @@ In this lab, you will complete the following tasks:
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal. if you are not already in the **Cloud Shell**.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](images/powershell-portal-guide-1.png)
+    ![Visual Studio Code Icon](./images/mod03-ai-102-image5.png)
 
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
