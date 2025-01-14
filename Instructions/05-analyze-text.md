@@ -28,9 +28,7 @@ In this lab, you will complete the following tasks:
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Language service** resource in a supported region.
 
-1. Open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
-
-1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Azure AI services (1)**, and then select **Azure AI Services (2)** under services.
 
     ![Visual Studio Code Icon](./images/a-2.png)
 
