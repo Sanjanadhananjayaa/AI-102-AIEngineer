@@ -34,10 +34,12 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Select **Language Service (1)** from the left navigation pane. Then click on **Create (2)**.
 
-    ![Visual Studio Code Icon](./images/a-59.png)
+    ![Visual Studio Code Icon](./images/mod03-ai-102-image1.png)
 
 1. Scroll down to the bottom and select **Continue to create your resource**.
 
+   ![Visual Studio Code Icon](./images/mod03-ai-102-image2.png)
+   
 1. Provision the resource using the following settings and then click on **Review+Create (7)**.
 
     - **Subscription**: **Leave the default Azure subscription (1)**.
@@ -52,7 +54,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     - **Responsible AI Notice**: Check the checkbox **(6)**
 
-      ![Visual Studio Code Icon](./images/b-2.png)    
+      ![Visual Studio Code Icon](./images/mod03-ai-102-image3.png)    
     .
 1. Click on **create**.
 
@@ -60,7 +62,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 1. Select **Go to resource**.
 
-    ![Visual Studio Code Icon](./images/a-5.png)
+    ![Visual Studio Code Icon](./images/mod03-ai-102-image4.png)
 
 1. From the left navigation menu, select **Keys and Endpoint (1)** under Resource management. Copy the values of **Key 1 (2)** and **Endpoint (3)** , in a notepad. You will use this in the next task.
 
@@ -72,14 +74,20 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](./images/powershell-portal-guide-1.png)
+    ![Visual Studio Code Icon](./images/mod03-ai-102-image5.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
+     ![Visual Studio Code Icon](./images/mod03-ai-102-image6.png)
+   
 1. If you're prompted to create storage for your Cloud Shell, select **Mount storage account** and select your default **Subscription** , and then click on **Apply**.
+
+      ![Visual Studio Code Icon](./images/mod03-ai-102-image7.png)
    
 1. Select **I want to create a storage account**, click on **Next**.
 
+      ![Visual Studio Code Icon](./images/mod03-ai-102-image8.png)
+   
 1. On the **Create Storage account** page, provid the following details and then click on **Create (6)**.
 
     - **Subscription**: **Choose the deafult Subscription (1)**
