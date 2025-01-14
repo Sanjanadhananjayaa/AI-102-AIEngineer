@@ -62,7 +62,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     ![Visual Studio Code Icon](./images/a-5.png)
 
-1. From the left navigation menu, select **Keys and Endpoint (1)** under Resource management.Copy the values of **Key 1 (2)** and **Endpoint (3)** , in a notepad. You will use this in the next task.
+1. From the left navigation menu, select **Keys and Endpoint (1)** under Resource management. Copy the values of **Key 1 (2)** and **Endpoint (3)** , in a notepad. You will use this in the next task.
 
     ![Visual Studio Code Icon](./images/b-4.png)
 
