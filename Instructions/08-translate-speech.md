@@ -31,6 +31,7 @@ If you don't already have on in your subscription, you'll need to provision a **
 1. Select **Create** under **Speech service** in the results page.
 
 1. Create a resource with the following settings:
+   
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Choose any available region*
@@ -58,6 +59,7 @@ In this exercise, you'll complete a partially implemented client application tha
    ```
    
 1. View the contents of the **translator** folder, and note that it contains a file for configuration settings:
+   
     - **C#**: appsettings.json
 
 1. Open the configuration file and update the configuration values it contains to include an authentication **key** for your Azure AI Speech resource, and the **location** where it is deployed. **Save your changes**.
