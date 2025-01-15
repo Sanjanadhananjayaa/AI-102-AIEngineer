@@ -43,11 +43,17 @@ In this lab, you will complete the following tasks:
 
 To create and host a knowledge base for question answering, you need a **Language service** resource in your Azure subscription.
 
-1. Open the Azure portal.
-
-1. In the search field at the top, search for **Language**. Then, Then select **Language** in the suggestions dropdown that appears.
+1. IIn the Azure Portal, select the **＋Create** a resource button. 
 
    ![](./images/language1.png)
+
+1. Search for **Language**. Then, Then select **Language Service**.
+
+    ![](./images/languagesearch.png)
+
+1. On **Language Service** Page Click on Create.
+
+   ![](./images/createlan.png)
 
 1. Click **Select** on the **Custom question answering** block. Then click **Continue to create your resource**.
 
@@ -55,13 +61,19 @@ To create and host a knowledge base for question answering, you need a **Languag
 
 1. You will need to enter the following settings:
     
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
-    - **Region**: **<inject key="Region" enableCopy="false"/>**
-    - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Pricing tier**: Standard S
-    - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*)
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
+    - **Subscription**: **Your Azure subscription (1)**
+    - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**
+    - **Region**: **<inject key="Region" enableCopy="false"/> (3)**
+    - **Name**: **AI-Language-<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Pricing tier**: Standard S **(5)**
+
+      ![](./images/lan1.png)
+
+    - **Azure Search pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*) **(6)**
+
+    - **By checking this box I acknowledge that I have read and understood all the terms below (7)**: select the checkbox.
+
+      ![](./images/lan2.png)
     
 1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**.
 
@@ -270,13 +282,19 @@ Most commonly, the client applications used to retrieve answers from a knowledge
 
     *If some values are missing, refresh your browser.*  
 
-    - **Bot handle**: *leave default*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
+    - **Bot handle**: *leave default*
     - **Pricing tier**: Standard.
-    - **Creation type**: Create new User-assigned managed identity.
 
-1. Select **Next**, then set the following if not already populated automatically:
+       ![](./images/bot1.png)
+
+    - **Creation type**: Create new User-assigned managed identity.
+    - Select **Next**.
+    
+      ![](./images/bot2.png)
+
+1. Set the following if not already populated automatically:
 
     - **App name**: *Same as the **Bot handle** with a unique ID and *.azurewebsites.net* appended automatically.*
     - **SDK language**: *Choose either C# or Node.js*
