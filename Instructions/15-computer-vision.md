@@ -32,7 +32,9 @@ In this lab, you will complete the following tasks:
 
      ![Visual Studio Code Icon](./images/vscode.png) 
 
-2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-master** folder and select **select folder**
+2.  Open a file, From the top-left options, Click on **File->Open Folder** and navigate to **C:\LabFiles** choose **AI-102-AIEngineer-stage** folder and select **select folder**.
+
+    ![](./images/8.1.png)
 
       **Note:** You may be prompted to complete a 2-minute survey. Go ahead and select **No, thanks**. You may need to do this more than once.
   
@@ -44,7 +46,11 @@ If you don't already have one in your subscription, you'll need to provision a *
 
 1. Open the **Azure portal**.
 
-2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
+2. Select the **&#65291;Create a resource** button.
+
+   ![](./images/8.2.png)
+
+1. Search for **Azure AI services**, select **Azure AI Services** and select create to create an Azure AI services multi-service account resource with the following setting:
 
     - **Subscription**: *Your Azure subscription*
     
@@ -382,7 +388,7 @@ In some cases, you may need to create a smaller version of an image named a *thu
      ```
 
   
-3. opening the **thumbnail.jpg** file that is generated in the same folder as your code file.
+3. Opening the **thumbnail.jpg** file that is generated in the same folder as your code file.
 
      **C#**
 
