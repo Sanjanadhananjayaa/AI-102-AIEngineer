@@ -50,8 +50,8 @@ If you don't already have one in your subscription, you'll need to provision a *
     - **Name**: **aicognitive<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
 
-      ![](images/b-1.png)
-
+      ![](images/b-10.png)
+      ![](images/b-12.png)
 3. Select the required checkboxes and create the resource.
 
 4. Select **Review + create** to navigate to the **Review + create** tab, and then select **Create**.
