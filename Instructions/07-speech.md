@@ -1,6 +1,7 @@
 # Exercise 01: Recognize and Synthesize Speech
 
 ## Lab scenario
+
 **Azure AI Speech** is a service that provides speech-related functionality, including:
 
 - A *speech-to-text* API that enables you to implement speech recognition (converting audible spoken words into text).
@@ -34,7 +35,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
 1. Start Visual Studio Code.
 
-1. Open the New Terminal  and run a **Git: Clone** command to clone the`https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
+1. Open the New Terminal  and run a **git clone** command to clone the`https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
 
    ![](./images/Terminal_new_vs_1.png)
    
@@ -68,7 +69,7 @@ If you don't already have on in your subscription, you'll need to provision a **
     - **Name**: **aispeech<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Standard S0 or S1 based on Availability of the Tier
 
-    ![](./images/azureaiservice2.png)
+      ![](./images/azureaiservice2.png)
 
 1. Wait for deployment to complete, and then view the deployment details.
 
@@ -336,4 +337,4 @@ In this lab, you have completed:
 + Used a different voice
 + Used Speech Synthesis Markup Language
 
-## You have successfully completed the lab, proceed with the next exercises.
+## You have successfully completed this exercise.

@@ -43,8 +43,6 @@ To create a conversational language model, you need a **Azure AI Language servic
 
 1. Then, in the Azure AI services tab, select **Language Service (1)** and select **+ Create (2)**.
 
-      ![](images/b-1.png)
-
 1. Scroll down to the bottom and select **Continue to create your resource**.
 
 1. Provision the resource using the following settings and then click on **Review + create (7)**. 
@@ -525,7 +523,7 @@ Open up a new internet browser tab to work with Cloud Shell.
 
 You can use Language Studio to develop and test your language understanding model, but in a software development process for DevOps, you should maintain a source controlled definition of the project that can be included in continuous integration and delivery (CI/CD) pipelines. While you can use the Azure AI Language REST API in code scripts to create and train the model, a simpler way is to use the portal to create the model schema, and export it as a **.json** file that can be imported and retrained in another Azure AI Language  instance. This approach enables you to make use of the productivity benefits of the Language Studio visual interface while maintaining portability and reproducibility for the model.
 
-1. Select the**Projects** tab from the left navigation pane, select the circle icon to select the **Clock (1)** project. and then Select the **&#x2913; Export (2)** button.
+1. In Azure AI | Language Studio, Select the **Projects** tab from the left navigation pane, select the circle icon to select the **Clock (1)** project. and then Select the **&#x2913; Export (2)** button.
 
       ![](images/c-40.png)
 
