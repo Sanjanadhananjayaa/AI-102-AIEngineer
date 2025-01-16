@@ -40,7 +40,7 @@ You're going to use the Bot Framework SDK to create your bot, and the Bot Framew
 
 1. In the Lab-VM, double click on the **Visual Studio Code**.
 
-1. Select the **Explorer**, select **Open Folder** in Visual Studio Code. Open **C:\AllFiles** and select folder **AI-102-AIEngineer-prod**.
+1. Select the **Explorer**, select **Open Folder** in Visual Studio Code. Open **C:\AllFiles** and select folder **AI-102-AIEngineer-stage**.
 
     >**Note:** On the **Do you trust the authors of the files in this folder?** pop-up, select **Yes, I trust the authors**.
 
@@ -88,8 +88,7 @@ You've created a bot based on the *EchoBot* template. Now you can run it locally
     dotnet run
     ```
 
-    >**Note:** When the bot starts, note the endpoint at which it is running is shown. This should be similar to    
- **http://localhost:3978**.
+    >**Note:** When the bot starts, note the endpoint at which it is running is shown. This should be similar to  **http://localhost:3978**.
 
 2. Start the **Bot Framework Emulator**, and select **open bot** by specifying the endpoint with the **`http://localhost:3978/api/messages` (1)** path appended, and select **Connect (2)**:
 

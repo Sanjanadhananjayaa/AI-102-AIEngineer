@@ -34,7 +34,7 @@ In this exercise, you will create a bot that uses the OpenWeather service to ret
 
 1. In a web browser, go to the OpenWeather site at `https://openweathermap.org/price`.
 
-1. Request a free API key, and create an OpenWeather account, using these credentials:
+1. Request a free API key, and create an OpenWeather account (if you do not already have one), using these credentials:
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
