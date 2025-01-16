@@ -27,7 +27,6 @@ In this lab, you will complete the following tasks:
 
     ![Visual Studio Code Icon](./images/mod03-ai-102-image5.png)
 
-
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
     ![](./images/18.png)
