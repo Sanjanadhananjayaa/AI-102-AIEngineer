@@ -29,7 +29,7 @@ In this lab, you will complete the following tasks:
 
     ![Visual Studio Code Icon](./images/a-7.png)
 
-1. Open **C:\AllFiles\AI-102-AIEngineer-prod (1)** and then click on **Select Folder (2)**.
+1. Open **C:\AllFiles\AI-102-AIEngineer-stage (1)** and then click on **Select Folder (2)**.
 
     ![Visual Studio Code Icon](./images/a-8.png)
 

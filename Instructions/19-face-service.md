@@ -112,7 +112,7 @@ Now you're ready to use the SDK to call the Computer Vision service and detect f
     **C#**
 
     ```C#
-    // Authenticate Computer Vision client
+    // Authenticate Azure AI Vision client
     ApiKeyServiceClientCredentials credentials = new ApiKeyServiceClientCredentials(cogSvcKey);
     cvClient = new ComputerVisionClient(credentials)
     {

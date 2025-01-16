@@ -35,11 +35,20 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Provision Azure AI Services resource
 
-If you don't already have one in your subscription, you'll need to provision a **Azure AI Services** resource.
+1. Navigate to the **Azure Portal**.
 
-1. Open the Azure portal.
+    ![Visual Studio Code Icon](./images/azureportal.png)
 
-2. Select the **&#65291;Create a resource** button, search for **Azure AI services**, select **Azure AI Services**, and select create to create an Azure AI services multi-service account resource with the following setting
+1. In the top search bar, search for **Azure AI services (1)**, select **Azure AI Services (2)**.
+
+    ![Visual Studio Code Icon](./images/a-2.png)
+
+1. On the **Azure AI service** home page, from the left navigation menu, select **Azure AI services multi-service account (1)**, select **+ Create (2)**.
+
+    ![Visual Studio Code Icon](./images/a-3.png)
+
+
+2. On the **Azure AI service** home page, from the left navigation menu, select **Azure AI services multi-service account (1)**, select **+ Create (2)**
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: **Ai-102-<inject key="DeploymentID" enableCopy="false" /></inject>**
@@ -48,9 +57,14 @@ If you don't already have one in your subscription, you'll need to provision a *
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: select the checkbox.
 
-3. Select **Review + create** and **Create**.
+      ![Visual Studio Code Icon](./images/a-4.png) 
+
+1. Once the validation passed, select **Create**.
+
 4. Wait for the deployment to complete. Once the deployment is successful, click on **Go to resources** to view the deployment details.
 5. In the left navigation pane, under the **Resource Management** section, choose **Keys and Endpoint**. Make sure to note down the Keys and Endpoint values in notepad. You'll require the endpoint and one of the keys from this page for the subsequent procedure.
+
+   ![Visual Studio Code Icon](./images/a-6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

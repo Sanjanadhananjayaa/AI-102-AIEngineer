@@ -104,13 +104,6 @@ The solution you will create for Margie's Travel requires the following resource
 
 1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="6cbaad12-ad3b-48d8-9a96-088e83af5b84" />
-
 >**Important**: Perform the Validation after completing, **Task 4**. Otherwise you may get validation as failed.
 
 ### Task 2.2: Create an Azure AI Services resource
@@ -131,7 +124,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     - **Region**: **<inject key="Region" enableCopy="false" /></inject> (3)** - **The same location as your Azure AI Search resource**
 
-    - **Name**: **aisearch1<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Name**: **aiservices<inject key="DeploymentID" enableCopy="false"/> (4)**
 
     - **Pricing tier**: **Standard S0 (5)**
 
@@ -144,13 +137,6 @@ If you don't already have one in your subscription, you'll need to provision an 
 1. Click on **Create**.
 
 1. Wait for deployment to complete, and click on **Go to resources** then view the deployment details.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="9a5c0568-3ad3-4983-9e42-c9baba1ebb22" />
 
 >**Important**: Perform the Validation after completing, **Task 4**. Otherwise you may get validation as failed.
 
@@ -199,6 +185,13 @@ If you don't already have one in your subscription, you'll need to provision an 
     ![Visual Studio Code Icon](./images/d-15.png) 
  
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="6cbaad12-ad3b-48d8-9a96-088e83af5b84" />
 
 ## Task 3: Upload Documents to Azure Storage
 
@@ -347,6 +340,12 @@ Now that you have the documents in place, you can create a search solution by in
 
     ![Visual Studio Code Icon](./images/d-28.png) 
  
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="9a5c0568-3ad3-4983-9e42-c9baba1ebb22" />
 
 ## Task 5: Search the index
 

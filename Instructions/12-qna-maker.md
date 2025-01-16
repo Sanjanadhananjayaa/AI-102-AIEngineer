@@ -85,15 +85,17 @@ To create and host a knowledge base for question answering, you need a **Languag
    
 1. Select **Create** under **AI Search** in the results page.
 
-1. Provision the resource using the following settings:
+1. Provision the resource using the following settings then click on **Review + Create (6)**:
 
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: **<inject key="Region" enableCopy="false"/>**
-    - **Name**: **ai-search-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*).
+    - **Subscription**:  Select Your Azure subscription **1**.
+    - **Resource group**: **ai-102-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+    - **Region**: **<inject key="Region" enableCopy="false"/> (3)**
+    - **Name**: **ai-search-<inject key="DeploymentID" enableCopy="false"/> (4)**.
+    - **Pricing tier**: Free (F) (*If this tier is not available, select Basic (B)*).**(5)**
+
+    ![](./images/12.1.png)
       
-1. Select **Review + Create** to navigate to the **Review + Create** tab, and then select **Create**..
+1. Once the validation completed select **Create**..
 
 1. Wait for deployment to complete, and then view the deployment details
 
