@@ -251,6 +251,8 @@ In this exercise, you'll complete a partially implemented client application tha
 
 ## Task 4: Detect language
 
+In this task, you will implement language detection for the review documents using the Azure AI Language SDK. 
+
 Now that you have created a client for the API, let's use it to detect the language in which each review is written.
 
 1. In the **Main** function for your program, find the comment **Get language**. Then, under this comment, add the code necessary to detect the language in each review document:
@@ -289,9 +291,11 @@ Now that you have created a client for the API, let's use it to detect the langu
     python text-analysis.py
     ```
 
-1. Observe the output, noting that this time the language for each review is identified.
+1. Observe the output, nothing that this time the language for each review is identified.
 
 ## Task 5: Evaluate sentiment
+
+In this task, you will implement sentiment analysis to classify the sentiment of text reviews using the Azure AI Language SDK. 
 
 *Sentiment analysis* is a commonly used technique to classify text as *positive* or *negative* (or possible *neutral* or *mixed*). It's commonly used to analyze social media posts, product reviews, and other items where the sentiment of the text may provide useful insights.
 
@@ -332,6 +336,8 @@ Now that you have created a client for the API, let's use it to detect the langu
 1. Observe the output, noting that the sentiment of the reviews is detected.
 
 ## Task 6: Identify key phrases
+
+In this task, you will implement language detection for the review documents using the Azure AI Language SDK. 
 
 It can be useful to identify key phrases in a body of text to help determine the main topics that it discusses.
 
@@ -383,6 +389,8 @@ It can be useful to identify key phrases in a body of text to help determine the
 
 ## Task 7: Extract entities
 
+In this task, you will extract entities from the review documents using the Azure AI Language SDK.
+
 Often, documents or other bodies of text mention people, places, time periods, or other entities. The text Analytics API can detect multiple categories (and subcategories) of entity in your text.
 
 1. In the **Main** function for your program, find the comment **Get entities**. Then, under this comment, add the code necessary to identify entities that are mentioned in each review:
@@ -430,6 +438,8 @@ Often, documents or other bodies of text mention people, places, time periods, o
 1. Observe the output, noting the entities that have been detected in the text.
 
 ## Task 8: Extract linked entities
+
+In this task, you will extract linked entities from the review documents using the Azure AI Language SDK. 
 
 In addition to categorized entities, the Text Analytics API can detect entities for which there are known links to data sources, such as Wikipedia.
 
