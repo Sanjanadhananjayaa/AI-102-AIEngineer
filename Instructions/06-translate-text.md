@@ -5,7 +5,7 @@
 
 For example, suppose a travel agency wants to examine hotel reviews that have been submitted to the company's web site, standardizing on English as the language that is used for analysis. By using Azure AI Translator, they can determine the language each review is written in, and if it is not already English, translate it from whatever source language it was written in into English.
 
-## Objectives
+## lab Objectives
 
 In this lab, you will complete the following tasks:
 
