@@ -26,6 +26,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Provision an Azure AI Language resource
 
+In this task, you'll set up the foundational resource for AI language functionalities, ensuring it is ready for integration and use in subsequent activities or development.
+
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Language service** resource in a supported region.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Azure AI services (1)**, and then select **Azure AI Services (2)** under services.
@@ -69,6 +71,8 @@ If you don't already have one in your subscription, you'll need to provision an 
     ![Visual Studio Code Icon](./images/b-4.png)
 
 ## Task 2: Clone the repository for this course in Cloud Shell
+
+In this task, you will set up Azure Cloud Shell, clone the course repository, and access the necessary lab files to prepare for the exercises.
 
 Open up a new browser tab to work with Cloud Shell. If you haven't cloned this repository to Cloud Shell recently, follow the steps below to make sure you have the most recent version. Otherwise, open Cloud Shell and navigate to your clone.
 
@@ -135,6 +139,8 @@ Open up a new browser tab to work with Cloud Shell. If you haven't cloned this r
     ![Visual Studio Code Icon](./images/b-6.png)     
 
 ## Task 3: Prepare to use the Azure AI Language SDK for text analytics
+
+In this task, you will configure and prepare a client application to use the Azure AI Language SDK for analyzing text.
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Language text analytics SDK to analyze hotel reviews.
 
