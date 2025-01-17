@@ -23,6 +23,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Clone the repo into your Azure Cloud Shell
 
+In this task, you will clone the required repository into your Azure Cloud Shell and open the relevant folder in the built-in code editor.
+
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal. if you are not already in the **Cloud Shell**.
 
     ![Visual Studio Code Icon](./images/mod03-ai-102-image5.png)
@@ -61,6 +63,8 @@ In this lab, you will complete the following tasks:
      > **Note**: If you don't see the built-in code editor, please repeat steps 5 and 6 accordingly.   
 
 ## Task 2: Provision an Azure AI Translator resource
+
+In this task, you'll provision an Azure AI Translator resource in the Azure portal.
 
 1. Open a new tab, and open Azure portal at `https://portal.azure.com`.
 
@@ -102,6 +106,8 @@ In this lab, you will complete the following tasks:
    ![](images/b-13.png)
 
 ## Task 3: Prepare to use Azure AI Translator
+
+In this task you'll prepares your development environment to interact with the Azure AI Translator service by configuring necessary credentials and testing a basic application. 
 
 In this exercise, you'll complete a partially implemented client application that uses the Azure AI Translator REST API to translate hotel reviews.
 
@@ -167,6 +173,8 @@ In this exercise, you'll complete a partially implemented client application tha
 1. Observe the output as the code should run without error, displaying the contents of each review text file in the **reviews** folder. The application currently doesn't make use of Azure AI Translator. We'll fix that in the next procedure.
 
 ## Task 4: Detect language
+
+In this task you'll add language detection functionality to the client application that uses the Azure AI Translator service.
 
 Azure AI Translator can automatically detect the source language of text to be translated, but it also enables you to explicitly detect the language in which text is written.
 
@@ -261,6 +269,8 @@ Azure AI Translator can automatically detect the source language of text to be t
 1. Observe the output, noting that this time the language for each review is identified.
 
 ## Task 5: Translate text
+
+In this task, you'll add translation functionality to the client application. Now that the application can detect the language of the reviews, we will use Azure AI Translator to translate non-English reviews into English.
 
 Now that your application can determine the language in which reviews are written, you can use Azure AI Translator to translate any non-English reviews into English.
 
